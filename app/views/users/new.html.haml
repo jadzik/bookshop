@@ -9,20 +9,11 @@
     = f.label :surname, "Nazwisko"
     .input= f.text_field :surname
   .clearfix
-    = f.label :phone, "Nr telefonu"
+    = f.label :phone, "Numer telefonu"
     .input= f.text_field :phone
   .clearfix
     = f.fields_for :client, @user.client do |client_form|
-      .clearfix
-        = client_form.label :email, "Adres e-mail"
-        .input= client_form.email_field :email
-      .clearfix
-        = client_form.label :password, "Hasło"
-        .input= client_form.password_field :password
-      .clearfix
-        = client_form.label :password_confirmation, "Potwierdź hasło"
-        .input= client_form.password_field :password_confirmation
-    -#= render :partial => "shared/client", :f => client_form
+      = render :partial => "shared/client",  :locals => { :f => client_form }
   .clearfix.actions
     = f.submit "Zarejestruj się", :class => "btn primary"
 -#= render :partial => "devise/shared/links"

@@ -1,5 +1,12 @@
 class CompaniesController < ApplicationController
-def index
+  before_filter :prepare_params, :only => :create
+  
+  def prepare_params
+    @client_attributes = params[:company].delete(:client_attributes)
+    @params = params[:company]
+  end
+
+  def index
     @companies = Company.all
   end
 
@@ -9,12 +16,14 @@ def index
 
   def new 
     @company = Company.new
+    @company.build_client
   end
 
   def create
-    @company = Company.new(params[:company])
+    @company = Company.new(@params)
     if @company.save
-      redirect_to company_path(@company)
+      @client = @company.create_client(@client_attributes.merge(:resource => @company))
+      redirect_to root_path
     else
       render :action => "new"
     end

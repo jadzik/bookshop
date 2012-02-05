@@ -5,7 +5,7 @@ Bookshop::Application.routes.draw do
 
   devise_for :clients
   resources :users, :only => [:new, :create]
-
+  resources :companies, :only => [:new, :create]
 
   root :to => 'home#index'
     match '/about_company', :to => 'home#about_company'

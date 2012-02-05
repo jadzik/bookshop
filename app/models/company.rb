@@ -1,6 +1,7 @@
 #encoding: utf-8
 class Company < ActiveRecord::Base
   has_one :client, :as => :resource
+  accepts_nested_attributes_for :client
   has_many :addresses, :as => :resource
   has_many :payers
 
