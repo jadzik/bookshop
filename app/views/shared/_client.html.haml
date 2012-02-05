@@ -7,3 +7,6 @@
 .clearfix
   = f.label :password_confirmation, "Potwierdź hasło"
   .input= f.password_field :password_confirmation
+.clearfix
+  %br/
+  Klikając "Zarejestruj się" akceptujesz #{link_to "regulamin", rules_path}.

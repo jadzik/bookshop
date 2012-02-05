@@ -11,6 +11,7 @@ Bookshop::Application.routes.draw do
     match '/about_company', :to => 'home#about_company'
     match '/contact_us', :to => 'home#contact_us'
     match '/cooperation', :to => 'home#cooperation'
+    match '/rules', :to => 'home#rules'
 #  match "/contact_us", :to => "contacts#new"
 
   resources :contacts, :only => [:new, :create]

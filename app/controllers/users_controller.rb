@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       @client = @user.create_client(@client_attributes.merge(:resource => @user))
       redirect_to root_path
     else
-      render :action => "new"
+      redirect_to new_user_path(@client)
     end
   end
 

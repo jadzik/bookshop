@@ -1,7 +1,7 @@
 %h2 Załóż konto dla firmy
 = form_for @company, :url => { :action => "create" }, :html => { :method => :post } do |f|
-  -# = devise_error_messages!
-
+  -#= devise_error_messages!
+  = flash[:error] = @company.errors.full_messages
   .clearfix
     = f.label :name, "Nazwa firmy"
     .input= f.text_field :name
@@ -18,17 +18,20 @@
     = f.label :nip, "Numer NIP"
     .input= f.text_field :nip
   .clearfix
-    = f.label :contact_comments, "Wypisz osoby i ich numery telefonu, do kontaktu (ważne przy realizacji zamówień)"
+    = f.label :contact_comments, "Wypisz osoby i ich numery telefonu, do kontaktu (ważne przy realizacji zamówień)."
     .input= f.text_area :contact_comments
   .clearfix
-    = f.label :library_or_school, "Zaznacz jeśli jesteś szkołą lub biblioteką !"
-    .input= f.radio_button :library_or_school, true
-    = f.label :library_or_school, "Zaznacz jeśli nie jesteś szkołą nia biblioteką !"
-    .input= f.radio_button :library_or_school, false 
+    Rejestrujesz się jako:
+    %br/
+    %label{:for => "collection_library_or_school"}
+      = f.radio_button :library_or_school, true
+      szkoła/bilbioteka
+    %br/
+    %label{:for => "collection_library_or_school"}
+      = f.radio_button :library_or_school, false
+      firma
   .clearfix
     = f.fields_for :client, @company.client do |client_form|
       = render :partial => "shared/client",  :locals => { :f => client_form }
   .clearfix.actions
     = f.submit "Zarejestruj się", :class => "btn primary"
--#= render :partial => "devise/shared/links"
-

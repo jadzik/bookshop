@@ -25,7 +25,7 @@ class CompaniesController < ApplicationController
       @client = @company.create_client(@client_attributes.merge(:resource => @company))
       redirect_to root_path
     else
-      render :action => "new"
+      redirect_to new_company_path(@client)
     end
   end
 

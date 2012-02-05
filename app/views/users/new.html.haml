@@ -1,7 +1,7 @@
 %h2 Załóż konto indywidualne
 = form_for @user, :url => { :action => "create" }, :html => { :method => :post } do |f|
   -# = devise_error_messages!
-
+  = flash[:error] = @company.errors.full_messages
   .clearfix
     = f.label :name, "Imię"
     .input= f.text_field :name
@@ -16,5 +16,3 @@
       = render :partial => "shared/client",  :locals => { :f => client_form }
   .clearfix.actions
     = f.submit "Zarejestruj się", :class => "btn primary"
--#= render :partial => "devise/shared/links"
-
