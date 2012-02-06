@@ -20,9 +20,11 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.new(@params)
-    if @company.save
+    ActiveRecord::Base.transaction do
+      @company = Company.new(@params)
       @client = @company.create_client(@client_attributes.merge(:resource => @company))
+    end
+    if @company.save
       redirect_to root_path
     else
       redirect_to new_company_path(@client)

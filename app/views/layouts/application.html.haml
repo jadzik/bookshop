@@ -9,7 +9,7 @@
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
     %title Centrum Dobrej Książki i Gry
     %meta{:content => "kodeks, Centrum dobrej książki i gry, ustawa, Beck, MT Biznes, Poltext, Ossolineum, Biblioteka Narodowa, Dynastie, Arkady, wydawnictwo Skorpion, Zawiśliński Stanisław, lektury, ważne żeby iść, głośne rzymskie procesy karne, PAX, IW PAX, historia filozofii, arcydzieła malarstwa, sztuka, album, albumy, książki na telefon, księgarnia wysyłkowa, książki na zamówienie, wydawnictwa nisko nakładowe, ekskluzywne wydawnictwa, wydanie albumowe, słownik, scenariusz filmu, scenariusze, pedagogika, psychologia, ekonomia, filologia, literatura obcojęzyczna, biografie, Krzysztof Kieślowski, PWN, GWP, Gdańskie Wydawnictwo Pedagogiczne, Carcassonne, Rattle Snake, Albi, gry planszowe, gry strategiczne, gry edukacyjne, gry do świetlic, literatura biznesowa, wyposażenie świetlic, wyposażenie bibliotek ", :name => "keywords"}/
-    %meta{:content => "Na łamach tej witryny odnajdziecie Państwo nie tylko opisy nowości wydawniczych czy wyszukacie edycje bibliofilskie. W Centrum Dobrej Ksiązki i Gry mozna równierz odnaleźć doskonałe pomysły na prezenty dla bliskich Wam osób czy kluczowych klientów i pracowników. Pamiętajmy iż upominki, którymi obdarowywujemy innych świadaczą o nas samych. Stąd odpowiednio dobrana książka czy gra planszowa mogą sprawić wiele radości bliskim a wśród obdarowywanych kontrachentów i pracowników utrwali pozytywny wizerunek firmy równierz jako mecenasa kultury. Asortyment który oferujemy Państwu, to książki z najznakomitszych polskich wydawnictw, częstwo z głęgoko zakorzenioną tradycją i bogatą historią co czyni ofertę wyjątkową .", :name => "description"}/
+    %meta{:content => "Na łamach tej witryny odnajdziecie Państwo nie tylko opisy nowości wydawniczych czy wyszukacie edycje bibliofilskie. W Centrum Dobrej Ksiązki i Gry mozna równierz odnaleźć doskonałe pomysły na prezenty dla bliskich Wam osób czy kluczowych klientów i pracowników. Pamiętajmy iż upominki, którymi obdarowywujemy innych świadaczą o nas samych. Stąd odpowiednio dobrana książka czy gra planszowa mogą sprawić wiele radości bliskim a wśród obdarowywanych kontrachentów i pracowników utrwali pozytywny wizerunek firmy równierz jako mecenasa kultury. Asortyment który oferujemy Państwu, to książki z najznakomitszych polskich wydawnictw, częstwo z głęgoko zakorzenioną tradycją i bogatą historią co czyni ofertę wyjątkową.", :name => "description"}/
   %body
     %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "1000"}
       %tr
@@ -30,13 +30,18 @@
                     %td.menu--gora
                       = link_to "Współpraca", cooperation_path 
               - if client_signed_in?
-                Witaj, #{current_client.email}
-                = link_to "Wyloguj", destroy_client_session_path, :method => "delete"
+                Jesteś zalogowany jako 
+                - if current_client.resource_type == "User"
+                  #{User.find(current_client.resource_id).name} #{User.find(current_client.resource_id).surname}
+                  = link_to "   Moje konto", user_path(current_client.resource_id)
+                - if current_client.resource_type == "Company"
+                  #{Company.find(current_client.resource_id).name}
+                  = link_to "   Moje konto", company_path(current_client.resource_id)
+                = link_to "   Wyloguj", destroy_client_session_path, :method => "delete"
               - else
                 = link_to "Zaloguj", new_client_session_path
       %tr
         %td.ramka2{:valign => "top"}
-
           %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "970"}
             %tr
               %td{:valign => "top", :width => "300"}

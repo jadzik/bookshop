@@ -20,10 +20,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(@params)
-    if @user.save
+    ActiveRecord::Base.transaction do
+      @user = User.new(@params)
       @client = @user.create_client(@client_attributes.merge(:resource => @user))
-      redirect_to root_path
+    end
+    if @user.save
+      redirect_to user_path(@user)
+      #redirect_to root_path
     else
       redirect_to new_user_path(@client)
     end

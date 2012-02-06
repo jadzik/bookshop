@@ -4,8 +4,8 @@ Bookshop::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   devise_for :clients
-  resources :users, :only => [:new, :create]
-  resources :companies, :only => [:new, :create]
+  resources :users, :only => [:new, :create, :show]
+  resources :companies, :only => [:new, :create, :show]
 
   root :to => 'home#index'
     match '/about_company', :to => 'home#about_company'
