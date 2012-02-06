@@ -1,3 +1,4 @@
+#encoding: utf-8
 class CompaniesController < ApplicationController
   before_filter :prepare_params, :only => :create
   before_filter :my_account, :only => :show 

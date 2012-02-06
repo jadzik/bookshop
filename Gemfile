@@ -4,7 +4,7 @@ gem 'rails', '3.1.1'
 gem 'sqlite3'
 gem 'therubyracer'
 gem 'haml'
-gem 'devise'
+gem 'devise', "~>2.0.0"
 gem 'cancan'
 gem 'i18n'                #spolszczenia
 gem 'activeadmin'

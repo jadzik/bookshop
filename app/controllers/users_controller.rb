@@ -17,11 +17,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    ActiveRecord::Base.transaction do
+    #ActiveRecord::Base.transaction do
       @user = User.new(@params)
-      @client = @user.create_client(@client_attributes.merge(:resource => @user))
-    end
+      
+    #end
     if @user.save
+      @client = @user.create_client(@client_attributes.merge(:resource => @user))
+      Rails.logger.info @client.errors.inspect
+      Rails.logger.info @user.errors.inspect
       redirect_to user_path(@user)
       #redirect_to root_path
     else

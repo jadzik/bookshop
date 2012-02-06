@@ -34,13 +34,12 @@ pl:
       confirmed: 'Konto zostało poprawnie aktywowane. Zostałeś automatycznie zalogowany.'
     registrations:
       signed_up: 'Witaj! Rejestracja zakończyła się sukcesem.'
-      inactive_signed_up: 'Rejestracja zakończyła się pomyślnie. Nie zostałeś jednak zalogowany ponieważ konto jest %{reason}.'
+      signed_up_but_unconfirmed: 'Wiadomość z linkiem do potwierdzenia konta została wysłana na Twój adres e-mail. Aby aktywować konto musisz kliknąć w linka'
+      signed_up_but_inactive: 'Zarejestrowałeś się pomyślnie. Niestety nie możesz się zalogować, ponieważ Twoje konto nie zostało aktywowane'
+      signed_up_but_locked: 'Zarejestrowałeś się pomyślnie. Niestety nie możesz się zalogować, ponieważ Twoje konto zostało zablokowane'
+
       updated: 'Konto zostało pomyślnie zaktualizowane.'
       destroyed: 'Konto zostało usunięte.'
-      reasons:
-        inactive: 'nieaktywne'
-        unconfirmed: 'niepotwierdzone'
-        locked: 'zablokowane'
     unlocks:
       send_instructions: 'Wkrótce otrzymasz e-mail z instrukcją jak odblokować swoje konto.'
       unlocked: 'Twoje konto zostało odblokowane. Jesteś już zalogowany.'
