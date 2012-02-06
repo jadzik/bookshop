@@ -29,16 +29,7 @@
                       = link_to "Kontakt", contact_us_path
                     %td.menu--gora
                       = link_to "Współpraca", cooperation_path 
-              - if client_signed_in?
-                Jesteś zalogowany jako 
-                - if current_client.resource_type == "User"
-                  #{User.find(current_client.resource_id).name} #{User.find(current_client.resource_id).surname}
-                  = link_to "   Moje konto", user_path(current_client.resource_id)
-                - if current_client.resource_type == "Company"
-                  #{Company.find(current_client.resource_id).name}
-                  = link_to "   Moje konto", company_path(current_client.resource_id)
-                = link_to "   Wyloguj", destroy_client_session_path, :method => "delete"
-              - else
+              - if !client_signed_in?
                 = link_to "Zaloguj", new_client_session_path
       %tr
         %td.ramka2{:valign => "top"}
@@ -48,6 +39,8 @@
                 %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "200"}
                   %tr
                     %dt 
+                      - if client_signed_in? 
+                        = render :partial => "shared/logged"
                       %a{:href => "/books"} Książki
                       %dd
                         %a{:href => "/category_books"} Kategorie
@@ -84,7 +77,8 @@
                           %td.tekst-1strona
                             %p{:style => "font-weight: bold; font-size: 16px;"}
                               = flash[:notice]
-                              %p.alert= alert
+                              = flash[:error]
+                              = flash[:alert]
                               =yield 
                   %tr
                     %td.ramka3-3  

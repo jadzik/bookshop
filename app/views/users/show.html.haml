@@ -2,13 +2,24 @@
   %h2.tekst-1strona
     Witaj na karcie "Moje konto"
     %br/
-    Jesteś zalogowany jako #{@user.name} #{@user.surname}
     %br/
-    Twoje zakładki:
+    Jesteś zarejestrowany jako klient indywidualny  #{@user.name} #{@user.surname}
     %br/
-    moje dane
+    Nr telefonu : #{@user.phone}
     %br/
-    Moje zamówienia
+    Adres e-mail : #{@user.client.email}
+    %br
+    -#- if !@user.client.confirmed?
+      -#Twoje konto jest nowe. Oznacza to, że Twój e-mail nie został jeszcze potwierdzony.
+      -#= link_to "Wyślij e-mail z instrukcjami potwierdzenia.", new_confirmation_path(@user.client)
+      %br/
     %br/
-    usuń konto
+    = link_to "Edytuj swoje dane", edit_user_path(@user)
+    %br/
+    %br/
+    = link_to "Zmień hasło", edit_registration_path(@user.client)
+    %br/
+    %br/
+    %br/
+    = link_to "Usuń konto",registration_path(@user.client), :confirm => "Jesteś pewien, że chcesz usunąć konto? To jest nieodwracalne!", :method => :delete
 %p

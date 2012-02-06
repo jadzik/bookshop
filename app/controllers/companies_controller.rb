@@ -1,10 +1,6 @@
 class CompaniesController < ApplicationController
   before_filter :prepare_params, :only => :create
-  
-  def prepare_params
-    @client_attributes = params[:company].delete(:client_attributes)
-    @params = params[:company]
-  end
+  before_filter :my_account, :only => :show 
 
   def index
     @companies = Company.all
@@ -36,4 +32,15 @@ class CompaniesController < ApplicationController
 
   def destroy
   end
+
+  private
+    def prepare_params
+      @client_attributes = params[:company].delete(:client_attributes)
+      @params = params[:company]
+    end
+    def my_account
+      unless (client_signed_in? && current_client.resource_id == params[:id] ) || client_signed_in?
+        redirect_to root_path, :error => "Nie możesz zobaczyć konta innej osoby!"
+      end
+    end
 end

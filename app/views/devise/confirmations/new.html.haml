@@ -1,9 +1,9 @@
-%h2 Resend confirmation instructions
+%h2 Prześlij instrukcje potwierdzenia Twojego adresu e-mail:
 = form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f|
   = devise_error_messages!
   %div
-    = f.label :email
+    = f.label :email, "Adres e-mail"
     %br/
     = f.email_field :email
-  %div= f.submit "Resend confirmation instructions"
+  %div= f.submit "Wyślij"
 = render :partial => "devise/shared/links"

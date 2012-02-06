@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120204145957) do
+ActiveRecord::Schema.define(:version => 20120206130803) do
 
   create_table "accessories", :force => true do |t|
     t.string    "name"
@@ -111,9 +111,8 @@ ActiveRecord::Schema.define(:version => 20120204145957) do
     t.datetime "updated_at"
     t.integer  "resource_id"
     t.string   "resource_type"
-    t.string   "status",                                :default => "new"
-    t.string   "email",                                 :default => "",    :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "",    :null => false
+    t.string   "email",                                 :default => "", :null => false
+    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
