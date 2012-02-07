@@ -1,0 +1,486 @@
+
+--- 
+category_accessories: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 2
+    - "Zak\xC5\x82adki do ksi\xC4\x85\xC5\xBCek"
+    - 2011-12-04 00:19:53.551491+0000
+    - 2011-12-04 00:19:53.551491+0000
+
+--- 
+publisher_books: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Skorpion
+    - 2011-12-03 22:18:52.739471+0000
+    - 2011-12-03 22:18:52.739471+0000
+  - - 2
+    - Ossolineum
+    - 2012-01-22 19:29:38.492771+0000
+    - 2012-01-22 19:29:38.492771+0000
+  - - 3
+    - ARCHI-PLUS
+    - 2012-01-22 19:31:20.791599+0000
+    - 2012-01-22 19:31:20.791599+0000
+  - - 4
+    - PEKW "GAJA"
+    - 2012-01-22 19:33:23.459632+0000
+    - 2012-01-22 19:33:23.459632+0000
+  - - 5
+    - SUPERNOVA
+    - 2012-01-23 16:07:46.244971+0000
+    - 2012-01-23 16:07:46.244971+0000
+  - - 6
+    - Wolters Kluwer Polska
+    - 2012-01-23 16:08:50.849102+0000
+    - 2012-01-23 16:08:50.849102+0000
+  - - 7
+    - Poltext
+    - 2012-01-23 16:11:03.064114+0000
+    - 2012-01-23 16:11:03.064114+0000
+  - - 8
+    - MT Biznes
+    - 2012-01-23 16:11:37.134053+0000
+    - 2012-01-23 16:11:37.134053+0000
+  - - 9
+    - Wydawnictwo UMCS
+    - 2012-01-23 16:12:25.797162+0000
+    - 2012-01-23 16:12:25.797162+0000
+  - - 10
+    - Znak
+    - 2012-01-23 16:18:25.690533+0000
+    - 2012-01-23 16:18:25.690533+0000
+
+--- 
+subcategory_books: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  - category_book_id
+  records: 
+  - - 3
+    - "J\xC4\x99zyk angielski"
+    - 2011-12-03 22:17:41.533575+0000
+    - 2011-12-03 22:17:41.533575+0000
+    - 1
+  - - 4
+    - "J\xC4\x99zyk niemiecki"
+    - 2011-12-03 22:18:10.553334+0000
+    - 2011-12-03 22:18:10.553334+0000
+    - 1
+  - - 6
+    - Kuchnia
+    - 2011-12-18 14:38:18.703173+0000
+    - 2011-12-18 14:38:18.703173+0000
+    - 2
+  - - 7
+    - Zdrowie i uroda
+    - 2011-12-18 14:38:39.495412+0000
+    - 2011-12-18 14:38:39.495412+0000
+    - 2
+  - - 8
+    - Filologia obca
+    - 2011-12-18 14:39:07.794018+0000
+    - 2011-12-18 14:39:07.794018+0000
+    - 3
+  - - 9
+    - Filologia polska
+    - 2011-12-18 14:39:22.248681+0000
+    - 2011-12-18 14:39:22.248681+0000
+    - 3
+  - - 10
+    - Lektury
+    - 2012-01-22 18:15:28.809972+0000
+    - 2012-01-22 18:15:28.809972+0000
+    - 4
+  - - 11
+    - Historia literatury
+    - 2012-01-23 17:49:35.878782+0000
+    - 2012-01-23 17:49:35.878782+0000
+    - 11
+
+--- 
+subcategory_games: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  - category_game_id
+  records: 
+  - - 1
+    - Gry familijne
+    - 2012-01-22 19:08:08.307478+0000
+    - 2012-01-22 19:08:08.307478+0000
+    - 1
+  - - 2
+    - Gry strategiczne
+    - 2012-01-22 19:11:10.552218+0000
+    - 2012-01-22 19:11:10.552218+0000
+    - 1
+  - - 3
+    - Gry ekonomiczne
+    - 2012-01-22 19:13:29.881522+0000
+    - 2012-01-22 19:17:00.198982+0000
+    - 1
+
+--- 
+products: 
+  columns: 
+  - id
+  - created_at
+  - updated_at
+  - resource_id
+  - resource_type
+  records: 
+  - - 1
+    - 2012-01-22 19:41:35.743165+0000
+    - 2012-01-22 19:41:35.743165+0000
+    - 1
+    - Game
+  - - 3
+    - 2012-01-23 18:02:27.138804+0000
+    - 2012-01-23 18:02:27.138804+0000
+    - 1
+    - Book
+
+--- 
+admin_users: 
+  columns: 
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - admin@example.com
+    - $2a$10$bxL/F6kce6IaRL63d3ZXI.G9gge68dV6U8AMrp/FWdvMTVs3Dqep6
+    - 
+    - 
+    - 
+    - 32
+    - 2012-02-02 10:17:25.124523
+    - 2012-01-23 23:12:40.714042
+    - 127.0.0.1
+    - 79.110.200.149
+    - 2011-11-29 11:16:48.078390+0000
+    - 2012-02-02 10:17:25.127493
+
+--- 
+category_books: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - "J\xC4\x99zyki obce"
+    - 2011-12-03 22:17:19.109331+0000
+    - 2011-12-03 22:17:19.109331+0000
+  - - 2
+    - Poradniki
+    - 2011-12-18 14:37:31.612265+0000
+    - 2011-12-18 14:37:31.612265+0000
+  - - 3
+    - Filologia
+    - 2011-12-18 14:38:00.403183+0000
+    - 2011-12-18 14:38:00.403183+0000
+  - - 4
+    - "Ksi\xC4\x85\xC5\xBCki dla dzieci i m\xC5\x82odzie\xC5\xBCy"
+    - 2012-01-22 18:14:03.106966+0000
+    - 2012-01-22 18:14:03.106966+0000
+  - - 5
+    - Historia i archeologia
+    - 2012-01-22 18:17:47.689534+0000
+    - 2012-01-22 18:17:47.689534+0000
+  - - 6
+    - "Budownictwo "
+    - 2012-01-23 16:23:07.580151+0000
+    - 2012-01-23 16:23:07.580151+0000
+  - - 7
+    - Ekonomia i biznes
+    - 2012-01-23 16:23:45.039631+0000
+    - 2012-01-23 16:23:45.039631+0000
+  - - 8
+    - Politologia
+    - 2012-01-23 17:44:40.473138+0000
+    - 2012-01-23 17:44:40.473138+0000
+  - - 9
+    - Prawo
+    - 2012-01-23 17:45:25.714304+0000
+    - 2012-01-23 17:45:25.714304+0000
+  - - 10
+    - Psychologia
+    - 2012-01-23 17:46:24.379536+0000
+    - 2012-01-23 17:46:24.379536+0000
+  - - 11
+    - Literatura
+    - 2012-01-23 17:47:32.564619+0000
+    - 2012-01-23 17:47:32.564619+0000
+
+--- 
+category_games: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Gry planszowe
+    - 2012-01-22 18:49:39.305848+0000
+    - 2012-01-22 18:49:39.305848+0000
+  - - 2
+    - Gry karciane
+    - 2012-01-22 18:50:42.965851+0000
+    - 2012-01-22 18:51:57.790185+0000
+  - - 3
+    - Gry RPG
+    - 2012-01-22 18:52:46.989979+0000
+    - 2012-01-22 18:52:46.989979+0000
+  - - 4
+    - Gry dla dzieci
+    - 2012-01-22 18:53:53.277316+0000
+    - 2012-01-22 18:53:53.277316+0000
+  - - 6
+    - Akcesoria
+    - 2012-01-22 19:02:58.034040+0000
+    - 2012-01-22 19:07:15.496882+0000
+
+--- 
+pictures: 
+  columns: 
+  - id
+  - created_at
+  - updated_at
+  - photo
+  - photo_file_name
+  - photo_content_type
+  - photo_file_size
+  - product_id
+  records: 
+  - - 1
+    - 2011-12-20 14:18:13.472847+0000
+    - 2011-12-20 14:31:11.008520+0000
+    - 
+    - book1.jpg
+    - image/jpeg
+    - 4506
+    - 3
+  - - 2
+    - 2011-12-20 14:31:54.287897+0000
+    - 2011-12-20 14:31:54.287897+0000
+    - 
+    - book2.jpg
+    - image/jpeg
+    - 6725
+    - 6
+  - - 3
+    - 2011-12-20 14:34:11.340037+0000
+    - 2012-01-14 18:28:49.509159+0000
+    - 
+    - book4.jpg
+    - image/jpeg
+    - 6672
+    - 22
+  - - 4
+    - 2011-12-20 14:34:37.846583+0000
+    - 2012-01-14 18:15:04.000277+0000
+    - 
+    - gra1.jpg
+    - image/jpeg
+    - 35611
+    - 23
+
+--- 
+books: 
+  columns: 
+  - id
+  - title
+  - created_at
+  - updated_at
+  - translation
+  - year_of_publishing
+  - number_of_pages
+  - author
+  - price
+  - description
+  - language
+  - subcategory_book_id
+  - size
+  - publisher_book_id
+  - category_book_id
+  - cover
+  - isbn
+  records: 
+  - - 1
+    - Historia literatury niemieckiej
+    - 2012-01-23 18:02:27.032436+0000
+    - 2012-02-02 10:35:05.038802
+    - ""
+    - 2011
+    - 376
+    - "Miros\xC5\x82awa Czarnecka"
+    - 33.0
+    - "Zarys literatury niemieckiej, uwzgl\xC4\x99dniaj\xC4\x85cy wyniki bada\xC5\x84 autorki (m.in. literatura kobiet, Gerarda i Carla Hauptmana, barok \xC5\x9Bl\xC4\x85ski). Ksi\xC4\x85\xC5\xBCka zosta\xC5\x82a uzupe\xC5\x82niona o literatur\xC4\x99 migracyjn\xC4\x85 w Niemczech. Praca zawiera wiele cennych wiadomo\xC5\x9Bci o literaturze ostatnich 50 lat, a zw\xC5\x82aszcza lat 1989-2009."
+    - polski
+    - 11
+    - 15 x 21
+    - 2
+    - 11
+    - twarda
+    - "9788304050501"
+
+--- 
+publisher_games: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - IPN
+    - 2012-01-22 19:35:50.183136+0000
+    - 2012-01-22 19:35:50.183136+0000
+  - - 2
+    - Bard
+    - 2012-01-22 19:36:12.093326+0000
+    - 2012-01-22 19:36:12.093326+0000
+
+--- 
+games: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  - price
+  - number_of_players_from
+  - number_of_players_to
+  - age_of_players_from
+  - game_time_from
+  - game_time_to
+  - description
+  - language
+  - subcategory_game_id
+  - number_of_players
+  - category_game_id
+  - instruction
+  - year_of_publication
+  - game_type
+  - game_time
+  - publisher_game_id
+  records: 
+  - - 1
+    - Kolejka
+    - 2012-01-22 19:41:35.702719+0000
+    - 2012-02-02 10:44:44.921644
+    - 80.0
+    - 4
+    - 5
+    - 10
+    - 20
+    - 40
+    - "Gra planszowa \xE2\x80\x9EKolejka\xE2\x80\x9D opowiada o realiach \xC5\xBCycia codziennego w latach schy\xC5\x82kowego PRL. Zadanie graczy (od 2 do 5) wydaje si\xC4\x99 proste. Musz\xC4\x85 wys\xC5\x82a\xC4\x87 swoj\xC4\x85, z\xC5\x82o\xC5\xBCona z pi\xC4\x99ciu pionk\xC3\xB3w, rodzin\xC4\x99 do sklep\xC3\xB3w na planszy i kupi\xC4\x87 wszystkie towary z wylosowanej listy zakup\xC3\xB3w. Problem polega jednak na tym, \xC5\xBCe p\xC3\xB3\xC5\x82ki w pi\xC4\x99ciu osiedlowych sklepach s\xC4\x85 puste\xE2\x80\xA6\r\n\
+      \r\n\
+      Gracze ustawiaj\xC4\x85 swoje pionki w kolejkach, nie wiedz\xC4\x85c z pocz\xC4\x85tku do kt\xC3\xB3rego sklepu zostanie dostarczony towar. Napi\xC4\x99cie ro\xC5\x9Bnie, gdy ods\xC5\x82ania si\xC4\x99 karty dostawy towaru i okazuje si\xC4\x99, \xC5\xBCe kart towaru starczy tylko dla kilku szcz\xC4\x99\xC5\x9Bliwc\xC3\xB3w, stoj\xC4\x85cych najbli\xC5\xBCej drzwi do sklepu. Kolejka zaczyna napiera\xC4\x87 na drzwi, bo ka\xC5\xBCdy chce by\xC4\x87 pierwszy. Do przepychania si\xC4\x99 w kolejce gracze u\xC5\xBCywaj\xC4\x85 zagrywanych z r\xC4\x99ki kart kolejki, takich jak: \xE2\x80\x9EMatka z dzieckiem na r\xC4\x99ku\xE2\x80\x9D, \xE2\x80\x9EPan tu nie sta\xC5\x82\xE2\x80\x9D czy \xE2\x80\x9ETowar spod lady\xE2\x80\x9D. Musz\xC4\x85 jednak uwa\xC5\xBCa\xC4\x87 na \xE2\x80\x9ERemanent\xE2\x80\x9D, \xE2\x80\x9EPomy\xC5\x82k\xC4\x99 w dostawie\xE2\x80\x9D oraz na stoj\xC4\x85ce w ka\xC5\xBCdej kolejce czarne pionki \xE2\x80\x93 spekulant\xC3\xB3w. Z zakupami wr\xC3\xB3c\xC4\x85 do mieszkania tylko ci, kt\xC3\xB3rzy najsprawniej wykorzystali trzymane w r\xC4\x99ku karty kolejki. \r\n\
+      \r\n\
+      Na kartach towaru przedstawiono zdj\xC4\x99cia sze\xC5\x9B\xC4\x87dziesi\xC4\x99ciu oryginalnych przedmiot\xC3\xB3w z czas\xC3\xB3w PRL. W sklepach znajdziemy mi\xC4\x99dzy innymi buty \xE2\x80\x9ERelaks\xE2\x80\x9D, wod\xC4\x99 toaletow\xC4\x85 \xE2\x80\x9EPrzemys\xC5\x82awk\xC4\x99\xE2\x80\x9D, herbat\xC4\x99 \xE2\x80\x9EPopularn\xC4\x85\xE2\x80\x9D oraz wiele innych trudno dost\xC4\x99pnych d\xC3\xB3br. Na osiedlu jest te\xC5\xBC bazar, gdzie mo\xC5\xBCna kupi\xC4\x87 wszystko, ale trzeba s\xC5\x82ono zap\xC5\x82aci\xC4\x87. Chyba \xC5\xBCe uda si\xC4\x99 dogada\xC4\x87 z przekupk\xC4\x85... W tej historycznej grze planszowej trzeba nie\xC5\xBAle kombinowa\xC4\x87, \xC5\xBCeby zdoby\xC4\x87 upragniony towar.\r\n\
+      \r\n\
+      Czy masz odwag\xC4\x99 zmierzy\xC4\x87 si\xC4\x99 z codzienno\xC5\x9Bci\xC4\x85 lat 80?\r\n\
+      \r\n\
+      Zawarto\xC5\x9B\xC4\x87 pude\xC5\x82ka:\r\n\
+      dwie tekturowe plansze do gry \r\n\
+      32 drewniane pionki w 8 kolorach \r\n\
+      50 kart kolejki w 5 kolorach \r\n\
+      5 kart listy zakup\xC3\xB3w \r\n\
+      60 kart towar\xC3\xB3w w 5 kolorach \r\n\
+      15 kart dostawy towaru w 5 kolorach \r\n\
+      5 kart pomocy graczy w 5 kolorach \r\n\
+      broszur\xC4\x99 z instrukcj\xC4\x85 i opracowaniem historycznym \r\n\
+      p\xC5\x82yt\xC4\x99 z dwoma filmami dokumentalnymi o rzeczywisto\xC5\x9Bci kolejkowej "
+    - Polski
+    - 3
+    - 
+    - 1
+    - "Instrukcjia w j\xC4\x99zyku polskim"
+    - 2011
+    - Gra edukacyjna
+    - 
+    - 1
+
+--- 
+clients: 
+  columns: 
+  - id
+  - created_at
+  - updated_at
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - confirmation_token
+  - confirmed_at
+  - confirmation_sent_at
+  - unconfirmed_email
+  - name
+  - fax_phone
+  - stationary_phone
+  - type
+  - nip
+  - mobile_phone
+  - contact_comments
+  records: 
+  - - 6
+    - 2012-02-06 22:48:17.258485
+    - 2012-02-07 12:36:01.101113
+    - jjadzikk@gmail.com
+    - $2a$10$zbnTZ7fc6CYchsG8o3mP3e2XqgImRdYL0azJNK..cus4P13S8cYtm
+    - 
+    - 
+    - 
+    - 4
+    - 2012-02-07 12:26:56.133709
+    - 2012-02-07 12:23:06.868718
+    - 127.0.0.1
+    - 127.0.0.1
+    - xze34pbxtkNCpFHgs5FR
+    - 2012-02-07 12:28:46.188557
+    - 2012-02-07 12:36:01.110406
+    - jadwiga.gruczka@gmail.com
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
