@@ -5,8 +5,10 @@ Moje zamówienia
 %br/
 Moje adresy
 %br/
-Wiadomości
+Moje wiadomości
 %br/
-= link_to "   Wyloguj", destroy_client_session_path, :method => "delete"
+- if current_client.type == "szkoła" || current_client.type == "biblioteka"
+  Moi płatnicy
+= link_to "   Wyloguj mnie", destroy_client_session_path, :method => "delete"
 %br/
 %br/

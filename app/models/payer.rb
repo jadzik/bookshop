@@ -5,7 +5,7 @@ class Payer < ActiveRecord::Base
 
   private
     def library_or_school_validation
-      unless  client.type(@client_id) == "Biblioteka" || client.type(@client_id) == "szkoła"
+      unless  client.type(@client_id) == "biblioteka" || client.type(@client_id) == "szkoła"
         errors.add( "Twoja firma nie jest szkołą ani biblioteką, więc nie możesz dodać płatników.")
       end
     end

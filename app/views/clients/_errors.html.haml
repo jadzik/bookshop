@@ -1,7 +1,7 @@
-- if @user.errors.any?
+- if @client.errors.any?
   %div.alert-message.block-message.error
     %b Wystąpiły następujące błędy:
-    - @user.errors.each do |attr, msg|
+    - @client.errors.each do |attr, msg|
       %li
         = Pole
         %strong

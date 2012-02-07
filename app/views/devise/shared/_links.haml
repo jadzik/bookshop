@@ -1,15 +1,12 @@
 - if controller_name != 'sessions'
   = link_to "Zaloguj się", new_session_path(resource_name)
   %br/
-- if controller_name != 'registrations'
-  = link_to "Zarejestruj się jako klient indywidualny", new_user_path(resource_name)
-  %br/
-  = link_to "Zarejestruj się jako firma", new_company_path(resource_name)
-  %br/
 - if controller_name != 'passwords'
   = link_to "Zapomniałeś hasła?", new_password_path(resource_name)
   %br/
 - if controller_name != 'confirmations'
   = link_to "Nie otrzymałeś instrukcji potwierdzenia konta?", new_confirmation_path(resource_name)
   %br/
-
+- if controller_name != 'registrations'
+  = link_to "Zarejestruj się", new_client_path(resource_name)
+  %br/

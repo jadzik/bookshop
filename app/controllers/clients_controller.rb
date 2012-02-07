@@ -1,3 +1,4 @@
+#encoding: utf-8
 class ClientsController < ApplicationController
   before_filter :my_account, :only => :show 
  def index
@@ -18,8 +19,7 @@ class ClientsController < ApplicationController
       Rails.logger.info @client.errors.inspect
       redirect_to root_path
     else
-      render :action => "new"
-      #new_client_path(@client)
+      new_client_path(@client)
     end
   end
 
