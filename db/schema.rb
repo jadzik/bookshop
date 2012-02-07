@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120206182328) do
+ActiveRecord::Schema.define(:version => 20120207132009) do
 
   create_table "accessories", :force => true do |t|
     t.string    "name"
@@ -109,8 +109,6 @@ ActiveRecord::Schema.define(:version => 20120206182328) do
   create_table "clients", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "resource_id"
-    t.string   "resource_type"
     t.string   "email",                                 :default => "", :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
     t.string   "reset_password_token"
@@ -125,23 +123,18 @@ ActiveRecord::Schema.define(:version => 20120206182328) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.string   "name"
+    t.string   "fax_phone"
+    t.string   "stationary_phone"
+    t.string   "type"
+    t.string   "nip"
+    t.string   "mobile_phone"
+    t.text     "contact_comments"
   end
 
   add_index "clients", ["confirmation_token"], :name => "index_clients_on_confirmation_token", :unique => true
   add_index "clients", ["email"], :name => "index_clients_on_email", :unique => true
   add_index "clients", ["reset_password_token"], :name => "index_clients_on_reset_password_token", :unique => true
-
-  create_table "companies", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "name"
-    t.string   "fax_phone"
-    t.string   "stationary_phone"
-    t.boolean  "library_or_school"
-    t.string   "nip"
-    t.string   "mobile_phone"
-    t.text     "contact_comments"
-  end
 
   create_table "contacts", :force => true do |t|
     t.timestamp "created_at"
@@ -233,14 +226,6 @@ ActiveRecord::Schema.define(:version => 20120206182328) do
     t.timestamp "created_at"
     t.timestamp "updated_at"
     t.integer   "category_game_id"
-  end
-
-  create_table "users", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "name"
-    t.string   "surname"
-    t.string   "phone"
   end
 
 end

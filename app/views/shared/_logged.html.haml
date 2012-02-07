@@ -1,12 +1,5 @@
-Jesteś zalogowany jako 
-- if current_client.resource_type == "User"
-  #{User.find(current_client.resource_id).name} #{User.find(current_client.resource_id).surname}
-  %br/
-  = link_to "Moje konto", user_path(current_client.resource_id)
-- if current_client.resource_type == "Company"
-  #{Company.find(current_client.resource_id).name}
-  %br/
-  = link_to "Moje konto", company_path(current_client.resource_id)
+Jesteś zalogowany jako #{current_client.name} 
+= link_to "Moje konto", client_path(current_client.id)
 %br/
 Moje zamówienia
 %br/

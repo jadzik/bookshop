@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-
+  before_filter :my_account, :only => :show 
  def index
     @clients = Client.all
   end
@@ -15,9 +15,11 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(params[:client])
     if @client.save
-      redirect_to client_path(@client)
+      Rails.logger.info @client.errors.inspect
+      redirect_to root_path
     else
       render :action => "new"
+      #new_client_path(@client)
     end
   end
 
@@ -26,4 +28,11 @@ class ClientsController < ApplicationController
 
   def destroy
   end
+
+  private
+    def my_account
+      unless (client_signed_in? && current_client.id == params[:id] ) || client_signed_in?
+        redirect_to root_path, :error => "Nie możesz zobaczyć konta innej osoby!"
+      end
+    end
 end

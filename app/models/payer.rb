@@ -1,11 +1,11 @@
 #encoding: utf-8
 class Payer < ActiveRecord::Base
-  belongs_to :company
-  has_many :addresses, :as => :resource
+  belongs_to :client
+  has_one :addresses, :as => :resource
 
   private
     def library_or_school_validation
-      unless  company.library_or_school(@company_id)
+      unless  client.type(@company_id) == "Biblioteka" || client.type(@company_id) == "Szkoła"
         errors.add( "Twoja firma nie jest szkołą ani biblioteką, więc nie możesz dodać płatników.")
       end
     end

@@ -37,7 +37,8 @@ pl:
       signed_up_but_unconfirmed: 'Wiadomość z linkiem do potwierdzenia konta została wysłana na Twój adres e-mail. Aby aktywować konto musisz kliknąć w linka'
       signed_up_but_inactive: 'Zarejestrowałeś się pomyślnie. Niestety nie możesz się zalogować, ponieważ Twoje konto nie zostało aktywowane'
       signed_up_but_locked: 'Zarejestrowałeś się pomyślnie. Niestety nie możesz się zalogować, ponieważ Twoje konto zostało zablokowane'
-
+      client:
+        update_needs_confirmation: "Zmiana adresu e-mail wymaga potwierdzeniam sprawdź swoją pocztę."
       updated: 'Konto zostało pomyślnie zaktualizowane.'
       destroyed: 'Konto zostało usunięte.'
     unlocks:

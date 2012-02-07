@@ -13,7 +13,7 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = Address.new(@address_params.merge(:resource => current))
+    @address = Address.new(@address_params.merge(:resource => current_client))
     if @address.save
       redirect_to address_path(@address)
     else
