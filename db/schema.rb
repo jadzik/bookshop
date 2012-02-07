@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120207203514) do
+ActiveRecord::Schema.define(:version => 20120207232134) do
 
   create_table "accessories", :force => true do |t|
     t.string    "name"
@@ -126,10 +126,10 @@ ActiveRecord::Schema.define(:version => 20120207203514) do
     t.string   "name"
     t.string   "fax_phone"
     t.string   "stationary_phone"
-    t.string   "type"
     t.string   "nip"
     t.string   "mobile_phone"
     t.text     "contact_comments"
+    t.string   "client_type"
   end
 
   add_index "clients", ["confirmation_token"], :name => "index_clients_on_confirmation_token", :unique => true

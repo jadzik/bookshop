@@ -3,28 +3,41 @@
     Witaj na karcie "Moje konto"
     %br/
     %br/
-    Jesteś zarejestrowany jako klient indywidualny  #{@user.name} #{@user.surname}
+    Jesteś zarejestrowany jako 
+    -if (@client.client_type == "indywidualny")
+      klient
+    #{@client.client_type} #{@client.name} 
     %br/
-    Nr telefonu : #{@user.phone}
+    Adres e-mail : #{@client.email}
     %br/
-    Adres e-mail : #{@user.client.email}
+    -unless (@client.stationary_phone.blank?)
+      Numer stacjonarny #{@client.stationary_phone}
+      %br/
+    -unless (@client.mobile_phone.blank?)
+      Numer komórkowy #{@client.mobile_phone}
+      %br/
+    -unless (@client.client_type == "indywidualny")
+      -unless (@client.fax_phone.blank?)
+        Fax #{@client.fax_phone}
+        %br/
+      Numer NIP #{@client.nip}
+      %br/
     %br/
-    %br/
-    - if !@user.client.confirmed?
+    - if !@client.confirmed?
       Twoje konto jest nowe. Oznacza to, że Twój e-mail nie został jeszcze potwierdzony.
       %br/
-      = link_to "Wyślij e-mail z instrukcjami potwierdzenia.", new_client_confirmation_path(@user.client)
+      = link_to "Wyślij e-mail z instrukcjami potwierdzenia.", new_client_confirmation_path(@client)
       %br/
     %br/
-    = link_to "Edytuj swoje dane", edit_user_path(@user)
+    = link_to "Edytuj swoje dane", edit_client_path(@client)
     %br/
     %br/
-    = link_to "Zmień adres e-mail", edit_registration_path(@user.client)
+    = link_to "Zmień adres e-mail", edit_registration_path(@client)
     %br/
     %br/
-    = link_to "Zmień hasło", edit_client_password_path(@user.client)
+    = link_to "Zmień hasło", edit_client_password_path(@client)
     %br/
     %br/
     %br/
-    = link_to "Usuń konto",registration_path(@user.client), :confirm => "Jesteś pewien, że chcesz usunąć konto? To jest nieodwracalne!", :method => :delete
+    = link_to "Usuń konto",registration_path(@client), :confirm => "Jesteś pewien, że chcesz usunąć konto? To jest nieodwracalne!", :method => :delete
 %p
