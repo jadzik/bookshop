@@ -6,11 +6,11 @@ Bookshop::Application.routes.draw do
   devise_for :clients
   resources :users, :only => [:new, :create, :show, :edit]
   resources :companies, :only => [:new, :create, :show, :edit]
+  resources :addresses, :only => [:new, :create, :index, :edit]
 
   root :to => 'home#index'
     match '/about_company', :to => 'home#about_company'
     match '/contact_us', :to => 'home#contact_us'
-    match '/cooperation', :to => 'home#cooperation'
     match '/rules', :to => 'home#rules'
 #  match "/contact_us", :to => "contacts#new"
 

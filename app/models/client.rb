@@ -1,9 +1,6 @@
 #encoding: utf-8
 class Client < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :encryptable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, 
-         :recoverable, :rememberable, :trackable, :validatable, :confirmable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :confirmable
   attr_accessible :email, :password, :password_confirmation, :remember_me, :resource
   :prerequisite_attributes
   belongs_to :resource, :polymorphic => true

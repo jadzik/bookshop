@@ -11,5 +11,5 @@ class Address < ActiveRecord::Base
             :message => "numer mieszkania musi być liczbą większą od 1, może zawierać małe litery na końcu"},
             :allow_blank => true
   validates :zip_code, :format =>{:with => /^[0-9]{2}\-[0-9]{3}$/}
-  validates_inclusion_of :address_type, :in => %w(delivery payer permanent)
+  validates_inclusion_of :address_type, :in => %w(stały wysyłki płatnika)
 end
