@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120207132009) do
+ActiveRecord::Schema.define(:version => 20120207203514) do
 
   create_table "accessories", :force => true do |t|
     t.string    "name"
@@ -180,9 +180,9 @@ ActiveRecord::Schema.define(:version => 20120207132009) do
     t.datetime "updated_at"
     t.string   "name"
     t.string   "phone"
-    t.integer  "company_id"
     t.string   "nip"
     t.text     "contact_comments"
+    t.integer  "client_id"
   end
 
   create_table "pictures", :force => true do |t|
