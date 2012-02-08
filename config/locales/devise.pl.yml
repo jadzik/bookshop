@@ -38,7 +38,7 @@ pl:
       signed_up_but_inactive: 'Zarejestrowałeś się pomyślnie. Niestety nie możesz się zalogować, ponieważ Twoje konto nie zostało aktywowane'
       signed_up_but_locked: 'Zarejestrowałeś się pomyślnie. Niestety nie możesz się zalogować, ponieważ Twoje konto zostało zablokowane'
       client:
-        update_needs_confirmation: "Zmiana adresu e-mail wymaga potwierdzeniam sprawdź swoją pocztę."
+        update_needs_confirmation: "Zmiana adresu e-mail wymaga potwierdzenia sprawdź swoją pocztę."
       updated: 'Konto zostało pomyślnie zaktualizowane.'
       destroyed: 'Konto zostało usunięte.'
     unlocks:

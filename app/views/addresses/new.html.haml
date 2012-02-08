@@ -15,9 +15,5 @@
   .clearfix
     = f.label :city, "miasto"
     .input= f.text_field :city
-  .clearfix
-    = f.label :address_type, "Typ adresu"
-    .input= f.select_field :address_type :collection => ["stały", "wysyłki"]
-    -#= render :partial => "form"
   .clearfix.actions
     = f.submit "Zapisz adres", :class => "btn primary"

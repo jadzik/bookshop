@@ -1,10 +1,10 @@
 class AddressesController < ApplicationController
-  before_filter :prepare_params, :only => :create
   def index
-    @addresses = Address.all
+    @addresses = current_client.addresses if client_signed_in?
   end
 
   def show
+
     @address = Address.find(params[:id])
   end
 
@@ -13,7 +13,7 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = Address.new(@address_params.merge(:resource => current_client))
+    @address = Address.new(params[:address])
     if @address.save
       redirect_to address_path(@address)
     else
@@ -26,8 +26,5 @@ class AddressesController < ApplicationController
 
   def destroy
   end
-  private
-    def prepare_params
-      @address_params = params[:address]
-    end
+
 end

@@ -4,7 +4,7 @@ Jesteś zalogowany jako #{current_client.name}
 %br/
 Moje zamówienia
 %br/
-Moje adresy
+= link_to "Moje adresy", addresses_path(current_client.id)
 %br/
 Moje wiadomości
 %br/

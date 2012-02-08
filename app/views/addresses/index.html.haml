@@ -1,11 +1,9 @@
-- if @user.errors.any?
-  %div.alert-message.block-message.error
-    %b Wystąpiły następujące błędy:
-    - @user.errors.each do |attr, msg|
-      %li
-        = Pole
-        %strong
-          = t(attr)
-        = msg
-%br/
-
+%h3 
+Twoje adresy:
+- for address in @addresses
+  ul. #{address.street} #{address.house_number}
+  - if !address.apartment_numer.blank? 
+    m. #{address.apartment_number}
+  %br/
+  #{address.zip_code} #{address.city}
+  %br/

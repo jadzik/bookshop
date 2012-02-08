@@ -1,77 +1,76 @@
 !!!5
--# plik na razie skopiowany z aktualnej strony mojej siostry
+-# layout nie jest mój, został skopiowany i przerobiony z aktualnej strony mojej siostry
 %html
   %head
     %title CDKiG
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
-    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
     %title Centrum Dobrej Książki i Gry
-    %meta{:content => "kodeks, Centrum dobrej książki i gry, ustawa, Beck, MT Biznes, Poltext, Ossolineum, Biblioteka Narodowa, Dynastie, Arkady, wydawnictwo Skorpion, Zawiśliński Stanisław, lektury, ważne żeby iść, głośne rzymskie procesy karne, PAX, IW PAX, historia filozofii, arcydzieła malarstwa, sztuka, album, albumy, książki na telefon, księgarnia wysyłkowa, książki na zamówienie, wydawnictwa nisko nakładowe, ekskluzywne wydawnictwa, wydanie albumowe, słownik, scenariusz filmu, scenariusze, pedagogika, psychologia, ekonomia, filologia, literatura obcojęzyczna, biografie, Krzysztof Kieślowski, PWN, GWP, Gdańskie Wydawnictwo Pedagogiczne, Carcassonne, Rattle Snake, Albi, gry planszowe, gry strategiczne, gry edukacyjne, gry do świetlic, literatura biznesowa, wyposażenie świetlic, wyposażenie bibliotek ", :name => "keywords"}/
-    %meta{:content => "Na łamach tej witryny odnajdziecie Państwo nie tylko opisy nowości wydawniczych czy wyszukacie edycje bibliofilskie. W Centrum Dobrej Ksiązki i Gry mozna równierz odnaleźć doskonałe pomysły na prezenty dla bliskich Wam osób czy kluczowych klientów i pracowników. Pamiętajmy iż upominki, którymi obdarowywujemy innych świadaczą o nas samych. Stąd odpowiednio dobrana książka czy gra planszowa mogą sprawić wiele radości bliskim a wśród obdarowywanych kontrachentów i pracowników utrwali pozytywny wizerunek firmy równierz jako mecenasa kultury. Asortyment który oferujemy Państwu, to książki z najznakomitszych polskich wydawnictw, częstwo z głęgoko zakorzenioną tradycją i bogatą historią co czyni ofertę wyjątkową.", :name => "description"}/
+    %meta{:content => "kodeks, Centrum dobrej książki i gry, ustawa, Beck, MT Biznes, Poltext, Ossolineum, Biblioteka Narodowa, Dynastie, Arkady, wydawnictwo Skorpion, Zawiśliński Stanisław, lektury, ważne żeby iść, głośne rzymskie procesy karne, PAX, IW PAX, historia filozofii, arcydzieła malarstwa, sztuka, album, albumy, książki na telefon, księgarnia wysyłkowa, książki na zamówienie, wydawnictwa nisko nakładowe, ekskluzywne wydawnictwa, wydanie albumowe, słownik, scenariusz filmu, scenariusze, pedagogika, psychologia, ekonomia, filologia, literatura obcojęzyczna, biografie, Krzysztof Kieślowski, PWN, GWP, Gdańskie Wydawnictwo Pedagogiczne, Carcassonne, Rattle Snake, Albi, gry planszowe, gry strategiczne, gry edukacyjne, gry do świetlic, literatura biznesowa, wyposażenie świetlic, wyposażenie bibliotek ", :name => "keywords"}
+    %meta{:content => "Na łamach tej witryny odnajdziecie Państwo nie tylko opisy nowości wydawniczych czy wyszukacie edycje bibliofilskie. W Centrum Dobrej Ksiązki i Gry mozna równierz odnaleźć doskonałe pomysły na prezenty dla bliskich Wam osób czy kluczowych klientów i pracowników. Pamiętajmy iż upominki, którymi obdarowywujemy innych świadaczą o nas samych. Stąd odpowiednio dobrana książka czy gra planszowa mogą sprawić wiele radości bliskim a wśród obdarowywanych kontrachentów i pracowników utrwali pozytywny wizerunek firmy równierz jako mecenasa kultury. Asortyment który oferujemy Państwu, to książki z najznakomitszych polskich wydawnictw, częstwo z głęgoko zakorzenioną tradycją i bogatą historią co czyni ofertę wyjątkową.", :name => "description"}
   %body
     %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "1000"}
       %tr
-        %td.ramka1
-          %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "980"}
-            %tr
-              %td.baner1  
-            %tr
-              %td.baner2{:valign => "top"}
-                %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "800"}
-                  %tr
-                    %td.menu--gora
-                      = link_to "Strona główna", root_path
-                    %td.menu--gora
-                      = link_to "O firmie", about_company_path
-                    %td.menu--gora
-                      = link_to "Kontakt", contact_us_path
-                    %td.menu--gora
-                      = link_to "Regulamin", rules_path 
-              - if !client_signed_in?
-                = link_to "Zaloguj", new_client_session_path
+        %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "980"}
+          %tr
+            %td.baner1  
+          %tr
+            %td.baner2{:valign => "top"}
+              %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "800"}
+                %tr
+                  %td.menu--gora
+                    = link_to "Strona główna", root_path
+                  %td.menu--gora
+                    = link_to "O firmie", about_company_path
+                  %td.menu--gora
+                    = link_to "Kontakt", contact_us_path
+                  %td.menu--gora
+                    = link_to "Regulamin", rules_path 
       %tr
-        %td.ramka2{:valign => "top"}
-          %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "970"}
-            %tr
-              %td{:valign => "top", :width => "300"}
-                %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "200"}
-                  %tr
-                    %dt 
-                      - if client_signed_in? 
-                        = render :partial => "shared/logged"
-                      %a{:href => "/books"} Książki
+        %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "970"}
+          %tr
+            %td{:valign => "top", :width => "300"}
+              %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "200"}
+                %tr
+                  %td.tekst-1strona
+                    - if client_signed_in? 
+                      = render :partial => "shared/logged"
+                    - if !client_signed_in?
+                      = link_to "Zaloguj", new_client_session_path 
+                      %br/
+                    %a{:href => "/books"} Książki
+                    %dd
+                      %a{:href => "/category_books"} Kategorie
                       %dd
-                        %a{:href => "/category_books"} Kategorie
-                        %dd
-                          - for category_book in CategoryBook.all
-                            %h2.name
-                              = link_to "#{category_book.name} (#{category_book.books.length})", category_book_path(category_book)
-                          %br
-                        %a{:href => "/publisher_books"} Wydawnictwa
-                        %dd
-                          - for publisher_book in PublisherBook.all
-                            %h2.name
-                              = link_to "#{publisher_book.name} (#{publisher_book.books.length})", publisher_book_path(publisher_book)
-                      %dt
-                        %a{:href => "/games"} Gry
-                      %dd                       
-                        - for category_game in CategoryGame.all
-                          %h2.name 
-                            = link_to "#{category_game.name} (#{category_game.games.length})", category_game_path(category_game)
-                      %dt
-                        %a{:href => "/accessories"} Akcesoria
+                        - for category_book in CategoryBook.all
+                          = link_to "#{category_book.name} (#{category_book.books.length})", category_book_path(category_book)
+                          %br/
+                        %br/
+                      %a{:href => "/publisher_books"} Wydawnictwa
                       %dd
-                        - for category_accessory in CategoryAccessory.all
-                          %h2.name
-                            = link_to "#{category_accessory.name} (#{category_accessory.accessories.length})", category_accessory_path(category_accessory)
+                        - for publisher_book in PublisherBook.all
+                          = link_to "#{publisher_book.name} (#{publisher_book.books.length})", publisher_book_path(publisher_book)
+                          %br/
+                    %dt
+                      %a{:href => "/games"} Gry
+                    %dd                       
+                      - for  category_game in CategoryGame.all
+                        = link_to "#{category_game.name} (#{category_game.games.length})", category_game_path(category_game)
+                        %br/
+                    %dt
+                      %a{:href => "/accessories"} Akcesoria
+                    %dd
+                      - for category_accessory in CategoryAccessory.all
+                        = link_to "#{category_accessory.name} (#{category_accessory.accessories.length})", category_accessory_path(category_accessory)
+                        %br/
               %td{:valign => "top", :width => "650"}
                 %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "750"}
                   %tr
-                    %td.ramka3-1  
+                    %td
                   %tr
-                    %td.ramka3-2
+                    %td
                       %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "700"}
                         %tr
                           %td.tekst-1strona
@@ -81,8 +80,8 @@
                               = flash[:alert]
                               =yield 
                   %tr
-                    %td.ramka3-3  
+                    %td
       %tr
-        %td.ramka3  
+        %td
     %p  
 
