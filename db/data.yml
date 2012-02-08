@@ -455,32 +455,32 @@ clients:
   - name
   - fax_phone
   - stationary_phone
-  - type
   - nip
   - mobile_phone
   - contact_comments
+  - client_type
   records: 
-  - - 6
-    - 2012-02-06 22:48:17.258485
-    - 2012-02-07 12:36:01.101113
+  - - 8
+    - 2012-02-07 23:45:18.206891
+    - 2012-02-07 23:45:21.257956
     - jjadzikk@gmail.com
-    - $2a$10$zbnTZ7fc6CYchsG8o3mP3e2XqgImRdYL0azJNK..cus4P13S8cYtm
+    - $2a$10$ZAzlcajvOz0sBgwJpupiK.OLcx3/VuDAw4Fg3uVTdOh60rffIvI.i
     - 
     - 
     - 
-    - 4
-    - 2012-02-07 12:26:56.133709
-    - 2012-02-07 12:23:06.868718
+    - 1
+    - 2012-02-07 23:45:21.255226
+    - 2012-02-07 23:45:21.255226
     - 127.0.0.1
     - 127.0.0.1
-    - xze34pbxtkNCpFHgs5FR
-    - 2012-02-07 12:28:46.188557
-    - 2012-02-07 12:36:01.110406
-    - jadwiga.gruczka@gmail.com
+    - CytvDAp52vWa89pMPPpw
     - 
+    - 2012-02-07 23:45:18.205268
     - 
+    - jadzia g
+    - ""
+    - ""
+    - ""
+    - "123456789"
     - 
-    - 
-    - 
-    - 
-    - 
+    - indywidualny
