@@ -5,7 +5,7 @@ Bookshop::Application.routes.draw do
 
   devise_for :clients
   resources :clients, :only => [:new, :create, :show, :edit]
-  resources :addresses, :only => [:new, :create, :index, :edit]
+  resources :addresses, :except => [:show]
   resources :payers
 
   root :to => 'home#index'

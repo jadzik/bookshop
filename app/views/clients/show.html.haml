@@ -27,7 +27,9 @@
       Twoje konto jest nowe. Oznacza to, że Twój e-mail nie został jeszcze potwierdzony.
       %br/
       = link_to "Wyślij e-mail z instrukcjami potwierdzenia.", new_client_confirmation_path(@client)
-      %br/
+    - if @client.confirmed?
+      Twoje konto jest w pełni aktywne.
+    %br/
     %br/
     = link_to "Edytuj swoje dane", edit_registration_path(@client)
     %br/
@@ -35,9 +37,13 @@
     = link_to "Zmień hasło", edit_client_password_path(@client)
     %br/
     %br/
-    = link_to "Pokaż adresy", addresses_path(@client)
+    = link_to "Pokaż adresy", addresses_path(@client.id)
     %br/
     %br/
+    - if (@client.client_type == "biblioteka" || @client.client_type == "szkoła")
+      = link_to "Pokaż płatników", payers_path(@client.id)
+      %br/
+      %br/
     %br/
-    = link_to "Usuń konto",registration_path(@client), :confirm => "Jesteś pewien, że chcesz usunąć konto? To jest nieodwracalne!", :method => :delete
+    = link_to "Usuń konto", registration_path(@client), :confirm => "Jesteś pewien, że chcesz usunąć konto? To jest nieodwracalne!", :method => :delete
 %p

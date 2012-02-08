@@ -9,7 +9,8 @@ Moje zamówienia
 Moje wiadomości
 %br/
 - if current_client.client_type == "szkoła" || current_client.client_type == "biblioteka"
-  Moi płatnicy
+  = link_to "Moi płatnicy", payers_path(current_client.id)
+  %br/
 = link_to "   Wyloguj mnie", destroy_client_session_path, :method => "delete"
 %br/
 %br/

@@ -1,0 +1,20 @@
+= render :partial => "errors"
+= form_for @address do |f|
+  .clearfix
+    = f.label :street, "ulica*"
+    .input= f.text_field :street
+  .clearfix
+    = f.label :house_number, "numer domu*"
+    .input= f.text_field :house_number
+  .clearfix
+    = f.label :apartment_number, "numer mieszkania"
+    .input= f.text_field :apartment_number
+  .clearfix
+    = f.label :zip_code, "kod pocztowy*"
+    .input= f.text_field :zip_code
+  .clearfix
+    = f.label :city, "miasto*"
+    .input= f.text_field :city
+  .clearfix.actions
+    = f.submit "Zapisz adres", :class => "btn primary"
+*Pola oznaczone gwiazdką są obowiązkowe

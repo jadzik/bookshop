@@ -23,8 +23,7 @@ Edytuj swój adres e-mail
     = f.label :mobile_phone, "Numer komórkowy"
     .input= f.text_field :mobile_phone
   .clearfix
-    %br/
-    - if !@client.client_type == "indywidualny"
+    - if @client.client_type != "indywidualny"
       %br/
       = f.label :fax_phone, "Fax"
       .input= f.text_field :fax_phone

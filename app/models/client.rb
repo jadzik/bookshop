@@ -3,7 +3,7 @@ class Client < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :confirmable
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :mobile_phone, :fax_phone, 
                   :stationary_phone, :nip, :client_type
-  has_many :addresses, :as => :resource
+  has_many :addresses
   has_many :payers
 
 

@@ -1,0 +1,11 @@
+- if @payer.errors.any?
+  %div.alert-message.block-message.error
+    %b Wystąpiły następujące błędy:
+    - @payer.errors.each do |attr, msg|
+      %li
+        Pole
+        %strong
+          = t(attr)
+        = msg
+%br/
+

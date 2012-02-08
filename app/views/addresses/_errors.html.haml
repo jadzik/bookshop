@@ -1,9 +1,9 @@
-- if @client.errors.any?
+- if @address.errors.any?
   %div.alert-message.block-message.error
     %b Wystąpiły następujące błędy:
-    - @client.errors.each do |attr, msg|
+    - @address.errors.each do |attr, msg|
       %li
-        = Pole
+        Pole
         %strong
           = t(attr)
         = msg

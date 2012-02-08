@@ -1,9 +1,21 @@
 %h3 
-Twoje adresy:
-- for address in @addresses
-  ul. #{address.street} #{address.house_number}
-  - if !address.apartment_numer.blank? 
-    m. #{address.apartment_number}
+-if @addresses.blank?
+  Nie dodałeś żadnego adresu
+-if !@addresses.blank?
+  Twoje adresy:
   %br/
-  #{address.zip_code} #{address.city}
-  %br/
+  - for address in @addresses
+    ul. #{address.street} #{address.house_number}
+    - if !address.apartment_number.blank? 
+      m. #{address.apartment_number}
+    %br/
+    #{address.zip_code} #{address.city}
+    %br/
+    =link_to "Edytuj adres", edit_address_path(address)
+    ||
+    =link_to "Usuń adres", address_path(address), :confirm => 'Jesteś pewien, że chcesz usunąć ten adres? To jest nieodwracalne!', :method => :delete
+    %br/
+%br/
+%br/
+=link_to "Dodaj adres", new_address_path(current_client.id)
+
