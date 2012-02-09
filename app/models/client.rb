@@ -18,7 +18,7 @@ class Client < ActiveRecord::Base
   validate :phone_cannot_be_blank
   with_options :if => lambda {self.client_type != "indywidualny"} do |company|
     company.validates :nip, :presence => true, :uniqueness =>true, 
-                            :format => { :with =>  /^[0-9]{10}$/, :message => "NIP jest złożony z 10 cyfr"}
+                            :format => { :with =>  /^[0-9]{10}$/, :message => "NIP jest złożony z 10 cyfr bez myślników"}
   end
   validates :email, :format => {:with =>  /^\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z$/, 
             :message => "To nie jest e-mail"}, :uniqueness => true
