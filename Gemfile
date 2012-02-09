@@ -13,7 +13,8 @@ gem "paperclip", "~> 2.4" #zdjęcia
 gem 'kaminari'            #paginacja
 gem 'actionmailer' 
 #gem "ransack"            #wyszukiwanie
-gem 'yaml_db'            #do zrzutów bazy do yaml
+gem 'yaml_db'             #do zrzutów bazy do yaml
+gem 'cells'               #koszyk
 
 group :producton do
   gem 'pg'

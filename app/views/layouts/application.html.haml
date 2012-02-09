@@ -41,6 +41,11 @@
                       = link_to "Zaloguj", new_client_session_path 
                       %br/
                       %br/
+                      -#header
+                      -#  = render_cell :cart, :display, :client => current_client
+         
+                      %br/
+                      %br/
                     %a{:href => "/books"} Książki
                     %dd
                       %a{:href => "/category_books"} Kategorie
