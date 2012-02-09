@@ -1,8 +1,8 @@
-%h3 
+%h3 To jest strona Twoich adresów. Możesz dodać dowolną ilość adresów. Podczas składania zamówienia będziesz mógł wybrać dowolny z nich jako adres dostawy.
 -if @addresses.blank?
+  %br/
   Nie dodałeś żadnego adresu
 -if !@addresses.blank?
-  Twoje adresy:
   %br/
   - for address in @addresses
     ul. #{address.street} #{address.house_number}
@@ -14,6 +14,7 @@
     =link_to "Edytuj adres", edit_address_path(address)
     ||
     =link_to "Usuń adres", address_path(address), :confirm => 'Jesteś pewien, że chcesz usunąć ten adres? To jest nieodwracalne!', :method => :delete
+    %br/
     %br/
 %br/
 %br/
