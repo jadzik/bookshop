@@ -2,15 +2,12 @@ Edytuj swój adres e-mail
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   = devise_error_messages!
   .clearfix
-    - if @client.client_type == "indywidualny"
+    - if @client.client_type == "klient indywidualny"
       = f.label :name, "Imię i nazwisko*"
     - if @client.client_type == "firma"
       =f.label :name, "Nazwa firmy*"
-    - if @client.client_type == "biblioteka"
-      =f.label :name, "Nazwa biblioteki*"
-    - if @client.client_type == "szkoła"
-      =f.label :name, "Nazwa szkoły*"
-    .input= f.text_field :name
+    - if @client.client_type == "szkoła lub biblioteka"
+      =f.label :name, "Nazwa szkoły/biblioteki*"
   .clearfix
     = f.label :email, "Adres e-mail*"
     .input= f.email_field :email
@@ -23,7 +20,7 @@ Edytuj swój adres e-mail
     = f.label :mobile_phone, "Numer komórkowy"
     .input= f.text_field :mobile_phone
   .clearfix
-    - if @client.client_type != "indywidualny"
+    - if @client.client_type != "klient indywidualny"
       %br/
       = f.label :fax_phone, "Fax"
       .input= f.text_field :fax_phone

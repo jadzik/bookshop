@@ -2,15 +2,13 @@ Jesteś zalogowany jako #{current_client.name}
 %br/
 = link_to "Moje konto", client_path(current_client.id)
 %br/
-Moje zamówienia
+= link_to "Moje zamówienia", orders_path(current_client.id)
 %br/
 = link_to "Moje adresy", addresses_path(current_client.id)
 %br/
-Moje wiadomości
-%br/
-- if current_client.client_type == "szkoła" || current_client.client_type == "biblioteka"
+- if current_client.client_type == "szkoła lub biblioteka"
   = link_to "Moi płatnicy", payers_path(current_client.id)
   %br/
-= link_to "   Wyloguj mnie", destroy_client_session_path, :method => "delete"
+= link_to "Wyloguj mnie", destroy_client_session_path, :method => "delete"
 %br/
 %br/

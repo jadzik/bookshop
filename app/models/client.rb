@@ -5,6 +5,7 @@ class Client < ActiveRecord::Base
                   :stationary_phone, :nip, :client_type
   has_many :addresses
   has_many :payers
+  has_many :orders
 
 
   private
@@ -13,10 +14,15 @@ class Client < ActiveRecord::Base
         errors.add(:mobile_phone,"Musisz podać przynajmniej jeden numer telefonu!")
       end
     end
+   def type_validation
+     unless (client_type == "klient indywidualny" || client_type == "firma" || client_type == "szkoła lub biblioteka")
+       errors.add(:client_type, "Typ konta źle wybrany")
+    end
+   end
 
   validates_presence_of :name, :email, :client_type
   validate :phone_cannot_be_blank
-  with_options :if => lambda {self.client_type != "indywidualny"} do |company|
+  with_options :if => lambda {self.client_type != "klient indywidualny"} do |company|
     company.validates :nip, :presence => true, :uniqueness =>true, 
                             :format => { :with =>  /^[0-9]{10}$/, :message => "NIP jest złożony z 10 cyfr bez myślników"}
   end
@@ -28,5 +34,5 @@ class Client < ActiveRecord::Base
             :message => "numer musi składać się z nr kierunkowego w nawiasach i numeru właściwego"},:allow_blank => true
   validates :stationary_phone, :format => {:with =>  /^\([0-9]{2}\)[0-9]{7}$/, 
             :message => "numer musi składać się z nr kierunkowego w nawiasach i numeru właściwego"},:allow_blank => true
-  validates_inclusion_of :client_type, :in => %w(indywidualny firma szkoła biblioteka)
+
 end

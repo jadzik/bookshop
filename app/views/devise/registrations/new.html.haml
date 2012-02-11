@@ -5,8 +5,8 @@
     = f.label :name, "Imię i nazwisko lub nazwa firmy*"
     .input= f.text_field :name
   .clearfix
-    = f.label :client_type, "Wybierz typ klienta:*"
-    .input= f.select :client_type, ["indywidualny", "firma", "biblioteka", "szkoła"]
+    = f.label :client_type, "Wybierz typ konta:*"
+    .input= f.select :client_type, ["klient indywidualny", "firma", "szkoła lub biblioteka"]
   .clearfix
     = f.label :email, "Adres e-mail*"
     .input= f.email_field :email

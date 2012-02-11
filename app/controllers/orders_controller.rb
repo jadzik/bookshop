@@ -1,5 +1,7 @@
+#encoding: utf-8
 class OrdersController < ApplicationController
   before_filter :my_orders, :only => [:show, :edit]
+
 
  def index
     @orders = current_client.orders if client_signed_in?

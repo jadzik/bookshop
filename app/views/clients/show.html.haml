@@ -4,8 +4,6 @@
     %br/
     %br/
     Jesteś zarejestrowany jako 
-    -if (@client.client_type == "indywidualny")
-      klient
     #{@client.client_type} #{@client.name} 
     %br/
     Adres e-mail : #{@client.email}
@@ -16,7 +14,7 @@
     -unless (@client.mobile_phone.blank?)
       Numer komórkowy #{@client.mobile_phone}
       %br/
-    -unless (@client.client_type == "indywidualny")
+    -unless (@client.client_type == "klient indywidualny")
       -unless (@client.fax_phone.blank?)
         Fax #{@client.fax_phone}
         %br/
@@ -40,10 +38,13 @@
     = link_to "Pokaż adresy", addresses_path(@client.id)
     %br/
     %br/
-    - if (@client.client_type == "biblioteka" || @client.client_type == "szkoła")
+    - if (@client.client_type == "szkoła lub biblioteka"
       = link_to "Pokaż płatników", payers_path(@client.id)
       %br/
       %br/
+    = link_to "Pokaż zamówienia", orders_path(@client.id)
+    %br/
+    %br/
     %br/
     = link_to "Usuń konto", registration_path(@client), :confirm => "Jesteś pewien, że chcesz usunąć konto? To jest nieodwracalne!", :method => :delete
 %p
