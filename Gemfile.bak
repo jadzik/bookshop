@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 
 gem 'sqlite3'
-#gem 'therubyracer'
+gem 'therubyracer'
 gem 'haml'
 gem 'devise', "~>2.0.0"
 gem 'cancan'
@@ -15,7 +15,6 @@ gem 'actionmailer'
 #gem "ransack"            #wyszukiwanie
 gem 'yaml_db'             #do zrzutów bazy do yaml
 gem 'cells'               #koszyk
-gem 'coffee-rails', '~> 3.1.1'
 
 group :producton do
   gem 'pg'
