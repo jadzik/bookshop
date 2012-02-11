@@ -1,6 +1,7 @@
 #encoding: utf-8
 class ClientsController < ApplicationController
-  before_filter :my_account, :only => :show 
+  before_filter :my_account, :only => [:show, :edit]
+
  def index
     @clients = Client.all
   end

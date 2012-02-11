@@ -7,6 +7,8 @@ Bookshop::Application.routes.draw do
   resources :clients, :only => [:new, :create, :show, :edit]
   resources :addresses, :except => [:show]
   resources :payers
+  resources :orders, :except => [:destroy]
+  resources :orders_items
 
   root :to => 'home#index'
     match '/about_company', :to => 'home#about_company'

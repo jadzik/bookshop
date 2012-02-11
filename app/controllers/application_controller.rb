@@ -1,6 +1,12 @@
 #encoding: utf-8
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  before_filter :cart
+
+  private
+    def cart
+      session[:order] ||= Order.new
+    end
 
 #  rescue Exception => e
 #    flash[:error] =  "Przykro nam, ale wystąpił błąd."

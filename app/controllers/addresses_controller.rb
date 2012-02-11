@@ -22,6 +22,7 @@ class AddressesController < ApplicationController
     @address = Address.find(params[:id])
     @client = current_client
   end
+
   def update
     @address = Address.find(params[:id])
     @client = current_client
