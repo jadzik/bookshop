@@ -11,65 +11,14 @@
     %title Centrum Dobrej Książki i Gry
     %meta{:content => "kodeks, Centrum dobrej książki i gry, ustawa, Beck, MT Biznes, Poltext, Ossolineum, Biblioteka Narodowa, Dynastie, Arkady, wydawnictwo Skorpion, Zawiśliński Stanisław, lektury, ważne żeby iść, głośne rzymskie procesy karne, PAX, IW PAX, historia filozofii, arcydzieła malarstwa, sztuka, album, albumy, książki na telefon, księgarnia wysyłkowa, książki na zamówienie, wydawnictwa nisko nakładowe, ekskluzywne wydawnictwa, wydanie albumowe, słownik, scenariusz filmu, scenariusze, pedagogika, psychologia, ekonomia, filologia, literatura obcojęzyczna, biografie, Krzysztof Kieślowski, PWN, GWP, Gdańskie Wydawnictwo Pedagogiczne, Carcassonne, Rattle Snake, Albi, gry planszowe, gry strategiczne, gry edukacyjne, gry do świetlic, literatura biznesowa, wyposażenie świetlic, wyposażenie bibliotek ", :name => "keywords"}
     %meta{:content => "Na łamach tej witryny odnajdziecie Państwo nie tylko opisy nowości wydawniczych czy wyszukacie edycje bibliofilskie. W Centrum Dobrej Ksiązki i Gry mozna równierz odnaleźć doskonałe pomysły na prezenty dla bliskich Wam osób czy kluczowych klientów i pracowników. Pamiętajmy iż upominki, którymi obdarowywujemy innych świadaczą o nas samych. Stąd odpowiednio dobrana książka czy gra planszowa mogą sprawić wiele radości bliskim a wśród obdarowywanych kontrachentów i pracowników utrwali pozytywny wizerunek firmy równierz jako mecenasa kultury. Asortyment który oferujemy Państwu, to książki z najznakomitszych polskich wydawnictw, częstwo z głęgoko zakorzenioną tradycją i bogatą historią co czyni ofertę wyjątkową.", :name => "description"}
-    :javascript
-      $(document).ready(function(){
-        $('#nav ul li').mouseenter(function(){
-          $(this).children().children().show(300);
-        }).mouseleave(function(){
-          $(this).children().children().hide(100);
-        });
-      });
-    :css
-      #nav {
-        margin-top: -50px;
-      }	
-      .submenu{
-        display:none;
-        padding-top:10px;
-      }
-      .submenu2{
-        display:none;
-        padding-top:10px;
-      }
-      .menu{
-        background: blue;
-        border-bottom: solid black 1px;
-        width: 150px;
-      }
-      .submenu{
-        background: blue;
-        border-bottom: solid black 1px;
-        z-index: 1;
-      }
-      .submenu2{
-        background: blue;
-        border-bottom: solid black 1px;
-        z-index: 2;
-      }
-      #nav li{
-        list-style-type:none;
-      }
-      .submenu{
-        height:auto;
-      }
-      #nav ul li ul{
-        position: absolute;
-        left: 150px;
-        margin-top:-15px;
-        padding-top: 0px;
-      }
-      #nav ul li ul li ul li{
-        position:relative;
-        padding-left: 20px;
-      }
-      #nav ul li{
-        padding-top: 10px;
-      }
-      #nav ul li ul li{
-      }
-      #nav ul li ul li ul{
-        width: 250px;
-      }		
+    -#:javascript
+    -#  $(document).ready(function(){
+    -#    $('#nav ul li').mouseenter(function(){
+    -#      $(this).children().children().show(300);
+    -#    }).mouseleave(function(){
+    -#      $(this).children().children().hide(100);
+    -#    });
+    -#  });
   %body
     %table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "1000"}
       %tr
@@ -108,37 +57,41 @@
                       %br/
                       #nav
                         %ul{:style=> 'list-style-type: none'}
-                          %li{:class => "menu"}
+                          %li.menu.open
                             = link_to "Książki", books_path
-                          %li{:class => "menu"}
-                            = link_to "Kategorie", category_books_path
                             %ul
-                              -for category_book in CategoryBook.all
-                                %li{:class => "submenu"}
-                                  = link_to "#{category_book.name} (#{category_book.books.length})", category_book_path(category_book)
-                                  %ul
-                                    -for subcategory_book in category_book.subcategory_books
-                                      %li{:class => "submenu2"}= link_to "#{subcategory_book.name} (#{subcategory_book.books.length})", subcategory_book_path(subcategory_book)
-                          %li{:class => "menu"}
-                            = link_to "Wydawnictwa", publisher_books_path
-                            %ul
-                              - for publisher_book in PublisherBook.all
-                                %li{:class => "submenu"}
-                                  = link_to "#{publisher_book.name} (#{publisher_book.books.length})", publisher_book_path(publisher_book)							  
-                          %li{:class => "menu"}
-                            = link_to "Gry", games_path 
+                              %li.submenu
+                                = link_to "Kategorie", category_books_path
+                                %ul
+                                  -for category_book in CategoryBook.all
+                                    %li.submenu
+                                      = link_to "#{category_book.name} (#{category_book.books.length})", category_book_path(category_book)
+                                      %ul
+                                        -for subcategory_book in category_book.subcategory_books
+                                          %li.submenu2
+                                            = link_to "#{subcategory_book.name} (#{subcategory_book.books.length})", subcategory_book_path(subcategory_book)
+                              %li.submenu
+                                = link_to "Wydawnictwa", publisher_books_path
+                                %ul
+                                  - for publisher_book in PublisherBook.all
+                                    %li.submenu2
+                                      = link_to "#{publisher_book.name} (#{publisher_book.books.length})", publisher_book_path(publisher_book)
+                          %li.menu
+                            = link_to "Gry", games_path
                             %ul
                               - for  category_game in CategoryGame.all
-                                %li{:class => "submenu"}
+                                %li.submenu
                                   = link_to "#{category_game.name} (#{category_game.games.length})", category_game_path(category_game)
                                   %ul
                                     -for subcategory_game in category_game.subcategory_games
-                                      %li{:class => "submenu2"}= link_to "#{subcategory_game.name} (#{subcategory_game.games.length})", subcategory_game_path(subcategory_game)
-                          %li{:class => "menu"}
+                                      %li.submenu2
+                                        = link_to "#{subcategory_game.name} (#{subcategory_game.games.length})", subcategory_game_path(subcategory_game)
+                          %li.menu
                             = link_to "Akcesoria", accessories_path
                             %ul
                               - for category_accessory in CategoryAccessory.all
-                                %li{:class => "submenu"}= link_to "#{category_accessory.name} (#{category_accessory.accessories.length})", category_accessory_path(category_accessory)
+                                %li.submenu2
+                                  = link_to "#{category_accessory.name} (#{category_accessory.accessories.length})", category_accessory_path(category_accessory)
 
               %td{:valign => "top", :width => "650"}
                 %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "750"}
