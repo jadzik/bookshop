@@ -28,7 +28,7 @@
     %br/
     cena: #{number_to_currency(@book.price)}
     %br/
-    %br/ 
+    = button_to("Dodaj do koszyka", add_to_cart_order_product_path(1, @book.product.id), :action => "add_to_cart", :method => :get) 
     = @book.description
 %p
 = link_to "Pokaż wszystkie książki", books_path
