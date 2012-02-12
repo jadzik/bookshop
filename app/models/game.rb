@@ -35,7 +35,7 @@ class Game < ActiveRecord::Base
                         :category_game_id, :age_of_players_from
   validate :number_of_players_cannot_be_blank, :game_time_validation, :category_validation
   validates :age_of_players_from, :numericality => { :greater_than => 0, :less_than => 150, :only_integer => true }
-  validates :price, :numericality => { :greater_than => 0, :less_than => 1000 , :precision => 2}
+  validates :price, :numericality => {:greater_than_or_equal_to => 0.0, :less_than_or_equal_to => 1000.0, :precision => 2}
   validates :year_of_publication, :numericality => { :greater_than => 1900, 
             :less_than_or_equal_to => Date.today.year, :only_integer => true }, :allow_blank => true
 end

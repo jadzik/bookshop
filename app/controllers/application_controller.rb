@@ -2,7 +2,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :cart
-
+  @order = Order.find(1)
     def cart
       session[:order] ||= Order.new
     end
