@@ -8,8 +8,8 @@ class Book < ActiveRecord::Base
 
   private
     def make_product
-      product = self.create_product()
-      Rails.logger.info product.errors.inspect
+      self.create_product()
+      #Rails.logger.info product.errors.inspect
     end
 
     def category_validation

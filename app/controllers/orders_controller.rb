@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
  def add_to_cart
   @order = Order.find(params[:order_id])
   @item_to_add = Product.find(params[:format])
-  if @order.status != "cart" 
+  #if @order.status != "cart" 
     
   redirect_to root_path
  end
