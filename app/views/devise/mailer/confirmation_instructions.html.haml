@@ -2,3 +2,6 @@
   Witaj #{@resource.email}!
 %p Możesz aktywować konto klikając w link poniżej:
 %p= link_to 'Potwierdź adres e-mail', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)
+%br/
+%br/
+= render :partial => "shared/mail"

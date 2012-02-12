@@ -16,6 +16,7 @@
       rodzaj oprawy:  #{book.cover}
       %br/
       cena: #{number_to_currency(book.price)} 
+    = button_to "Dodaj do koszyka", {:controller => 'order', :action => "add_to_cart" }  
 %br/
 %br/
 = paginate @books

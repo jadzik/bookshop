@@ -1,13 +1,13 @@
 Jesteś zalogowany jako #{current_client.name} 
 %br/
-= link_to "Moje konto", client_path(current_client.id)
+= link_to_unless_current( "Moje konto", client_path(current_client.id))
 %br/
-= link_to "Moje zamówienia", orders_path(current_client.id)
+= link_to_unless_current( "Moje zamówienia", orders_path(current_client.id))
 %br/
-= link_to "Moje adresy", addresses_path(current_client.id)
+= link_to_unless_current( "Moje adresy", addresses_path(current_client.id))
 %br/
 - if current_client.client_type == "szkoła lub biblioteka"
-  = link_to "Moi płatnicy", payers_path(current_client.id)
+  = link_to_unless_current( "Moi płatnicy", payers_path(current_client.id))
   %br/
 = link_to "Wyloguj mnie", destroy_client_session_path, :method => "delete"
 %br/
