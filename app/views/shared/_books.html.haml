@@ -17,7 +17,7 @@
       %br/
       cena: #{number_to_currency(book.price)} 
     %h2.tekst-1strona
-      = button_to("Dodaj do koszyka", add_to_cart_order_product_path(1, book.product.id), :action => "add_to_cart", :method => :get)  
+      = button_to("Dodaj do koszyka", add_to_cart_product_order_item_order_path( book.product.id, 1, 1), :action => "add_to_cart", :method => :get)  
 %br/
 %br/
 = paginate @books
