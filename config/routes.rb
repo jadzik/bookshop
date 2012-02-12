@@ -8,7 +8,11 @@ Bookshop::Application.routes.draw do
   resources :addresses, :except => [:show]
   resources :payers
   resources :orders do
-    get :add_to_cart
+    resources :products do
+      member do 
+        get :add_to_cart
+      end
+    end
   end
  resources :orders_items
 

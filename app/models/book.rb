@@ -24,7 +24,7 @@ class Book < ActiveRecord::Base
                         :publisher_book_id, :isbn, :category_book_id, :cover
   validate :category_validation
   validates :isbn, :format => { :with => /[0-9]{10}| [0-9]{13}/, :message => "Isbn musi być ciągiem 10 lub 13 cyfr" }
-  validates :price, :numericality => { :greater_than_or_equal_to => 0.0, :less_than_or_equal_to => 1000.0, :precision => 2 }
+  validates :price, :numericality => {:greater_than_or_equal_to => 0.0, :less_than_or_equal_to => 1000.0, :precision => 2}
   validates :year_of_publishing, :numericality => { :greater_than => 1900, 
             :less_than_or_equal_to => Date.today.year, :only_integer => true }
   validates :number_of_pages, :numericality => { :greater_than => 0, :only_integer => true } 
