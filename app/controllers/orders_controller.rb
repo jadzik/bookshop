@@ -2,6 +2,10 @@
 class OrdersController < ApplicationController
   before_filter :my_orders, :only => [:show, :edit]
  def add_to_cart
+  @order = Order.find(params[:order_id])
+  @item_to_add = Product.find(params[:format])
+  if @order.status != "cart" 
+    
   redirect_to root_path
  end
   
