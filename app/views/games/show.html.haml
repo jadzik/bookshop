@@ -30,6 +30,7 @@
         czas gry: od #{@game.game_time_from} do #{@game.game_time_to} minut 
         %br/
     cena: #{number_to_currency(@game.price)}
+     = button_to("Dodaj do koszyka", add_to_cart_product_order_item_order_path( game.product.id, 1, 1), :action => "add_to_cart", :method => :get)  
     %br/
     %br/
     = @game.description

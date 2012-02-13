@@ -11,6 +11,8 @@
       opis: #{truncate(game.description, :length => 20, :separator => ' ', :ommission => "...")}
       %br/
       cena: #{number_to_currency(game.price)}
+    %h2.tekst-1strona
+      = button_to("Dodaj do koszyka", add_to_cart_product_order_item_order_path( game.product.id, 1, 1), :action => "add_to_cart", :method => :get)
 %br/
 %br/
 = paginate @games
