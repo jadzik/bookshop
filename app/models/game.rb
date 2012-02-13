@@ -5,6 +5,7 @@ class Game < ActiveRecord::Base
   belongs_to :publisher_game
   has_one :product, :as => :resource
   after_create :make_product
+  default_scope :order => "name"
 
   private
     def make_product

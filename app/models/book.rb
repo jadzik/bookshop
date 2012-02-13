@@ -5,6 +5,7 @@ class Book < ActiveRecord::Base
   belongs_to :category_book
   has_one :product, :as => :resource
   after_create :make_product
+  default_scope :order => "title"
 
   private
     def make_product
