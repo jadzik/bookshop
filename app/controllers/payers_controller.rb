@@ -14,7 +14,7 @@ class PayersController < ApplicationController
   end
 
   def create
-    @payer = Payer.new(params[:payer])
+    @payer = Payer.new(params[:payer].merge(:client_id => current_client.id))
     if @payer.save
       redirect_to payer_path(@payer)
     else
