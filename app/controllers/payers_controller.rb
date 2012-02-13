@@ -29,7 +29,7 @@ class PayersController < ApplicationController
   end
 
   private
-    def my_adresses
+    def my_payers
       unless (client_signed_in? && current_client.id == params[:id] ) || client_signed_in?
         redirect_to root_path, :error => "Nie możesz zobaczyć płatników innej osoby!"
       end
