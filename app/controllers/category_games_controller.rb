@@ -1,3 +1,4 @@
+#encoding: utf-8
 class CategoryGamesController < ApplicationController
   def index
     @category_games = CategoryGame.all 

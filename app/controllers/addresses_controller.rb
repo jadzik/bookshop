@@ -1,3 +1,4 @@
+#encoding: utf-8
 class AddressesController < ApplicationController
   before_filter :my_adresses, :only => [:show, :index, :edit]
   def index

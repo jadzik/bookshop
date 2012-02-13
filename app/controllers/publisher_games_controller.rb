@@ -1,3 +1,4 @@
+#encoding: utf-8
 class PublisherGamesController < ApplicationController
   def index
     @publisher_games = PublisherGame.all 

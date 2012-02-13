@@ -1,3 +1,4 @@
+#encoding: utf-8
 class SubcategoryBooksController < ApplicationController
  def index
     @subcategory_books = SubcategoryBook.all 

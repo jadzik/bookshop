@@ -1,3 +1,4 @@
+#encoding: utf-8
 class PayersController < ApplicationController
   before_filter :my_payers, :only => [:show, :index, :edit]
   def index

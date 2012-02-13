@@ -1,7 +1,6 @@
 require 'spec_helper'
 
-describe CategoryGame
+describe CategoryGame do
   it {should have_many :subcategory_games }
   it {should have_many :games}
-  it {should validate_uniqueness_of :name}
 end
