@@ -4,7 +4,6 @@ gem 'rails', '3.1.1'
 gem 'sqlite3'
 gem 'haml'
 gem 'devise', "~>2.0.0"
-gem 'cancan'
 gem 'i18n'                #spolszczenia
 gem 'activeadmin'
 gem 'meta_search',    '>= 1.1.0.pre'
@@ -39,8 +38,17 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-
+group :development, :test do
+  gem 'rspec-rails', '~> 2.7.0'
+  gem 'factory_girl', '~> 2.0.0'
+  gem 'factory_girl_rails', '~> 1.1.0'
+end
 group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
+  gem 'capybara', '~> 1.1.1'
+  gem 'shoulda', '~> 2.11.3'
+  gem 'rb-inotify'
+  gem 'libnotify'
+  gem 'spork', '~> 0.9.0.rc9'
+  gem 'guard-spork'
+  gem 'guard-rspec'
 end

@@ -1,4 +1,5 @@
 class AddressesController < ApplicationController
+  before_filter :my_adresses, :only => [:show, :index, :edit]
   def index
     @addresses = current_client.addresses if client_signed_in?
   end
@@ -35,5 +36,10 @@ class AddressesController < ApplicationController
 
   def destroy
   end
-
+  private
+    def my_adresses
+      unless (client_signed_in? && current_client.id == params[:id] ) || client_signed_in?
+        redirect_to root_path, :error => "Nie możesz zobaczyć adresów innej osoby!"
+      end
+    end
 end

@@ -1,5 +1,6 @@
 class PayersController < ApplicationController
-def index
+  before_filter :my_payers, :only => [:show, :index, :edit]
+  def index
     @payers = Payer.all
   end
 
@@ -25,4 +26,11 @@ def index
 
   def destroy
   end
+
+  private
+    def my_adresses
+      unless (client_signed_in? && current_client.id == params[:id] ) || client_signed_in?
+        redirect_to root_path, :error => "Nie możesz zobaczyć płatników innej osoby!"
+      end
+    end
 end

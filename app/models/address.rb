@@ -1,5 +1,7 @@
 #encoding: utf-8
 class Address < ActiveRecord::Base
+  belongs_to :client
+
   validates_presence_of :street, :house_number, :zip_code, :city, :client_id
   validates_numericality_of :client_id
   validates :house_number, :format => {:with =>  /^[1-9][0-9]{0,2}[a-z]{0,5}$/, 
