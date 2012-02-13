@@ -4,7 +4,7 @@
     = link_to book.title, book_path(book)
     - unless book.product.pictures.blank?
       %br/
-      = image_tag book.product.pictures.first.photo.url(:thumb)
+      = image_tag book.product.pictures.first.photo.url(:small)
     %p.tekst-1strona
       Autor: #{book.author}
       %br/

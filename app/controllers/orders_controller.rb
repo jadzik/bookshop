@@ -6,11 +6,11 @@ class OrdersController < ApplicationController
     @order = Order.find(1)#(@current_order.id)
     @item_to_add = Product.find(params[:id])
     if @order.status != "cart" 
-      @order = Order.build
+      @order = Order.new
     end 
     if @order.order_items.blank? 
       #if @item_to_add.resource_type == "Book" || @item_to_add.resource_type == "book" :
-      @item = OrderItem.build(:product_id => @item_to_add.id, :price_for_one => @item_to_add.resource.price,
+      @item = OrderItem.new(:product_id => @item_to_add.id, :price_for_one => @item_to_add.resource.price,
                               :amount => "1", :name_of_product => "książka", :order_id => "1")  
       #else 
         #@item = OrderItem.new(:product_id => @item_to_add.id, :price_for_one => @item_to_add.resource.price, :amount => "1", :name_of_product => @item_to_add.resource.name, :order_id => "1") 
@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
     else
       @item = OrderItem.find_by_product_id(@item_to_add.id)
         if @item.blank?
-          @item = OrderItems.build(:product_id => @item_to_add.id, :price_for_one => @item_to_add.resource.price, 
+          @item = OrderItem.new(:product_id => @item_to_add.id, :price_for_one => @item_to_add.resource.price, 
                                  :amount => "1", :name_of_product => "książka", :order_id => "1")  
           @item.save
           #if @item.save  
@@ -33,7 +33,9 @@ class OrdersController < ApplicationController
           #@item.save
         end
     end
-    redirect_to root_path            
+    session[:count] = session[:count] + 1
+    redirect_to root_path, :notice => "Dodałeś produkt"
+             
   end
  
   

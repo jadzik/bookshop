@@ -4,7 +4,7 @@
     = link_to accessory.name, accessory_path(accessory)
     - unless accessory.product.pictures.blank?
       %br/
-      = image_tag accessory.product.pictures.first.photo.url(:thumb)
+      = image_tag accessory.product.pictures.first.photo.url(:small)
     %p.tekst-1strona
       opis: #{truncate(accessory.description, :length => 20, :separator => ' ', :ommission => "...")}
       %br/
