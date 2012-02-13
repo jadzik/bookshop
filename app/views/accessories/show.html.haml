@@ -6,7 +6,7 @@
       = image_tag @accessory.product.pictures.first.photo.url(:small)
       %br/
     cena: #{number_to_currency(@accessory.price)}
-    = button_to("Dodaj do koszyka", add_to_cart_product_order_item_order_path( accessory.product.id, 1, 1), :action => "add_to_cart", :method => :get)  
+    = button_to("Dodaj do koszyka", add_to_cart_product_order_item_order_path( @accessory.product.id, 1, 1), :action => "add_to_cart", :method => :get)  
     %br/
     %br/
     = @accessory.description
