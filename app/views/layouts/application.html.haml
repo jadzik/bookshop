@@ -37,59 +37,60 @@
                   %td.tekst-1strona
                     - if client_signed_in? 
                       = render :partial => "shared/logged"
+                      %br/
+                      %br/
+                      %br/
+                      %br/
                     - if !client_signed_in?
                       = link_to_unless_current( "Zaloguj", new_client_session_path) 
                       %br/
                       %br/
-                      -#header
-                      -#  = render_cell :order, :display, :client => current_client
-         
                       %br/
                       %br/
-                      #nav
-                        %ul{:style=> 'list-style-type: none'}
-                          %li.menu.show
-                            = link_to "", "#", :class => "expander open"
-                            = link_to_unless_current( "Książki", books_path)
-                            %ul
-                              %li.submenu.show
+                    #nav
+                      %ul{:style=> 'list-style-type: none'}
+                        %li.menu.show
+                          = link_to "", "#", :class => "expander open"
+                          = link_to_unless_current( "Książki", books_path)
+                          %ul
+                            %li.submenu.show
+                              = link_to "", "#", :class => "expander"
+                              = link_to_unless_current( "Kategorie", category_books_path)
+                              %ul.hide
+                                -for category_book in CategoryBook.all
+                                  %li.submenu
+                                    = link_to "", "#", :class => "expander"
+                                    = link_to_unless_current( "#{category_book.name} (#{category_book.books.length})", category_book_path(category_book))
+                                    %ul.hide
+                                      -for subcategory_book in category_book.subcategory_books
+                                        %li.submenu2
+                                          = link_to_unless_current( "#{subcategory_book.name} (#{subcategory_book.books.length})", subcategory_book_path(subcategory_book))
+                            %li.submenu.show
+                              = link_to "", "#", :class => "expander"
+                              = link_to_unless_current( "Wydawnictwa", publisher_books_path)
+                              %ul.hide
+                                - for publisher_book in PublisherBook.all
+                                  %li.submenu2
+                                    = link_to_unless_current( "#{publisher_book.name} (#{publisher_book.books.length})", publisher_book_path(publisher_book))
+                        %li.menu.show
+                          = link_to "", "#", :class => "expander"
+                          = link_to_unless_current( "Gry", games_path)
+                          %ul.hide
+                            - for  category_game in CategoryGame.all
+                              %li.submenu
                                 = link_to "", "#", :class => "expander"
-                                = link_to_unless_current( "Kategorie", category_books_path)
+                                = link_to_unless_current( "#{category_game.name} (#{category_game.games.length})", category_game_path(category_game))
                                 %ul.hide
-                                  -for category_book in CategoryBook.all
-                                    %li.submenu
-                                      = link_to "", "#", :class => "expander"
-                                      = link_to_unless_current( "#{category_book.name} (#{category_book.books.length})", category_book_path(category_book))
-                                      %ul.hide
-                                        -for subcategory_book in category_book.subcategory_books
-                                          %li.submenu2
-                                            = link_to_unless_current( "#{subcategory_book.name} (#{subcategory_book.books.length})", subcategory_book_path(subcategory_book))
-                              %li.submenu.show
-                                = link_to "", "#", :class => "expander"
-                                = link_to_unless_current( "Wydawnictwa", publisher_books_path)
-                                %ul.hide
-                                  - for publisher_book in PublisherBook.all
+                                  -for subcategory_game in category_game.subcategory_games
                                     %li.submenu2
-                                      = link_to_unless_current( "#{publisher_book.name} (#{publisher_book.books.length})", publisher_book_path(publisher_book))
-                          %li.menu.show
-                            = link_to "", "#", :class => "expander"
-                            = link_to_unless_current( "Gry", games_path)
-                            %ul.hide
-                              - for  category_game in CategoryGame.all
-                                %li.submenu
-                                  = link_to "", "#", :class => "expander"
-                                  = link_to_unless_current( "#{category_game.name} (#{category_game.games.length})", category_game_path(category_game))
-                                  %ul.hide
-                                    -for subcategory_game in category_game.subcategory_games
-                                      %li.submenu2
-                                        = link_to_unless_current( "#{subcategory_game.name} (#{subcategory_game.games.length})", subcategory_game_path(subcategory_game))
-                          %li.menu.show
-                            = link_to "", "#", :class => "expander"
-                            = link_to_unless_current( "Akcesoria", accessories_path)
-                            %ul.hide
-                              - for category_accessory in CategoryAccessory.all
-                                %li.submenu2
-                                  = link_to_unless_current( "#{category_accessory.name} (#{category_accessory.accessories.length})", category_accessory_path(category_accessory))
+                                      = link_to_unless_current( "#{subcategory_game.name} (#{subcategory_game.games.length})", subcategory_game_path(subcategory_game))
+                        %li.menu.show
+                          = link_to "", "#", :class => "expander"
+                          = link_to_unless_current( "Akcesoria", accessories_path)
+                          %ul.hide
+                            - for category_accessory in CategoryAccessory.all
+                              %li.submenu2
+                                = link_to_unless_current( "#{category_accessory.name} (#{category_accessory.accessories.length})", category_accessory_path(category_accessory))
 
               %td{:valign => "top", :width => "650"}
                 %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "750"}
