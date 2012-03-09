@@ -8,6 +8,7 @@ Edytuj swój adres e-mail
       =f.label :name, "Nazwa firmy*"
     - if @client.client_type == "szkoła lub biblioteka"
       =f.label :name, "Nazwa szkoły/biblioteki*"
+    .input= f.text_field :name
   .clearfix
     = f.label :email, "Adres e-mail*"
     .input= f.email_field :email

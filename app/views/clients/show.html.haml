@@ -38,7 +38,7 @@
     = link_to "Pokaż adresy", addresses_path(@client.id)
     %br/
     %br/
-    - if (@client.client_type == "szkoła lub biblioteka"
+    - if (@client.client_type == "szkoła lub biblioteka")
       = link_to "Pokaż płatników", payers_path(@client.id)
       %br/
       %br/
