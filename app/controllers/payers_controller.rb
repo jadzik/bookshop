@@ -23,9 +23,25 @@ class PayersController < ApplicationController
   end
 
   def edit
+    @payers = Payer.find(params[:id])
+    @client = current_client
+  end
+
+  def update
+    @payer = Payer.find(params[:id])
+    @client = current_client
+    if @payer.update_attributes(params[:payer])
+      redirect_to payers_path(current_client)
+    else
+      render :action => "edit"
+    end
   end
 
   def destroy
+    @payer = Payer.find(params[:id])
+    @client = current_client
+    @payer.destroy
+    redirect_to payers_path(current_client)
   end
 
   private

@@ -1,6 +1,7 @@
 #encoding: utf-8
 class AddressesController < ApplicationController
-  before_filter :my_adresses, :only => [:show, :index, :edit]
+  before_filter :my_adresses, :only => [:show, :index, :edit, :destroy]
+
   def index
     @addresses = current_client.addresses if client_signed_in?
   end
@@ -36,7 +37,12 @@ class AddressesController < ApplicationController
   end
 
   def destroy
+    @address = Address.find(params[:id])
+    @client = current_client
+    @address.destroy
+    redirect_to addresses_path(current_client)
   end
+
   private
     def my_adresses
       unless (client_signed_in? && current_client.id == params[:id] ) || client_signed_in?
