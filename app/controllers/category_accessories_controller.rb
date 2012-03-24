@@ -8,24 +8,4 @@ class CategoryAccessoriesController < ApplicationController
     @category_accessory = CategoryAccessory.find(params[:id])
     @accessories = @category_accessory.accessories.page(params[:page]).per(10) 
   end
-
-  def new 
-    @category_accessory = CategoryAccessory.new
-  end
-
-  def create
-    @category_accessory = CategoryAccessory.new(params[:category_accessory])
-    if @category_accessory.save
-      redirect_to category_accessory_path(@category_accessory)
-    else
-      render :action => "new"
-    end
-  end
-
-  def edit
-  end
-
-  def destroy
-  end
-
 end

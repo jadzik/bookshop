@@ -13,11 +13,4 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
   end
 
-  
-  def edit
-  end
-
-  def destroy
-  end
-
 end

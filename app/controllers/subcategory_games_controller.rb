@@ -21,11 +21,4 @@ class SubcategoryGamesController < ApplicationController
       render :action => "new"
     end
   end
-
-  def edit
-  end
-
-  def destroy
-  end
-
 end
