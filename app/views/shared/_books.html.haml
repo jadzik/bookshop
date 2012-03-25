@@ -1,11 +1,11 @@
 - for book in @books 
-  .post
-  %h2.title
+  .tekst
+  %h2.tekst
     = link_to book.title, book_path(book)
     - unless book.product.pictures.blank?
       %br/
       = image_tag book.product.pictures.first.photo.url(:small)
-    %p.tekst-1strona
+    %p.tekst
       Autor: #{book.author}
       %br/
       Wydawnictwo:
@@ -16,9 +16,9 @@
       rodzaj oprawy:  #{book.cover}
       %br/
       cena: #{number_to_currency(book.price)} 
-    %h2.tekst-1strona
+    .tekst
       = button_to("Dodaj do koszyka", add_to_cart_product_order_item_order_path( book.product.id, 1, 1), :action => "add_to_cart", :method => :get)  
 %br/
-%br/
-= paginate @books
+.tekst
+  = paginate @books
 

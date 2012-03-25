@@ -89,6 +89,7 @@
                           = link_to_unless_current( "#{category_accessory.name} (#{category_accessory.accessories.length})", category_accessory_path(category_accessory))
           %li.large
             %div
+              .tekst
               = flash[:notice]
               = flash[:error]
               = flash[:alert]
@@ -96,5 +97,4 @@
               =yield 
       #footer
         %div
-          %p.connect
           %p.footnote Copyright © Jadzia Gruczka. All rights reserved.

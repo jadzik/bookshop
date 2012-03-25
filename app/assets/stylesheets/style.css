@@ -1,7 +1,7 @@
 body {
 	background: #e8e1d1;
 	color: #7c6b4f;
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	margin: 0;
 	min-width: 960px;
@@ -139,7 +139,7 @@ div.body {
 	color: #3e3524;
 	display: block;
 	font-size: 16px;
-	font-family: Times New Roman, Times, serif;
+	font-family:  AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
 	font-weight: bold;
 	padding: 0 0 5px;
 	text-transform: uppercase;
@@ -149,11 +149,10 @@ div.body {
 	line-height: 23px;
 	margin: 0;
 	padding: 0;
-	text-align: justify;
+	text-align: left;
 }
 
 #body ul li a.readmore {
-	background: url(bg-readmore.gif) no-repeat;
 	color: #69614a;
 	display: block;
 	height: 24px;
@@ -174,19 +173,19 @@ div.body {
 div.body h2 {
 	color: #0D4D79;
 	display: block;
-	font-family: Times New Roman,Times,serif;
-    font-size: 28px;
-    line-height: 28px;
-    margin: 0;
-    padding: 0 0 30px;
+	font-family:  AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
+   	font-size: 28px;
+    	line-height: 28px;
+    	margin: 0;
+    	padding: 0 0 30px;
 	text-shadow: 0 1px #F8FFFF;
-    text-transform: uppercase;
+    	text-transform: uppercase;
 }
 
 div.body span,
 div.body h3 {
 	display: block;
-	font-family: Times New Roman,Times,serif;
+	font-family:  AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
 	font-size: 16px;
 	font-weight: bold;
 	line-height: 24px;
@@ -277,14 +276,14 @@ div.body div p {
 	line-height: 24px;
 	margin: 26px 0 0;
 	padding: 0;
-	text-align: justify;
+	text-align: left;
 	width: 470px;
 }
 
 div.body p {
 	line-height: 24px;
 	margin: 0 0 29px;
-	text-align: justify;
+	text-align: left;
 }
 
 div.body table tr td{
@@ -339,6 +338,43 @@ div.body ul li ul li:first-child {
 	float: none;
 }
 
+.tekst {
+	font-family: AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #3D1F00;
+	text-align: left;
+	padding-top: 2px;
+	padding-right: 10px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+}
+.tekst a{
+	font-family: AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #3D1F00;
+	text-decoration: underline;
+}
+
+h2.tekst {
+	font-size: 22px; 
+}
+h2.tekst a {
+	font-size: 22px; 
+	font-weight: normal;
+	color: #3D1F00;
+	text-decoration: underline;
+}
+h3.tekst {
+	font-size: 18px; 
+}
+h3.tekst a {
+	font-size: 18px;
+	font-weight: normal;
+	color: #3D1F00;
+	text-decoration: underline;
+}
 #footer {
 	background: url(bg-footer.jpg) repeat-x center top;
 	height: 70px;
@@ -351,74 +387,23 @@ div.body ul li ul li:first-child {
 	width: 90%;
 }
 
-#footer div p {
-	font-family: Times New Roman, Times, serif;
-	margin: 0;
-}
-
 #footer div p a {
-	color: #988878;
+	font-family:  AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
+	font-size: 10px;
+        color: #988878;	
 	text-decoration: none;
+	margin: 0;
 }
 
 #footer div p a:hover {
 	color: #988878;
-	text-decoration: underline;
-}
-
-#footer div p.connect {
-	float: left;
-	color: #988878;
+	text-decoration: none;
 }
 
 #footer div p.footnote {
+	font-family:  AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
+        padding-top: 20px;
+	font-size: 10px;
 	float: right;
 	color: #988878;
 }
-
-/*
-body,td,th {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 12px;
-}
-
-a:visited {
-	color: #F5C16E;
-	text-decoration: none;
-}
-a:hover {
-	color: #FF0;
-	text-decoration: none;
-}
-a:active {
-	color: #F5C16E;
-	text-decoration: none;
-}
-a:link {
-	text-decoration: none;
-	color: #F5C16E;
-}
-
-
-.tekst-1strona {
-	font-family: AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
-	font-size: 14px;
-	font-weight: normal;
-	color: #F5C16E;
-	text-align: justify;
-	padding-top: 0px;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
-}
-
-.teks2 {
-	font-family: AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
-	font-size: 14px;
-	color: #FC6;
-	text-align: left;
-	padding-top: 10px;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
-}*/
