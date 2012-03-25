@@ -1,10 +1,8 @@
-/* Website template by freewebsitetemplates.com */
-
 body {
 	background: #e8e1d1;
 	color: #7c6b4f;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
 	margin: 0;
 	min-width: 960px;
 	padding: 0;
@@ -12,6 +10,8 @@ body {
 
 a {
 	outline: 0;
+	font-family: AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
+	font-size: 16px;
 }
 
 img {
@@ -19,7 +19,7 @@ img {
 }
 
 p a {
-	color: #706758;
+	color: #F5C16E;
 }
 
 p a:hover,
@@ -35,23 +35,23 @@ div.body span a:hover {
 	width: 100%;
 }
 
-#header {
+#header2 {
 	margin: 0 auto;
 	width: 960px;
 }
 
-#header div {
+#header2 div {
 	margin: 65px 0 0;
 	text-align: center;
 }
 
-#header div a {
+#header2 div a {
 	display: block;
 	margin: 0 auto;
 	width: 483px;
 }
 
-#header ul {
+#header2 ul {
 	list-style: none;
 	margin: 25px 0 0;
 	overflow: hidden;
@@ -59,13 +59,13 @@ div.body span a:hover {
 	text-align: center;
 }
 
-#header ul li {
+#header2 ul li {
 	display: inline-block;
 	margin: 5px 20px;
 	box-shadow: 1px 1px 3px #CCB299;
 }
 
-#header ul li a {
+#header2 ul li a {
 	border: 1px solid #D6C2AD;
 	color: #3D1F00;
 	display: block;
@@ -75,7 +75,7 @@ div.body span a:hover {
 	text-decoration: none;
 }
 
-#header ul li a span {
+#header2 ul li a span {
 	border: 1px solid white;
 	background: #FFFFF5;
 	cursor: pointer;
@@ -84,16 +84,13 @@ div.body span a:hover {
 	padding: 0 15px;
 }
 
-#header ul li.current a,
-#header ul li a:hover {
-	/*background: url(../images/bg-menu-selected-right.gif) no-repeat right top;*/
-	/*color: #3D1F00;*/
+#header2 ul li.current a,
+#header2 ul li a:hover {
 	color: #f2ffff;
 }
 
-#header ul li.current a span,
-#header ul li a:hover span {
-	/*background: url(../images/bg-menu-selected-left.gif) no-repeat left top;*/
+#header2 ul li.current a span,
+#header2 ul li a:hover span {
         background: #3D1F00;
 }
 
@@ -378,3 +375,50 @@ div.body ul li ul li:first-child {
 	float: right;
 	color: #988878;
 }
+
+/*
+body,td,th {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+
+a:visited {
+	color: #F5C16E;
+	text-decoration: none;
+}
+a:hover {
+	color: #FF0;
+	text-decoration: none;
+}
+a:active {
+	color: #F5C16E;
+	text-decoration: none;
+}
+a:link {
+	text-decoration: none;
+	color: #F5C16E;
+}
+
+
+.tekst-1strona {
+	font-family: AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #F5C16E;
+	text-align: justify;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.teks2 {
+	font-family: AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #FC6;
+	text-align: left;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}*/
