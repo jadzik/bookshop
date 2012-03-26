@@ -3,7 +3,8 @@
     = @book.title
     %br/
     - unless @book.product.pictures.blank?
-      = image_tag @book.product.pictures.first.photo.url(:small)
+      - for picture in @book.product.pictures
+        = link_to image_tag(picture.photo.url(:small)), picture.photo.url(:large), :rel => "prettyPhoto[pp_gal]" 
       %br/
     Autor: #{@book.author}
     %br/

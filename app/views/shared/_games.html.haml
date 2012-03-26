@@ -4,7 +4,7 @@
     = link_to game.name, game_path(game)
     - unless game.product.pictures.blank?
       %br/
-      = image_tag game.product.pictures.first.photo.url(:small)
+      = link_to image_tag(game.product.pictures.first.photo.url(:small)), game.product.pictures.first.photo.url(:large), :rel => "prettyPhoto[pp_gal]" 
     %p.tekst
       gatunek gry: #{game.game_type}
       %br/

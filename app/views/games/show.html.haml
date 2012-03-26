@@ -3,7 +3,8 @@
     = @game.name
     %br/
     - unless @game.product.pictures.blank?
-      = image_tag @game.product.pictures.first.photo.url(:small)
+      - for picture in @game.product.pictures
+        = link_to image_tag(picture.photo.url(:small)), picture.photo.url(:large), :rel => "prettyPhoto[pp_gal]" 
       %br/
     wydawca: 
     = link_to @game.publisher_game.name, publisher_game_path(@publisher_game) 

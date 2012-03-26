@@ -3,7 +3,8 @@
     = @accessory.name
     %br/
     - unless @accessory.product.pictures.blank?
-      = image_tag @accessory.product.pictures.first.photo.url(:small)
+      - for picture in @accessory.product.pictures
+        = link_to image_tag(picture.photo.url(:small)), picture.photo.url(:large), :rel => "prettyPhoto[pp_gal]" 
       %br/
     cena: #{number_to_currency(@accessory.price)}
     = button_to("Dodaj do koszyka", add_to_cart_product_order_item_order_path( @accessory.product.id, 1, 1), :action => "add_to_cart", :method => :get)  

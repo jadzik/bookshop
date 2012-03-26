@@ -33,16 +33,12 @@
             %div
               - if client_signed_in? 
                 = render :partial => "shared/logged"
-                %br/
-                %br/
-                %br/
-                %br/
               - if !client_signed_in?
                 = link_to_unless_current( "Zaloguj", new_client_session_path) 
-                %br/
-                %br/
-                %br/
-                %br/
+              %br/
+              %br/
+              %br/
+              %br/
               #nav
                 %ul{:style=> 'list-style-type: none'}
                   %li.menu.show
@@ -98,3 +94,7 @@
       #footer
         %div
           %p.footnote Copyright © Jadzia Gruczka. All rights reserved.
+        :javascript
+        $(document).ready(function(){
+          $("a[rel^='prettyPhoto']").prettyPhoto();
+        });
