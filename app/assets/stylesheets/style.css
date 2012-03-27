@@ -407,3 +407,6 @@ h3.tekst a {
 	float: right;
 	color: #988878;
 }
+div.pp_default .pp_social {
+    display: none;
+}
