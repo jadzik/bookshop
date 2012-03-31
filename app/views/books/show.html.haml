@@ -4,7 +4,7 @@
     %br/
     - unless @book.product.pictures.blank?
       - for picture in @book.product.pictures
-        = link_to image_tag(picture.photo.url(:small)), picture.photo.url(:large), :rel => "prettyPhoto[pp_gal]" 
+        = link_to image_tag(picture.photo.url(:small), :alt => @book.title), picture.photo.url(:large), :rel => "prettyPhoto[pp_gal]" 
       %br/
     Autor: #{@book.author}
     %br/
@@ -30,6 +30,6 @@
     cena: #{number_to_currency(@book.price)}
     %br/
     = button_to("Dodaj do koszyka", add_to_cart_product_order_item_order_path(1, @book.product.id), :action => "add_to_cart", :method => :get) 
-    = @book.description
+    = @book.description.html_safe
 %p
 = link_to "Pokaż wszystkie książki", books_path

@@ -4,7 +4,7 @@
     %br/
     - unless @game.product.pictures.blank?
       - for picture in @game.product.pictures
-        = link_to image_tag(picture.photo.url(:small)), picture.photo.url(:large), :rel => "prettyPhoto[pp_gal]" 
+        = link_to image_tag(picture.photo.url(:small), :alt => @game.name), picture.photo.url(:large), :rel => "prettyPhoto[pp_gal]" 
       %br/
     wydawca: 
     = link_to @game.publisher_game.name, publisher_game_path(@publisher_game) 
@@ -34,7 +34,7 @@
     = button_to("Dodaj do koszyka", add_to_cart_product_order_item_order_path( @game.product.id, 1, 1), :action => "add_to_cart", :method => :get)  
     %br/
     %br/
-    = @game.description
+    = @game.description.html_safe
     %br/
 %p
 = link_to "Pokaż wszystkie gry", games_path
