@@ -51,7 +51,10 @@
                         %ul.hide
                           -for category_book in CategoryBook.all
                             %li.submenu
-                              = link_to "", "#", :class => "expander"
+                              - if category_book.subcategory_books.blank?
+                                = link_to "", "#", :class => "expander open"
+                              - else
+                                = link_to "", "#", :class => "expander"
                               = link_to_unless_current( "#{category_book.name} (#{category_book.books.length})", category_book_path(category_book))
                               %ul.hide
                                 -for subcategory_book in category_book.subcategory_books
@@ -70,7 +73,10 @@
                     %ul.hide
                       - for  category_game in CategoryGame.all
                         %li.submenu
-                          = link_to "", "#", :class => "expander"
+                          - if category_game.subcategory_games.blank?
+                            = link_to "", "#", :class => "expander open"
+                          - else
+                            = link_to "", "#", :class => "expander"
                           = link_to_unless_current( "#{category_game.name} (#{category_game.games.length})", category_game_path(category_game))
                           %ul.hide
                             -for subcategory_game in category_game.subcategory_games
