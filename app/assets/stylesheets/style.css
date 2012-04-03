@@ -7,7 +7,12 @@ body {
 	min-width: 960px;
 	padding: 0;
 }
-
+a, a:link, a:visited {
+	color: #7c6b4f;
+	font-family: AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
+	font-size: 16px;
+        text-decoration: underline;
+}
 a {
 	outline: 0;
 	font-family: AntykwaPoltawskiegoTTF, Verdana, Geneva, sans-serif;
@@ -104,6 +109,7 @@ div.body {
 
 #body ul {
 	list-style: none;
+	font-size: 16px;
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
@@ -356,7 +362,15 @@ div.body ul li ul li:first-child {
 	color: #3D1F00;
 	text-decoration: underline;
 }
-
+h1.tekst {
+	font-size: 26px; 
+}
+h1.tekst a {
+	font-size: 26px; 
+	font-weight: normal;
+	color: #3D1F00;
+	text-decoration: underline;
+}
 h2.tekst {
 	font-size: 22px; 
 }

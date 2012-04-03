@@ -1,15 +1,15 @@
 .post
-  %h2.tekst-1strona
+  %h2.tekst
     = @accessory.name
     %br/
     - unless @accessory.product.pictures.blank?
       - for picture in @accessory.product.pictures
         = link_to image_tag(picture.photo.url(:small), :alt => @accessory.name), picture.photo.url(:large), :rel => "prettyPhoto[pp_gal]" 
-      %br/
+  %p.tekst
     cena: #{number_to_currency(@accessory.price)}
+  .tekst
     = button_to("Dodaj do koszyka", add_to_cart_product_order_item_order_path( @accessory.product.id, 1, 1), :action => "add_to_cart", :method => :get)  
-    %br/
-    %br/
+  %p.tekst
     = @accessory.description.html_safe
 
 
