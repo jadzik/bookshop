@@ -1,0 +1,12 @@
+%h1
+  Nowości
+- for product in @new_products
+  - unless product.resource.blank?
+    - if product.resource_type == "Book"
+      = render :partial => "shared/book", :object => product.resource
+    - elsif product.resource_type == "Game"
+      = render :partial => "shared/game", :object => product.resource
+    - elsif product.resource_type == "Accessory"
+      = render :partial => "shared/accessory", :object => product.resource
+%br/
+= paginate @new_products

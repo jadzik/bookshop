@@ -41,6 +41,7 @@
               %br/
               #nav
                 %ul{:style=> 'list-style-type: none'}
+                  = link_to_unless_current("Nowości", new_products_path)
                   %li.menu.show
                     = link_to "", "#", :class => "expander open"
                     = link_to_unless_current( "Książki", books_path)

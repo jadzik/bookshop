@@ -1,23 +1,5 @@
 - for book in @books 
-  .tekst
-  %h2.tekst
-    = link_to book.title, book_path(book)
-    - unless book.product.pictures.blank?
-      %br/
-      = link_to image_tag(book.product.pictures.first.photo.url(:small), :alt => book.title), book.product.pictures.first.photo.url(:large), :rel => "prettyPhoto[pp_gal]" 
-    %p.tekst
-      Autor: #{book.author}
-      %br/
-      Wydawnictwo:
-      = link_to book.publisher_book.name, publisher_book_path(book.publisher_book_id) 
-      %br/
-      rok wydania: #{book.year_of_publishing} 
-      %br/
-      rodzaj oprawy:  #{book.cover}
-      %br/
-      cena: #{number_to_currency(book.price)} 
-    .tekst
-      = button_to("Dodaj do koszyka", add_to_cart_product_order_item_order_path( book.product.id, 1, 1), :action => "add_to_cart", :method => :get)  
+  = render :partial => "shared/book", :object => book
 %br/
 .tekst
   = paginate @books
