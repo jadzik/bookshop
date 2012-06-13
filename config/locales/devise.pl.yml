@@ -8,8 +8,9 @@ pl:
       already_confirmed: "już został aktywowany, możesz się zalogować"
       not_locked: "nie był zablokowany"
       not_saved:
-        one: "%{resource} nie został zapisany z powodu jednego błędu:"
-        other: "%{resource} nie został zapisany z powodu %{count} błędów:"
+        one: "%{resource} nie zostało zapisane z powodu jednego błędu:"
+        other: "%{resource} nie zostało zapisane z powodu %{count} błędów:"
+        client: Konto
   devise:
     failure:
       already_authenticated: 'Jesteś już zalogowany.'
@@ -55,3 +56,15 @@ pl:
         subject: 'Instrukcja ustawienia nowego hasła'
       unlock_instructions:
         subject: 'Instrukcja odblokowania konta'
+    resources:
+      client: Konto
+    attributes:
+      client:
+        email: "Adres e-mail"
+        password: "Hasło"
+        password_confirmation: "Potwierdzenie hasła"
+    client: Konto
+    email: "Adres e-mail"
+    password: "Hasło"
+    name: "Imię i nazwisko lub nazwa firmy"
+  

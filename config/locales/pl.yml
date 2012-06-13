@@ -207,6 +207,10 @@ pl:
 
   email: "adres e-mail"
   client: "Konto"
+  address: "Adres"
+  street: "Ulica"
+  house_number: "numer domu"
+  zip_code: "kod pocztowy"
   password: "hasło"
   password_confirmation: "powtórz hasło"
   name: "nazwa"

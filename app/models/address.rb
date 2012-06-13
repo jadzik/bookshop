@@ -9,5 +9,6 @@ class Address < ActiveRecord::Base
   validates :apartment_number, :format => {:with =>  /^[1-9][0-9]{0,2}[a-z]{0,5}$/, 
             :message => "numer mieszkania musi być liczbą większą od 1, może zawierać małe litery na końcu"},
             :allow_blank => true
-  validates :zip_code, :format =>{:with => /^[0-9]{2}\-[0-9]{3}$/}
+  validates :zip_code, :format => {:with => /^[0-9]{2}\-[0-9]{3}$/ }
+  validates :city, :format => {:with => /\D{3,40}$/ }
 end
