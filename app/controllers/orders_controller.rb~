@@ -12,15 +12,6 @@ class OrdersController < ApplicationController
 #   @order = Order.find(params[:id])
 #   @client = @order.client_id
 # end
-  def create
-    @order = Order.new
-    if @order.save
-      redirect_to @order
-    else
-      render :action => "new"
-    end
-  end
-
 
   def new 
     @order = Order.new
