@@ -136,7 +136,17 @@ ActiveRecord::Schema.define(:version => 20110403130448) do
     t.integer   "category_game_id"
   end
 
+  create_table "games_categories", :force => true do |t|
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+  end
 
+  create_table "games_subcategories", :force => true do |t|
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+  end
 
 
 
