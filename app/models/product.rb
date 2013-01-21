@@ -7,7 +7,7 @@ class Product < ActiveRecord::Base
   before_destroy :ensure_not_referenced_by_any_order_item
 
   validates_presence_of :resource_id, :resource_type
-  validates_inclusion_of :resource_type, :in => %w(book Book accesory Accesory game Game) 
+  validates_inclusion_of :resource_type, :in => %w(book Book accessory Accessory game Game) 
   validates_numericality_of :resource_id
   private
     def ensure_not_referenced_by_any_order_item

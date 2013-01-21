@@ -1,0 +1,12 @@
+#encoding: utf-8
+class OrderItemsController < ApplicationController
+  
+  def create
+    @order = current_order
+    @order_item = @order.product_item.build
+    @order_item.product = Product.find(params[:product_id])
+    
+  end
+
+
+end

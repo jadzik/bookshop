@@ -2,6 +2,7 @@
 %br/
 %br/
 %br/
-Zapamiętaj!!! id produktu  #{@book.product.id}
+Zapamiętaj!!! id produktu  = 
+= @book.product.id
 %br/
 = link_to "Kliknij aby dodać zdjęcie", new_admin_picture_path

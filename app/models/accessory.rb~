@@ -7,7 +7,6 @@ class Accessory < ActiveRecord::Base
   private
     def make_product
       self.create_product()
-      Rails.logger.info product.errors.inspect
     end
 
   validates_presence_of :name, :price, :description, :category_accessory_id

@@ -1,0 +1,12 @@
+.tekst
+%h2.tekst
+  = link_to accessory.name, accessory_path(accessory)
+  - unless accessory.product.pictures.blank?
+    %br/
+    = link_to image_tag(accessory.product.pictures.first.photo.url(:small), :alt => accessory.name), accessory.product.pictures.first.photo.url(:large), :rel => "prettyPhoto[pp_gal]" 
+  %p.tekst
+    opis: #{truncate(accessory.description.html_safe, :length => 20, :separator => ' ', :ommission => "...")}
+    %br/
+    cena: #{number_to_currency(accessory.price)} 
+  .tekst
+    = button_t "Dodaj do koszyka", order_items_path(product_id: accessory.product.id)  

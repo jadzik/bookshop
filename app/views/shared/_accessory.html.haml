@@ -9,4 +9,4 @@
     %br/
     cena: #{number_to_currency(accessory.price)} 
   .tekst
-    = button_to("Dodaj do koszyka", add_to_cart_product_order_item_order_path( accessory.product.id, 1, 1), :action => "add_to_cart", :method => :get)  
+    = button_to "Dodaj do koszyka", order_items_path(product_id: accessory.product.id)  

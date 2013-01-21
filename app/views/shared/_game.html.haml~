@@ -11,4 +11,4 @@
     %br/
     cena: #{number_to_currency(game.price)}
   .tekst
-    = button_to "Dodaj do koszyka", order_items_path(product_id: game.product.id)
+    = button_t "Dodaj do koszyka", order_items_path(product_id: game.product.id)
