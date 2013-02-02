@@ -1,22 +1,17 @@
 #encoding: utf-8
 class OrderItemsController < ApplicationController
   
+  def new
+    @order_item = OrderItem.new
+  end
+
   def create
-    @order = current_order
-    @order_item = @order.product_item.build
+    @order_item = current_order.product_items.build
     @order_item.product = Product.find(params[:product_id])
-    
-    respond_to do |format|
-      if @order_item.save
-        format.html { redirect_to @order_item.order,
-          notice: 'Dodałeś produkt do koszyka' }
-        format.json { render json: @order_item,
-          status: :created, location: @order_item }
-      else
-        format.html {render action: "new"}
-        format.json {render json: @order_item.errors,
-          status: :unprocessable_entity }
-      end
+    if @order_item.save
+      redirect_to @order_item.order, notice: "Dodałeś produkt do koszyka" 
+    else
+      render action: "new"
     end
   end
 

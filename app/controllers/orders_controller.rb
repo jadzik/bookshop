@@ -2,16 +2,17 @@
 class OrdersController < ApplicationController
 #  before_filter :my_orders, :only => [:show, :index, :edit]
 
+  def show
+    @order = Order.find(params[:id])
+#   @client = @order.client_id
+  end
  
   
 # def index
 #    @orders = current_client.orders if client_signed_in?
 # end
 
-# def show
-#   @order = Order.find(params[:id])
-#   @client = @order.client_id
-# end
+
   def create
     @order = Order.new
     if @order.save
@@ -28,15 +29,17 @@ class OrdersController < ApplicationController
 #    @order = @client.orders.new
   end
 
-#  def create
+  def create
+    @order = Order.new(params[:order])   
 #    @client = current_client
 #    @order = @client.orders.new(params[:order])
-   # if @order.save
-   #   redirect_to orders_path(current_client)
-   # else
-   #   render :action => "new"
-   # end
-#  end
+    if @order.save
+      redirect_to @order, notice: "Dodałeś produkt do koszyka" 
+#      redirect_to orders_path(current_client)
+    else
+      render action: "new"
+    end
+  end
 
 #  private
 #    def my_orders
