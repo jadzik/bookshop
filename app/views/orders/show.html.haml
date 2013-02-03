@@ -1,2 +1,3 @@
-to jest karta Twojego zamówienia
- W zależności od statusu trochę się zmienia :D
+- @order.order_items.each do |item|
+  = item.product.resource.title
+  <br/>

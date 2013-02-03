@@ -4,24 +4,13 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
-#   @client = @order.client_id
+#    @client = @order.client_id
   end
  
-  
-# def index
+  def index
+    @orders = Order.all
 #    @orders = current_client.orders if client_signed_in?
-# end
-
-
-  def create
-    @order = Order.new
-    if @order.save
-      redirect_to @order
-    else
-      render :action => "new"
-    end
   end
-
 
   def new 
     @order = Order.new
@@ -40,6 +29,20 @@ class OrdersController < ApplicationController
       render action: "new"
     end
   end
+
+  def edit
+    @order = Order.find(params[:id])
+  end
+
+  def update
+    @order = Order.find(params[:id])
+    if @order.update_attributes(params[:order])
+      redirect_to @order, notice: 'Koszyk został zaktualizowany.' 
+    else
+      render action: "edit"
+    end
+  end
+
 
 #  private
 #    def my_orders

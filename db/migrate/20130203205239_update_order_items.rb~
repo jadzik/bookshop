@@ -1,0 +1,8 @@
+class UpdateOrderItems < ActiveRecord::Migration
+  def up
+    update_column :order_items, :amount, default: 1
+  end
+
+  def down
+  end
+end

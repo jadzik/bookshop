@@ -1,160 +1,67 @@
 
 --- 
-category_accessories: 
+active_admin_comments: 
   columns: 
   - id
-  - name
-  - created_at
-  - updated_at
-  records: 
-  - - 2
-    - "Zak\xC5\x82adki do ksi\xC4\x85\xC5\xBCek"
-    - 2011-12-04 00:19:53.551491+0000
-    - 2011-12-04 00:19:53.551491+0000
-
---- 
-publisher_books: 
-  columns: 
-  - id
-  - name
-  - created_at
-  - updated_at
-  records: 
-  - - 1
-    - Skorpion
-    - 2011-12-03 22:18:52.739471+0000
-    - 2011-12-03 22:18:52.739471+0000
-  - - 2
-    - Ossolineum
-    - 2012-01-22 19:29:38.492771+0000
-    - 2012-01-22 19:29:38.492771+0000
-  - - 3
-    - ARCHI-PLUS
-    - 2012-01-22 19:31:20.791599+0000
-    - 2012-01-22 19:31:20.791599+0000
-  - - 4
-    - PEKW "GAJA"
-    - 2012-01-22 19:33:23.459632+0000
-    - 2012-01-22 19:33:23.459632+0000
-  - - 5
-    - SUPERNOVA
-    - 2012-01-23 16:07:46.244971+0000
-    - 2012-01-23 16:07:46.244971+0000
-  - - 6
-    - Wolters Kluwer Polska
-    - 2012-01-23 16:08:50.849102+0000
-    - 2012-01-23 16:08:50.849102+0000
-  - - 7
-    - Poltext
-    - 2012-01-23 16:11:03.064114+0000
-    - 2012-01-23 16:11:03.064114+0000
-  - - 8
-    - MT Biznes
-    - 2012-01-23 16:11:37.134053+0000
-    - 2012-01-23 16:11:37.134053+0000
-  - - 9
-    - Wydawnictwo UMCS
-    - 2012-01-23 16:12:25.797162+0000
-    - 2012-01-23 16:12:25.797162+0000
-  - - 10
-    - Znak
-    - 2012-01-23 16:18:25.690533+0000
-    - 2012-01-23 16:18:25.690533+0000
-
---- 
-subcategory_books: 
-  columns: 
-  - id
-  - name
-  - created_at
-  - updated_at
-  - category_book_id
-  records: 
-  - - 3
-    - "J\xC4\x99zyk angielski"
-    - 2011-12-03 22:17:41.533575+0000
-    - 2011-12-03 22:17:41.533575+0000
-    - 1
-  - - 4
-    - "J\xC4\x99zyk niemiecki"
-    - 2011-12-03 22:18:10.553334+0000
-    - 2011-12-03 22:18:10.553334+0000
-    - 1
-  - - 6
-    - Kuchnia
-    - 2011-12-18 14:38:18.703173+0000
-    - 2011-12-18 14:38:18.703173+0000
-    - 2
-  - - 7
-    - Zdrowie i uroda
-    - 2011-12-18 14:38:39.495412+0000
-    - 2011-12-18 14:38:39.495412+0000
-    - 2
-  - - 8
-    - Filologia obca
-    - 2011-12-18 14:39:07.794018+0000
-    - 2011-12-18 14:39:07.794018+0000
-    - 3
-  - - 9
-    - Filologia polska
-    - 2011-12-18 14:39:22.248681+0000
-    - 2011-12-18 14:39:22.248681+0000
-    - 3
-  - - 10
-    - Lektury
-    - 2012-01-22 18:15:28.809972+0000
-    - 2012-01-22 18:15:28.809972+0000
-    - 4
-  - - 11
-    - Historia literatury
-    - 2012-01-23 17:49:35.878782+0000
-    - 2012-01-23 17:49:35.878782+0000
-    - 11
-
---- 
-subcategory_games: 
-  columns: 
-  - id
-  - name
-  - created_at
-  - updated_at
-  - category_game_id
-  records: 
-  - - 1
-    - Gry familijne
-    - 2012-01-22 19:08:08.307478+0000
-    - 2012-01-22 19:08:08.307478+0000
-    - 1
-  - - 2
-    - Gry strategiczne
-    - 2012-01-22 19:11:10.552218+0000
-    - 2012-01-22 19:11:10.552218+0000
-    - 1
-  - - 3
-    - Gry ekonomiczne
-    - 2012-01-22 19:13:29.881522+0000
-    - 2012-01-22 19:17:00.198982+0000
-    - 1
-
---- 
-products: 
-  columns: 
-  - id
-  - created_at
-  - updated_at
   - resource_id
   - resource_type
+  - author_id
+  - author_type
+  - body
+  - created_at
+  - updated_at
+  - namespace
   records: 
   - - 1
-    - 2012-01-22 19:41:35.743165+0000
-    - 2012-01-22 19:41:35.743165+0000
+    - 13
+    - SubcategoryBook
     - 1
-    - Game
+    - AdminUser
+    - "Ksi\xC4\x85\xC5\xBCki z opracowaniami z  zakresu literatury polskiej oraz powszechnej"
+    - 2012-02-12 14:42:17.096252+0000
+    - 2012-02-12 14:42:17.096252+0000
+    - admin
+
+--- 
+addresses: 
+  columns: 
+  - id
+  - created_at
+  - updated_at
+  - street
+  - zip_code
+  - city
+  - client_id
+  - house_number
+  - apartment_number
+  records: 
+  - - 2
+    - 2012-06-09 19:15:12.248658+0000
+    - 2012-06-09 19:15:12.248658+0000
+    - sfdfghgdgfh
+    - 59-855
+    - sdeftgyhuygtf
+    - 1
+    - "5"
+    - 5g
   - - 3
-    - 2012-01-23 18:02:27.138804+0000
-    - 2012-01-23 18:02:27.138804+0000
+    - 2012-06-09 19:15:40.162038+0000
+    - 2012-06-09 19:15:40.162038+0000
+    - dfghgfdg
+    - 52-852
+    - esdfgsdxfcvgb
     - 1
-    - Book
+    - "4"
+    - 85g
+  - - 4
+    - 2012-06-09 19:16:16.046639+0000
+    - 2012-06-09 19:16:16.046639+0000
+    - rtfyghtredftgyhu
+    - 42-789
+    - sdcf852
+    - 1
+    - "8"
+    - "8"
 
 --- 
 admin_users: 
@@ -179,13 +86,257 @@ admin_users:
     - 
     - 
     - 
-    - 33
-    - 2012-02-08 21:04:37.706825
-    - 2012-02-02 10:17:25.124523
+    - 44
+    - 2013-01-21 20:01:43.003956
+    - 2012-04-24 17:28:47.987036
     - 127.0.0.1
-    - 127.0.0.1
+    - 46.113.101.75
     - 2011-11-29 11:16:48.078390+0000
-    - 2012-02-08 21:04:37.709478
+    - 2013-01-21 20:01:43.007299
+
+--- 
+books: 
+  columns: 
+  - id
+  - title
+  - created_at
+  - updated_at
+  - translation
+  - year_of_publishing
+  - number_of_pages
+  - author
+  - price
+  - description
+  - language
+  - subcategory_book_id
+  - size
+  - publisher_book_id
+  - category_book_id
+  - cover
+  - isbn
+  records: 
+  - - 1
+    - Historia literatury niemieckiej
+    - 2012-01-23 18:02:27.032436+0000
+    - 2012-02-02 10:35:05.038802+0000
+    - ""
+    - 2011
+    - 376
+    - "Miros\xC5\x82awa Czarnecka"
+    - 33.0
+    - "Zarys literatury niemieckiej, uwzgl\xC4\x99dniaj\xC4\x85cy wyniki bada\xC5\x84 autorki (m.in. literatura kobiet, Gerarda i Carla Hauptmana, barok \xC5\x9Bl\xC4\x85ski). Ksi\xC4\x85\xC5\xBCka zosta\xC5\x82a uzupe\xC5\x82niona o literatur\xC4\x99 migracyjn\xC4\x85 w Niemczech. Praca zawiera wiele cennych wiadomo\xC5\x9Bci o literaturze ostatnich 50 lat, a zw\xC5\x82aszcza lat 1989-2009."
+    - polski
+    - 11
+    - 15 x 21
+    - 2
+    - 11
+    - twarda
+    - "9788304050501"
+  - - 8
+    - Historia  literatury polskiej
+    - 2012-02-12 19:08:02.240204+0000
+    - 2012-02-12 19:24:56.732435+0000
+    - "Monika Wo\xC5\xBAniak"
+    - 2009
+    - 512
+    - " red. Luigiego Marinellego"
+    - 46.0
+    - "Wyj\xC4\x85tkowa synteza przygotowana przez w\xC5\x82oskich polonist\xC3\xB3w. Ksi\xC4\x85\xC5\xBCka sk\xC5\x82ania do przemy\xC5\x9Ble\xC5\x84, co w rodzimej kulturze jest lokalne, a co europejskie i uniwersalne. Autorzy wprowadzili te\xC5\xBC do swojej pracy rozdzia\xC5\x82 po\xC5\x9Bwi\xC4\x99cony literaturze polsko-\xC5\xBCydowskiej i tworzonej w j\xC4\x99zyku jidysz."
+    - polski
+    - 11
+    - 14,6 x 20,3
+    - 2
+    - 11
+    - twarda
+    - "9788304049994"
+  - - 9
+    - "Wyb\xC3\xB3r pism"
+    - 2012-02-12 19:51:29.158755+0000
+    - 2012-02-12 19:51:29.158755+0000
+    - ""
+    - 2009
+    - 312
+    - Kazimierz Sosnkowski
+    - 35.0
+    - "Wyb\xC3\xB3r tekst\xC3\xB3w wybitnego polityka, legionisty, genera\xC5\x82a Wojska Polskiego w opracowaniu Jerzego Kirszaka, Krzysztofa Polecho\xC5\x84skiego. Historyk Jerzy Kirszak wybra\xC5\x82 publikowane w wydawnictwach emigracyjnych wyst\xC4\x85pienia dotycz\xC4\x85ce wa\xC5\xBCnych kwestii wojskowych, polskiej i \xC5\x9Bwiatowej polityki. S\xC4\x85 tu wspomnienia z kampanii wrze\xC5\x9Bniowej, rozkazy, przem\xC3\xB3wienia okoliczno\xC5\x9Bciowe (np. na wieczorach po\xC5\x9Bwi\xC4\x99conych tw\xC3\xB3rczo\xC5\x9Bci Melchiora Wa\xC5\x84kowicza czy Kazimierza Wierzy\xC5\x84skiego), listy oraz t\xC5\x82umaczenia wierszy Charlesa Baudelaire\xE2\x80\x99a."
+    - polski
+    - 13
+    - 11,7 x 16,3
+    - 2
+    - 11
+    - twarda
+    - "9788304049642"
+  - - 10
+    - Sen srebrny Salomei
+    - 2012-02-12 20:16:45.361062+0000
+    - 2012-02-12 20:16:45.361062+0000
+    - ""
+    - 2009
+    - 264
+    - "Juliusz S\xC5\x82owacki"
+    - 26.0
+    - "To wybitne i nieocenione dzie\xC5\x82o, kt\xC3\xB3rego fabu\xC5\x82a oparta jest na wydarzeniach rzezi ukrai\xC5\x84skiej 1768 r., ukazuje konflikt narodowo-spo\xC5\x82eczny mi\xC4\x99dzy polsk\xC4\x85 szlacht\xC4\x85 a ukrai\xC5\x84skimi ch\xC5\x82opami. S\xC5\x82owacki przedstawia \xC5\x9Bwiat dziwny, tajemniczy i pe\xC5\x82en grozy, \xC5\x9Bwiat, kt\xC3\xB3rym nie kieruj\xC4\x85 \xC5\xBCadne racjonalne prawa, ale tajemne znaki i sny prorocze. Opracowanie utworu - Alina Kowalczykowa"
+    - polski
+    - 13
+    - 11,7 x 16,3
+    - 2
+    - 11
+    - twarda
+    - "9788304050174"
+  - - 11
+    - Opowiadania wybrane
+    - 2012-02-12 20:27:40.256043+0000
+    - 2012-02-12 20:27:40.256043+0000
+    - ""
+    - 2009
+    - 452
+    - Adolf Rudnicki
+    - 35.0
+    - "Tw\xC3\xB3rczo\xC5\x9B\xC4\x87 Rudnickiego ukazuje przenikanie tradycji i kultury \xC5\xBCydowskiej, zar\xC3\xB3wno religijnej, jak i \xC5\x9Bwieckiej do rodzimej literatury. Jest tak\xC5\xBCe \xC5\x9Bwiadectwem ocalonego z Holokaustu. Autor wst\xC4\x99pu omawia fenomen to\xC5\xBCsamo\xC5\x9Bci polsko-\xC5\xBCydowskiej na podstawie biografii Rudnickiego oraz ukazuje poszczeg\xC3\xB3lne etapy tw\xC3\xB3rczo\xC5\x9Bci tego pisarza.\r\n\
+      Zbi\xC3\xB3r, w opracowaniu J\xC3\xB3zefa Wr\xC3\xB3bla, zawiera utwory: Kartka znaleziona pod murem strace\xC5\x84, Pi\xC4\x99kna sztuka pisania, Wielki Stefan Konecki, Niekochana, Gin\xC4\x85cy Daniel, Czysty nurt, Wniebowst\xC4\x85pienie, Stara \xC5\x9Bciana, Lew \xC5\x9Bwi\xC4\x99tej soboty, Uderzaj!, Ja, strudel, Ofiarowanie Izaaka, Panie, je\xC5\x9Bli Ci jestem potrzebny w\xC5\x82a\xC5\x9Bnie taki... "
+    - polski
+    - 13
+    - 11,7 x 16,3
+    - 2
+    - 11
+    - twarda
+    - "9788304049437"
+  - - 12
+    - "Opowiadania i nowele. Wyb\xC3\xB3r"
+    - 2012-02-12 20:46:19.646856+0000
+    - 2012-02-12 20:46:19.646856+0000
+    - ""
+    - 2009
+    - 422
+    - "Boles\xC5\x82aw Prus"
+    - 30.0
+    - "Tom zawiera utwory realistyczne, najwy\xC5\xBCej cenione przez autora, czytelnik\xC3\xB3w i historyk\xC3\xB3w literatury, kt\xC3\xB3re wesz\xC5\x82y na trwa\xC5\x82e do dorobku pi\xC5\x9Bmiennictwa polskiego: Z notatek hreczkosieja, Pod sztychami, Sieroca dola, Szkatu\xC5\x82ka babki, Powracaj\xC4\x85ca fala, Antek, Micha\xC5\x82ko, Katarynka, Kamizelka, On, Grzechy dzieci\xC5\x84stwa, Ple\xC5\x9B\xC5\x84 \xC5\x9Bwiata, Cienie, Z legend dawnego Egiptu, Sen. Wyb\xC3\xB3r utwor\xC3\xB3w i opracowanie autorstwa Tadeusza \xC5\xBBabskiego"
+    - polski
+    - 13
+    - 11,7 x 16,3
+    - 2
+    - 11
+    - twarda
+    - "9788304043398"
+  - - 13
+    - Oda w poezji polskiej. Antologia
+    - 2012-02-12 21:04:01.186222+0000
+    - 2012-02-12 21:04:01.186222+0000
+    - ""
+    - 2009
+    - 543
+    - red. Teresa Kostkiewiczowa
+    - 37.0
+    - "Oda to jeden z podstawowych gatunk\xC3\xB3w poetyckich, utrzymany w patetycznym stylu, opiewaj\xC4\x85cy wybitn\xC4\x85 posta\xC4\x87, wydarzenie, uroczysto\xC5\x9B\xC4\x87, instytucj\xC4\x99 czy wznios\xC5\x82\xC4\x85 ide\xC4\x99. Autorka wst\xC4\x99pu zabiera nas na w\xC4\x99dr\xC3\xB3wk\xC4\x99 przez r\xC3\xB3\xC5\xBCne okresy literackie i r\xC3\xB3\xC5\xBCne typy tw\xC3\xB3rczo\xC5\x9Bci; pisze o genezie gatunku, jego miejscu w poezji polskiej, odmianach i historycznych przekszta\xC5\x82ceniach. Najobszerniejsz\xC4\x85 cz\xC4\x99\xC5\x9B\xC4\x87 ksi\xC4\x85\xC5\xBCki stanowi antologia utwor\xC3\xB3w, obejmuj\xC4\x85ca 113 nazwiska autor\xC3\xB3w \xE2\x80\x93 od renesansu do literatury najnowszej \xE2\x80\x93 i 325 tekst\xC3\xB3w. Jest to pierwsza tak powa\xC5\xBCna monografia, adresowana do szerokiego kr\xC4\x99gu czytelniczego, lecz zrazem niezb\xC4\x99dna w edukacji akademickiej. "
+    - polski
+    - 13
+    - 11,7 x 16,3
+    - 2
+    - 11
+    - twarda
+    - "9788304050259"
+  - - 14
+    - Nad Niemnem. Tom I,II,III
+    - 2012-02-12 21:27:59.241500+0000
+    - 2012-02-12 21:27:59.241500+0000
+    - ""
+    - 2009
+    - 760
+    - Eliza Orzeszkowa
+    - 50.0
+    - "Panorama polskiego spo\xC5\x82ecze\xC5\x84stwa XIX-wiecznego na przyk\xC5\x82adzie dw\xC3\xB3ch \xC5\x9Brodowisk: szlachty ziemia\xC5\x84skiej oraz szlacheckiego za\xC5\x9Bcianka. Jednym z g\xC5\x82\xC3\xB3wnych w\xC4\x85tk\xC3\xB3w jest intryga mi\xC5\x82osna zwi\xC4\x85zana z postaci\xC4\x85 zubo\xC5\xBCa\xC5\x82ej szlachcianki Justyny Orzelskiej i Janka Bohatyrowicza pochodz\xC4\x85cego ze szlachty zagrodowej.\r\n\
+      We wst\xC4\x99pie J\xC3\xB3zef Bach\xC3\xB3rz przedstawi\xC5\x82 m.in. tradycj\xC4\x99 powstania 1863 r., kontrast dw\xC3\xB3ch kultur, dramaty pracy organicznej oraz temat ma\xC5\x82\xC5\xBCe\xC5\x84stwa i sytuacji kobiety."
+    - polski
+    - 13
+    - 11,7 x 16,3
+    - 2
+    - 11
+    - twarda
+    - "9788304043374"
+  - - 15
+    - "Horszty\xC5\x84ski"
+    - 2012-02-12 21:41:34.136707+0000
+    - 2012-02-12 21:41:34.136707+0000
+    - ""
+    - 2009
+    - 352
+    - "Juliusz S\xC5\x82owacki"
+    - 28.0
+    - "Horszty\xC5\x84ski jest arcydzie\xC5\x82em. To dramat fascynuj\xC4\x85cy i pora\xC5\xBCaj\xC4\x85cy, szczytowe arcydzie\xC5\x82o pesymizmu i daleka zapowied\xC5\xBA mistycznej fazy tw\xC3\xB3rczo\xC5\x9Bci, dzie\xC5\x82o blu\xC5\xBAniercze i zawieraj\xC4\x85ce g\xC5\x82\xC4\x99bokie intuicje metafizyczne, tekst o utracie wiary i o poszukiwaniu w\xC5\x82asnej to\xC5\xBCsamo\xC5\x9Bci, o odkrywaniu g\xC5\x82\xC4\x99bin \xE2\x80\x9Eja\xE2\x80\x9D.\r\n\
+      Jaros\xC5\x82aw \xC5\x81awski, Wst\xC4\x99p"
+    - polski
+    - 13
+    - 11,7 x 16,3
+    - 2
+    - 11
+    - twarda
+    - "9788304050181"
+  - - 16
+    - "Podr\xC3\xB3\xC5\xBC sentymentalna przez Francj\xC4\x99 i W\xC5\x82ochy"
+    - 2012-02-12 21:50:34.117408+0000
+    - 2012-02-12 21:50:34.117408+0000
+    - Agnieszka Glinczanka
+    - 2009
+    - 276
+    - Laurence Sterne
+    - 29.0
+    - "Dziennik podr\xC3\xB3\xC5\xBCy, w kt\xC3\xB3rym autor zawar\xC5\x82 zapis stan\xC3\xB3w wewn\xC4\x99trznych, przelotnych znajomo\xC5\x9Bci i wzrusze\xC5\x84 g\xC5\x82\xC3\xB3wnego bohatera Yoricka. Obecne wydanie zawiera poprawiony i uzupe\xC5\x82niony wst\xC4\x99p."
+    - polski
+    - 13
+    - 11,7 x 16,3
+    - 2
+    - 11
+    - twarda
+    - "9788304045019"
+  - - 17
+    - "Marcel Reich-RanickiI. \xE2\x80\x9EMoj\xC4\x85 ojczyzn\xC4\x85 jest literatura\xE2\x80\x9D"
+    - 2012-02-12 22:31:45.049621+0000
+    - 2012-02-12 22:31:45.049621+0000
+    - ""
+    - 2007
+    - 228
+    - Norbert Honsza, Stephan Wolting
+    - 35.0
+    - "Biografia literacka po\xC5\x9Bwi\xC4\x99cona znanemu i kontrowersyjnemu krytykowi, mistrzowi prowokacji, zwanemu te\xC5\xBC papie\xC5\xBCem literatury. Honsza i Wolting, opieraj\xC4\x85c si\xC4\x99 na badaniach w\xC5\x82asnych i innych autor\xC3\xB3w, spotkaniach i rozmowach z Reichem-Ranickim, a tak\xC5\xBCe na jego autobiografii Moje \xC5\xBCycie, ukazuj\xC4\x85 drog\xC4\x99 \xC5\xBCyciow\xC4\x85 i pisarsk\xC4\x85 krytyka od pocz\xC4\x85tku jego pracy w Wydawnictwie MON i \xE2\x80\x9ECzytelniku\xE2\x80\x9D, poprzez dzia\xC5\x82alno\xC5\x9B\xC4\x87 krytyczno-literack\xC4\x85 w Niemczech, a\xC5\xBC do jego s\xC5\x82ynnego programu \xE2\x80\x9EKwartet literacki\xE2\x80\x9D. Staraj\xC4\x85 si\xC4\x99 znale\xC5\xBA\xC4\x87 przyczyny mog\xC4\x85ce wyja\xC5\x9Bni\xC4\x87 znaczenie i kontrowersyjno\xC5\x9B\xC4\x87 krytyka.\r\n\
+      Pomys\xC5\x82 napisania tej ksi\xC4\x85\xC5\xBCki zrodzi\xC5\x82 si\xC4\x99 w 2003 r. w Getyndze, kiedy Norbert Honsza zosta\xC5\x82 laureatem Nagrody \xC5\x9Al\xC4\x85ska Kraju Dolnej Saksonii. Laudacj\xC4\x99 wyg\xC5\x82osi\xC5\x82 w\xC3\xB3wczas Reich-Ranicki."
+    - polski
+    - 12
+    - 14,6 x 20,3
+    - 2
+    - 11
+    - "mi\xC4\x99kka"
+    - "9788304049482"
+  - - 18
+    - "Najpierw \xC5\xBCy\xC4\x87, potem igra\xC4\x87. Szkice o literaturze polskiej "
+    - 2012-02-12 22:38:55.468852+0000
+    - 2012-02-12 22:38:55.468852+0000
+    - "El\xC5\xBCbieta Herden"
+    - 2005
+    - 202
+    - Marcel Reich-Ranicki
+    - 20.0
+    - "Jak postrzegana jest nasza literatura w Niemczech? Jak pr\xC3\xB3buje si\xC4\x99 j\xC4\x85 rozpowszechni\xC4\x87, przybli\xC5\xBCy\xC4\x87 zagranicznym czytelnikom? Na czym polega jej specyfika? Jak widzi j\xC4\x85 najbardziej wp\xC5\x82ywowy niemiecki krytyk literacki? Te pytania nieustannie towarzysz\xC4\x85 lekturze ksi\xC4\x85\xC5\xBCki Marcela Reicha\xE2\x80\x93Ranickiego, zwanego \xE2\x80\x9Epapie\xC5\xBCem niemieckiej krytyki literackiej\xE2\x80\x9D.\r\n\
+      Najpierw \xC5\xBCy\xC4\x87, potem igra\xC4\x87 to wyb\xC3\xB3r 28 artyku\xC5\x82\xC3\xB3w, pisanych w latach 1958\xE2\x80\x932001 w wi\xC4\x99kszo\xC5\x9Bci dla niemieckiej prasy. W ksi\xC4\x85\xC5\xBCce zosta\xC5\x82y zamieszczone m.in. recenzje, portrety i wspomnienia po\xC5\x9Bmiertne o szesnastu pisarzach polskich, kt\xC3\xB3rzy wed\xC5\x82ug krytyka wywarli du\xC5\xBCy wp\xC5\x82yw na literatur\xC4\x99 polsk\xC4\x85 XX w. Znalaz\xC5\x82y si\xC4\x99 tu teksty o takich tw\xC3\xB3rcach, jak: Brunon Schulz, Jaros\xC5\x82aw Iwaszkiewicz, Jan Parandowski, Antoni S\xC5\x82onimski, Mieczys\xC5\x82aw Jastrun, Witold Gombrowicz, Stanis\xC5\x82aw Jerzy Lec, Jerzy Andrzejewski, Czes\xC5\x82aw Mi\xC5\x82osz, Kazimierz Brandys, Tadeusz Nowakowski, Roman Bratny, Andrzej Braun, Andrzej Szczypiorski, S\xC5\x82awomir Mro\xC5\xBCek i Marek H\xC5\x82asko."
+    - polski
+    - 12
+    - 11,6 x 19,5
+    - 2
+    - 11
+    - twarda
+    - "8304046458"
+
+--- 
+category_accessories: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 2
+    - "Zak\xC5\x82adki do ksi\xC4\x85\xC5\xBCek"
+    - 2011-12-04 00:19:53.551491+0000
+    - 2011-12-04 00:19:53.551491+0000
 
 --- 
 category_books: 
@@ -239,6 +390,22 @@ category_books:
     - Literatura
     - 2012-01-23 17:47:32.564619+0000
     - 2012-01-23 17:47:32.564619+0000
+  - - 12
+    - Sztuka
+    - 2012-02-12 14:22:21.306919+0000
+    - 2012-02-12 14:22:21.306919+0000
+  - - 13
+    - Pedagogika
+    - 2012-02-12 14:23:50.406960+0000
+    - 2012-02-12 14:23:50.406960+0000
+  - - 14
+    - "S\xC5\x82owniki i encyklopedie"
+    - 2012-02-12 14:28:27.820484+0000
+    - 2012-02-12 14:28:27.820484+0000
+  - - 15
+    - Varia
+    - 2012-02-12 14:29:43.180623+0000
+    - 2012-02-12 14:29:43.180623+0000
 
 --- 
 category_games: 
@@ -270,105 +437,81 @@ category_games:
     - 2012-01-22 19:07:15.496882+0000
 
 --- 
-pictures: 
+clients: 
   columns: 
   - id
   - created_at
   - updated_at
-  - photo
-  - photo_file_name
-  - photo_content_type
-  - photo_file_size
-  - product_id
-  records: 
-  - - 1
-    - 2011-12-20 14:18:13.472847+0000
-    - 2011-12-20 14:31:11.008520+0000
-    - 
-    - book1.jpg
-    - image/jpeg
-    - 4506
-    - 3
-  - - 2
-    - 2011-12-20 14:31:54.287897+0000
-    - 2011-12-20 14:31:54.287897+0000
-    - 
-    - book2.jpg
-    - image/jpeg
-    - 6725
-    - 6
-  - - 3
-    - 2011-12-20 14:34:11.340037+0000
-    - 2012-01-14 18:28:49.509159+0000
-    - 
-    - book4.jpg
-    - image/jpeg
-    - 6672
-    - 22
-  - - 4
-    - 2011-12-20 14:34:37.846583+0000
-    - 2012-01-14 18:15:04.000277+0000
-    - 
-    - gra1.jpg
-    - image/jpeg
-    - 35611
-    - 23
-
---- 
-books: 
-  columns: 
-  - id
-  - title
-  - created_at
-  - updated_at
-  - translation
-  - year_of_publishing
-  - number_of_pages
-  - author
-  - price
-  - description
-  - language
-  - subcategory_book_id
-  - size
-  - publisher_book_id
-  - category_book_id
-  - cover
-  - isbn
-  records: 
-  - - 1
-    - Historia literatury niemieckiej
-    - 2012-01-23 18:02:27.032436+0000
-    - 2012-02-02 10:35:05.038802
-    - ""
-    - 2011
-    - 376
-    - "Miros\xC5\x82awa Czarnecka"
-    - 33.0
-    - "Zarys literatury niemieckiej, uwzgl\xC4\x99dniaj\xC4\x85cy wyniki bada\xC5\x84 autorki (m.in. literatura kobiet, Gerarda i Carla Hauptmana, barok \xC5\x9Bl\xC4\x85ski). Ksi\xC4\x85\xC5\xBCka zosta\xC5\x82a uzupe\xC5\x82niona o literatur\xC4\x99 migracyjn\xC4\x85 w Niemczech. Praca zawiera wiele cennych wiadomo\xC5\x9Bci o literaturze ostatnich 50 lat, a zw\xC5\x82aszcza lat 1989-2009."
-    - polski
-    - 11
-    - 15 x 21
-    - 2
-    - 11
-    - twarda
-    - "9788304050501"
-
---- 
-publisher_games: 
-  columns: 
-  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - confirmation_token
+  - confirmed_at
+  - confirmation_sent_at
+  - unconfirmed_email
   - name
-  - created_at
-  - updated_at
+  - fax_phone
+  - stationary_phone
+  - nip
+  - mobile_phone
+  - contact_comments
+  - client_type
   records: 
   - - 1
-    - IPN
-    - 2012-01-22 19:35:50.183136+0000
-    - 2012-01-22 19:35:50.183136+0000
+    - 2012-06-09 16:46:34.365975+0000
+    - 2012-06-09 19:24:32.423664+0000
+    - a_skrzypczyk@interia.eu
+    - $2a$10$ag5aINq.xzj4zQrq.opixOI02B8BGLSGv4KtUdOB.4EEyWHOMz/kG
+    - 
+    - 
+    - 
+    - 2
+    - 2012-06-09 19:24:32.412616+0000
+    - 2012-06-09 16:46:41.260129+0000
+    - 164.126.37.214
+    - 164.126.37.214
+    - 
+    - 2012-06-09 18:43:43.953295+0000
+    - 2012-06-09 16:52:04.529871+0000
+    - 
+    - Anna Skrzypczyk
+    - ""
+    - ""
+    - ""
+    - "665979445"
+    - 
+    - klient indywidualny
   - - 2
-    - Bard
-    - 2012-01-22 19:36:12.093326+0000
-    - 2012-01-22 19:36:12.093326+0000
+    - 2012-06-09 19:37:49.569959+0000
+    - 2012-06-09 19:37:52.790461+0000
+    - gruszeczksldldld@dfg.pl
+    - $2a$10$yfYj6ydi83b./P4MzHhavuPl7anLQ963uLKFZ/Z7gNyBv712u8Zi2
+    - 
+    - 
+    - 
+    - 1
+    - 2012-06-09 19:37:52.788344+0000
+    - 2012-06-09 19:37:52.788344+0000
+    - 164.126.37.214
+    - 164.126.37.214
+    - YXnyzw6V5XwpbybWTsGy
+    - 
+    - 2012-06-09 19:37:49.560372+0000
+    - 
+    - Cedjndjfjbf12
+    - ""
+    - ""
+    - "9458585123"
+    - "665979445"
+    - 
+    - firma
 
 --- 
 games: 
@@ -397,7 +540,7 @@ games:
   - - 1
     - Kolejka
     - 2012-01-22 19:41:35.702719+0000
-    - 2012-02-02 10:44:44.921644
+    - 2012-02-13 07:15:19.673185+0000
     - 80.0
     - 4
     - 5
@@ -426,108 +569,578 @@ games:
     - 3
     - 
     - 1
-    - "Instrukcjia w j\xC4\x99zyku polskim"
+    - "Instrukcja w j\xC4\x99zyku polskim"
     - 2011
     - Gra edukacyjna
     - 
     - 1
-
---- 
-clients: 
-  columns: 
-  - id
-  - created_at
-  - updated_at
-  - email
-  - encrypted_password
-  - reset_password_token
-  - reset_password_sent_at
-  - remember_created_at
-  - sign_in_count
-  - current_sign_in_at
-  - last_sign_in_at
-  - current_sign_in_ip
-  - last_sign_in_ip
-  - confirmation_token
-  - confirmed_at
-  - confirmation_sent_at
-  - unconfirmed_email
-  - name
-  - fax_phone
-  - stationary_phone
-  - nip
-  - mobile_phone
-  - contact_comments
-  - client_type
-  records: 
-  - - 8
-    - 2012-02-07 23:45:18.206891
-    - 2012-02-08 18:52:51.273067
-    - jadwiga.gruczka@gmail.com
-    - $2a$10$ZAzlcajvOz0sBgwJpupiK.OLcx3/VuDAw4Fg3uVTdOh60rffIvI.i
+  - - 2
+    - Zimna wojna 1945-1989. Twilight Struggle
+    - 2012-02-13 12:02:38.388050+0000
+    - 2012-02-13 12:02:38.388050+0000
+    - 149.9
+    - 2
+    - 2
+    - 14
+    - 120
+    - 180
+    - "W 1945 roku Alianci wraz z Sowietami zatrzymali hitlerowsk\xC4\x85 machin\xC4\x99 wojenn\xC4\x85, a najgro\xC5\xBAniejsza bro\xC5\x84 wymy\xC5\x9Blona przez ludzko\xC5\x9B\xC4\x87 rzuci\xC5\x82a Cesarstwo Japo\xC5\x84skie na kolana. Dawne \xC5\x9Bwiatowe pot\xC4\x99gi zosta\xC5\x82y zast\xC4\x85pione przez dwa supermocarstwa: USA i ZSRR. \xC5\x9Awiat mia\xC5\x82 ledwie kilka miesi\xC4\x99cy na z\xC5\x82apanie oddechu zanim pojawi\xC5\x82a si\xC4\x99 gro\xC5\xBAba nowego konfliktu. Ta wojna, odmiennie od poprzednich konflikt\xC3\xB3w, b\xC4\x99dzie toczona nie przez \xC5\xBCo\xC5\x82nierzy, a polityk\xC3\xB3w i szpieg\xC3\xB3w, naukowc\xC3\xB3w i intelektualist\xC3\xB3w, artyst\xC3\xB3w i zdrajc\xC3\xB3w.\r\n\
+      \r\n\
+      \xE2\x80\x9EZimna wojna 1945-1989\xE2\x80\x9D jest gr\xC4\x85 dla dw\xC3\xB3ch graczy, odwzorowuj\xC4\x85c\xC4\x85 czterdziestopi\xC4\x99cioletni taniec intryg, wp\xC5\x82yw\xC3\xB3w i konflikt\xC3\xB3w zbrojnych mi\xC4\x99dzy ZSRR i USA. Ca\xC5\x82y \xC5\x9Bwiat jest szachownic\xC4\x85, na kt\xC3\xB3rej tych dw\xC3\xB3ch tytan\xC3\xB3w przesuwa pionki. Gra rozpoczyna si\xC4\x99 po\xC5\x9Br\xC3\xB3d ruin Europy, kiedy dwa supermocarstwa \xC5\x9Bcieraj\xC4\x85 si\xC4\x99 o powojenne zgliszcza, a ko\xC5\x84czy si\xC4\x99 w 1989, kiedy na scenie pozosta\xC5\x82y ju\xC5\xBC tylko Stany Zjednoczone.\r\n\
+      \xE2\x80\x9EZimna wojna 1945-1989\xE2\x80\x9D jest gr\xC4\x85 szybk\xC4\x85, opart\xC4\x85 na prostych zasadach.\r\n\
+      Obszarem gry jest mapa \xC5\x9Bwiata z okresu zimnej wojny, na kt\xC3\xB3rej gracze przesuwaj\xC4\x85 jednostki i rozszerzaj\xC4\x85 wp\xC5\x82ywy, pr\xC3\xB3buj\xC4\x85c pozyska\xC4\x87 sojusznik\xC3\xB3w i kontrol\xC4\x99 dla swojego supermocarstwa. Karty wydarze\xC5\x84 w \xE2\x80\x9EZimnej wojnie 1945-1989\xE2\x80\x9D dodaj\xC4\x85 grze g\xC5\x82\xC4\x99bi. Obejmuj\xC4\x85 one szeroki zakres wydarze\xC5\x84 historycznych: konflikty arabsko-izraelskie, wojn\xC4\x99 w Wietnamie, ruchy pacyfistyczne, kryzys kuba\xC5\x84ski i inne zdarzenia, kt\xC3\xB3re doprowadzi\xC5\x82y \xC5\x9Bwiat na skraj nuklearnej zag\xC5\x82ady. Pomniejsze aspekty gry oddaj\xC4\x85 przebieg wy\xC5\x9Bcigu kosmicznego jak i napi\xC4\x99\xC4\x87 nuklearnych, z zawsze pozostaj\xC4\x85c\xC4\x85 w tle mo\xC5\xBCliwo\xC5\x9Bci\xC4\x85 zako\xC5\x84czenia rozgrywki nadej\xC5\x9Bciem nuklearnego holocaustu. Czy jako Prezydent USA lub Sekretarz Generalny ZSRR zdo\xC5\x82asz poprowadzi\xC4\x87 swoj\xC4\x85 stron\xC4\x99 do wygranej?\r\n\
+      \r\n\
+      Ogromn\xC4\x85 zalet\xC4\x85 gry s\xC4\x85 walory edukacyjne, gdy\xC5\xBC w grze jest opisanych ponad sto kluczowych wydarze\xC5\x84 z okresu zimnej wojny a na kartach oraz planszy wykorzystano archiwalne zdj\xC4\x99cia w ciekawej oprawie graficznej. \r\n\
+      Warto zwr\xC3\xB3ci\xC4\x87 uwag\xC4\x99 na ciekawie przemy\xC5\x9Blan\xC4\x85 mechanik\xC4\x99 rozgrywek, kt\xC3\xB3ra gwarantuje nam za ka\xC5\xBCdym razem niezwykle emocjonuj\xC4\x85c\xC4\x85 gr\xC4\x99.\r\n\
+      Gra zosta\xC5\x82a wykonana bardzo starannie, z materia\xC5\x82\xC3\xB3w gwarantuj\xC4\x85cych nam bardzo wysok\xC4\x85 jako\xC5\x9B\xC4\x87 i trwa\xC5\x82o\xC5\x9B\xC4\x87. T\xC5\x82umaczenie oraz szat\xC4\x99 graficzn\xC4\x85 przygotowano z dba\xC5\x82o\xC5\x9Bci\xC4\x85 o ka\xC5\xBCdy detal.\r\n\
+      W \xC5\x9Bwiatowych rankingach gier jest to najwy\xC5\xBCej oceniana gra."
+    - polski
+    - 2
+    - 2
+    - 1
+    - "w j\xC4\x99zyku polskim"
+    - 2011
+    - gra strategiczna
     - 
-    - 
-    - 
+    - 2
+  - - 3
+    - Rattle Snake
+    - 2012-02-13 12:21:26.975619+0000
+    - 2012-02-13 12:21:26.975619+0000
+    - 55.0
+    - 2
     - 4
-    - 2012-02-08 18:52:51.271133
-    - 2012-02-08 12:37:22.990310
-    - 127.0.0.1
-    - 127.0.0.1
-    - 
-    - 2012-02-08 13:29:28.605777
-    - 2012-02-08 12:31:17.022359
-    - 
-    - jadzia g
-    - ""
-    - ""
-    - ""
-    - "123456789"
-    - 
-    - indywidualny
-  - - 9
-    - 2012-02-08 20:17:53.429987
-    - 2012-02-08 20:18:00.108895
-    - jjadzikk@gmail.com
-    - $2a$10$VAxI/rYo4v2Ol29V9A5phOhPgEAl0zXqA6D11B/HIZPpvr0wvnslC
-    - 
-    - 
+    - 8
+    - 10
+    - 15
+    - "Kto b\xC4\x99dzie pierwszym graczem, kt\xC3\xB3ry pozb\xC4\x99dzie si\xC4\x99 niebezpiecznych jaj grzechotnika? Grzechotnik to zabawna i prosta gra \xC5\x82\xC4\x85cz\xC4\x85ca zr\xC4\x99czno\xC5\x9B\xC4\x87 i strategi\xC4\x99 dla dzieci w ka\xC5\xBCdym wieku. Gracze rywalizuj\xC4\x85 by by\xC4\x87 pierwszym, kt\xC3\xB3ry umie\xC5\x9Bci wszystkie magnetyczne jaja grzechotnika na planszy. Ale uwa\xC5\xBCaj! Ka\xC5\xBCde dodatkowe jajo sprawia, \xC5\xBCe inne jaja b\xC4\x99d\xC4\x85ce ju\xC5\xBC na planszy wiruj\xC4\x85, przesuwaj\xC4\x85 si\xC4\x99.... a mo\xC5\xBCe nawet zderzaj\xC4\x85! Ka\xC5\xBCdy, kto spowodowa\xC5\x82 zderzenie musi zebra\xC4\x87 wszystkie z\xC5\x82\xC4\x85czone jaja, co czyni zwyci\xC4\x99stwo du\xC5\xBCo trudniejszym!\r\n Na pocz\xC4\x85tku gry, podziel magnetyczne jaja grzechotnika pomi\xC4\x99dzy graczy. 6 dla ka\xC5\xBCdego w przypadku 2 graczy, 4 jaja dla 3 graczy lub 3 jaja dla w przypadku rozgrywki z czterema graczami. GRA W swojej turze rzucasz ko\xC5\x9Bci\xC4\x85. Po\xC5\x82\xC3\xB3\xC5\xBC jedno z jaj grzechotnika na jakimkolwiek w\xC4\x99\xC5\xBCu na planszy, kt\xC3\xB3rego kolor pasuje do koloru, kt\xC3\xB3ry wypad\xC5\x82 na ko\xC5\x9Bci. \xC5\x9Arodek jaja musi spoczywa\xC4\x87 na w\xC4\x99\xC5\xBCu. Ale b\xC4\x85d\xC5\xBA ostro\xC5\xBCny- jaja grzechotnika s\xC4\x85 namagnetyzowane i b\xC4\x99d\xC4\x85 si\xC4\x99 przyci\xC4\x85ga\xC4\x87! Je\xC5\x9Bli umie\xC5\x9Bcisz jedno jajo zbyt blisko drugie- zderz\xC4\x85 si\xC4\x99! Je\xC5\x9Bli dwa lub wi\xC4\x99cej jaj si\xC4\x99 zderzy\xC5\x82o, gracz, kt\xC3\xB3ry to spowodowa\xC5\x82 musi zebra\xC4\x87 wszystkie po\xC5\x82\xC4\x85czone jaja. To oznacza, \xC5\xBCe b\xC4\x99dzie trzeba pozby\xC4\x87 si\xC4\x99 wielu wi\xC4\x99cej jaj ni\xC5\xBC pocz\xC4\x85tkowo aby wygra\xC4\x87! Je\xC5\x9Bli \xC5\xBCadne jaja si\xC4\x99 nie zderzy\xC5\x82y wykona\xC5\x82e\xC5\x9B dobry ruch! Je\xC5\x9Bli jajo, kt\xC3\xB3re w\xC5\x82a\xC5\x9Bnie umie\xC5\x9Bci\xC5\x82e\xC5\x9B by\xC5\x82o ostatnim w twoim r\xC4\x99ku- wygrywasz! W przeciwnym razie przekazujesz ko\xC5\x9B\xC4\x87 graczowi po twojej lewej stronie i gra toczy si\xC4\x99 dalej. ZWYCI\xC4\x98STWO Pierwszy gracz, kt\xC3\xB3ry umie\xC5\x9Bci wszystkie jaja na planszy nie powoduj\xC4\x85c zderzenia wygrywa gr\xC4\x99!\r\n\
+      Gra otrzyma\xC5\x82a Nominacj\xC4\x99 do najbardziej presti\xC5\xBCowej nagrody Spiel des Jahres Niemcy 2008 oraz wyr\xC3\xB3\xC5\xBCnienie jako najlepsza gra dzieci\xC4\x99ca na targach Game and Toys \xC5\x81\xC3\xB3d\xC5\xBA 2009\r\n\
+      \r\n\
+      Pude\xC5\x82ko zawiera:\r\n\
+      Zasady\r\n\
+      Plansz\xC4\x99 do gry\r\n\
+      Jedn\xC4\x85 specjaln\xC4\x85 ko\xC5\x9B\xC4\x87 sze\xC5\x9Bcio\xC5\x9Bcienn\xC4\x85\r\n\
+      12 magnetycznych \"jaj grzechotnika\""
+    - polski
+    - 1
     - 
     - 1
-    - 2012-02-08 20:18:00.105315
-    - 2012-02-08 20:18:00.105315
-    - 127.0.0.1
-    - 127.0.0.1
-    - gHKiyRLuzLcDooW8DS4p
+    - "w j\xC4\x99zyku polskim"
+    - 2008
+    - "gra zr\xC4\x99czno\xC5\x9Bciowa"
     - 
-    - 2012-02-08 20:17:53.427705
+    - 2
+  - - 4
+    - Carcassonne
+    - 2012-02-13 13:10:06.426747+0000
+    - 2012-02-13 13:10:06.426747+0000
+    - 89.0
+    - 2
+    - 5
+    - 8
+    - 30
+    - 45
+    - "Carcassonne to niemiecka gra planszowa autorstwa Klausa-Jurgena Wrede. Pomaga rozwija\xC4\x87 wyobra\xC5\xBAni\xC4\x99 przestrzenn\xC4\x85, uczy my\xC5\x9Blenia strategicznego i taktycznego oraz planowania i podejmowania decyzji .Gra posiada mo\xC5\xBCliwo\xC5\x9B\xC4\x87 rozszerzenia o kolejne plansze b\xC4\x99d\xC4\x85ce kontynuacj\xC4\x85 gry\r\n\
+      W Carcassonne nie ma typowej , gotowej planszy, gdy\xC5\xBC powstaje ona dopiero na naszych oczach z \xC5\xBCeton\xC3\xB3w terenu w trakcie gry . Takie rozwi\xC4\x85zanie nadaje grze nietuzinkowy charakter i to gracze decyduj\xC4\x85 jak b\xC4\x99d\xC4\x85 wygl\xC4\x85da\xC5\x82y miasta, drogi i \xC5\x82\xC4\x85ki. Karty  terenu zawieraj\xC4\x85 kombinacje z\xC5\x82o\xC5\xBCone z cz\xC4\x99\xC5\x9Bci dr\xC3\xB3g, \xC5\x82\xC4\x85k i \xC5\x9Bredniowiecznych miast czy te\xC5\xBC  klasztor. Zasadniczym celem gry jest zbieranie punkt\xC3\xB3w za zajmowanie pionkami  obszar\xC3\xB3w i ich rozbudow\xC4\x99.  Punkty podlicza si\xC4\x99 zar\xC3\xB3wno w trakcie gry jak i na jej ko\xC5\x84cu, dlatego te\xC5\xBC zwyci\xC4\x99zca jest znany dopiero na ko\xC5\x84cu gry. Carcassonne jest strategiczn\xC4\x85 gr\xC4\x85 planszow\xC4\x85, kt\xC3\xB3ra po ka\xC5\xBCdym wykonanym ruchu otwiera przed graczem nowe mo\xC5\xBCliwo\xC5\x9Bci. Jak  dynamiczna b\xC4\x99dzie rozgrywka zale\xC5\xBCy tylko od fantazji graczy.\r\n\
+      \r\n\
+      Przebieg gry: \r\n\
+      Kolejka przebiega zgodnie z ruchem wskaz\xC3\xB3wek zegara. Gracz, wykonuje nast\xC4\x99puj\xC4\x85ce ruchy w podanej kolejno\xC5\x9Bci:\r\n\
+      1. Gracz musi wylosowa\xC4\x87 jeden \xC5\xBCeton terenu i po\xC5\x82o\xC5\xBCy\xC4\x87 go tam gdzie uzna za s\xC5\x82uszne. Trzeba jednak pami\xC4\x99ta\xC4\x87 \xC5\xBCe musi przylega\xC4\x87 przynajmniej jedn\xC4\x85 pasuj\xC4\x85c\xC4\x85 kraw\xC4\x99dzi\xC4\x85  do wy\xC5\x82o\xC5\xBConych ju\xC5\xBC element\xC3\xB3w ( co troch\xC4\x99 przypomina puzzle).  Znaczy to, \xC5\xBCe nale\xC5\xBCy uwa\xC5\xBCa\xC4\x87, aby miasto nie zako\xC5\x84czy\xC5\x82o si\xC4\x99 nagle polem, albo aby nie uci\xC4\x85\xC4\x87 znienacka drogi. Prawdziwym problemem nie jest dopasowanie go gdziekolwiek, ale dopasowanie go tam, gdzie przyniesie nam najwi\xC4\x99kszy zysk punktowy.\r\n\
+      2. Gracz mo\xC5\xBCe umie\xC5\x9Bci\xC4\x87 sw\xC3\xB3j pionek na \xC5\xBCetonie, kt\xC3\xB3ry w\xC5\x82a\xC5\x9Bnie wy\xC5\x82o\xC5\xBCy\xC5\x82 aby obj\xC4\x85\xC4\x87 nad nim  kontrol\xC4\x99. Od miejsca ustawienia pionka zale\xC5\xBCy wiele. Nale\xC5\xBCy pami\xC4\x99ta\xC4\x87  \xC5\xBCe mamy tylko ograniczon\xC4\x85 liczb\xC4\x99 pionk\xC3\xB3w (powracaj\xC4\x85 do naszej dyspozycji dopiero po zako\xC5\x84czeniu budowy obiektu).Nieuko\xC5\x84czone miasta, drogi, klasztory blokuj\xC4\x85 nam znaczniki do momentu zako\xC5\x84czenia rozgrywki, uniemo\xC5\xBCliwiaj\xC4\x85c zdobywanie punkt\xC3\xB3w. \r\n\
+      3.  Je\xC5\xBCeli po wy\xC5\x82o\xC5\xBCeniu \xC5\xBCetonu powstanie uko\xC5\x84czona droga, miasto lub klasztor, nale\xC5\xBCy zliczy\xC4\x87 zdobyte w tej kolejce punkty dla gracza kontroluj\xC4\x85cego dany obiekt- znacznik kontroli wraca do gracza i mo\xC5\xBCe zosta\xC4\x87 ponownie u\xC5\xBCyty\r\n\
+      Celem gry jest zebranie jak najwi\xC4\x99kszej ilo\xC5\x9Bci punkt\xC3\xB3w\r\n\
+      \xC2\xA0Gra ma jasne i czytelne zasady. Nadaj\xC4\x99 si\xC4\x99 zar\xC3\xB3wno dla graczy od  8 roku \xC5\xBCycia jak i dla senior\xC3\xB3w. Carcassonne \xC5\x9Bwietnie zdaje egzamin jako gra familijna. Jest pozbawiona wrogo\xC5\x9Bci a jej     charakter sprawia i\xC5\xBC \xC5\x9Bwietnie si\xC4\x99 nadaje nawet do gry w dwie osoby. \r\n\
+      \r\n\
+      Pude\xC5\x82ko zawiera:\r\n\
+      Zasady gry w j\xC4\x99zyku polskim\r\n\
+      Plansz\xC4\x99 do liczenia punkt\xC3\xB3w\r\n\
+      72 \xC5\xBCetony terenu\r\n\
+      40 drewnianych pionk\xC3\xB3w\r\n\
+      \r\n"
+    - polski
+    - 1
     - 
-    - super biblioteka
-    - ""
-    - ""
-    - "1234567890"
-    - "123456789"
+    - 1
+    - "w j\xC4\x99zyku polskim"
     - 
-    - biblioteka
+    - gra strategiczna
+    - 
+    - 2
 
 --- 
-addresses: 
+new_products: 
   columns: 
   - id
   - created_at
   - updated_at
-  - street
-  - zip_code
-  - city
-  - client_id
-  - house_number
-  - apartment_number
+  - resource_type
+  - resource_id
   records: 
   - - 1
-    - 2012-02-08 19:20:15.537511
-    - 2012-02-08 20:00:20.271171
-    - moja ulica
-    - 51-345
-    - Zadupie
+    - 2012-04-03 13:12:11.612195+0000
+    - 2012-04-03 13:12:11.612195+0000
+    - Book
+    - 1
+  - - 2
+    - 2012-04-03 13:12:30.495446+0000
+    - 2012-04-03 13:12:30.495446+0000
+    - Game
+    - 2
+
+--- 
+order_items: 
+  columns: 
+  - id
+  - created_at
+  - updated_at
+  - product_id
+  - price_for_one
+  - amount
+  - name_of_product
+  - order_id
+  records: 
+  - - 1
+    - 2012-02-12 23:23:01.737518+0000
+    - 2012-02-12 23:23:01.737518+0000
+    - 6
+    - 26.0
+    - 1
+    - Sen srebrny Salomei
+    - 1
+  - - 2
+    - 2012-02-13 14:38:41.929556+0000
+    - 2012-02-13 14:38:41.929556+0000
+    - 1
+    - 80.0
+    - 1
+    - "ksi\xC4\x85\xC5\xBCka"
+    - 1
+
+--- 
+orders: 
+  columns: 
+  - id
+  - created_at
+  - updated_at
+  - status
+  - client_id
+  - address_id
+  - payer_id
+  - payment_type
+  - delivery_type
+  - comments
+  - summary_price
+  records: 
+  - - 1
+    - 2012-02-12 23:04:32.725134+0000
+    - 2012-02-12 23:04:32.725134+0000
+    - cart
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+
+--- 
+pictures: 
+  columns: 
+  - id
+  - created_at
+  - updated_at
+  - photo
+  - photo_file_name
+  - photo_content_type
+  - photo_file_size
+  - product_id
+  records: 
+  - - 5
+    - 2012-02-12 22:54:55.199174+0000
+    - 2012-02-12 22:54:55.199174+0000
+    - 
+    - id_6.jpg
+    - image/jpeg
+    - 26467
+    - 6
+  - - 6
+    - 2012-02-12 22:55:34.402476+0000
+    - 2012-02-12 22:55:34.402476+0000
+    - 
+    - id_3.jpg
+    - image/jpeg
+    - 25754
+    - 3
+  - - 7
+    - 2012-02-12 22:55:55.590776+0000
+    - 2012-02-12 22:55:55.590776+0000
+    - 
+    - id_4.jpg
+    - image/jpeg
+    - 24537
+    - 4
+  - - 8
+    - 2012-02-12 22:56:16.549266+0000
+    - 2012-02-12 22:56:16.549266+0000
+    - 
+    - id_5.jpg
+    - image/jpeg
+    - 26071
+    - 5
+  - - 9
+    - 2012-02-12 22:56:40.196563+0000
+    - 2012-02-12 22:56:40.196563+0000
+    - 
+    - id_7.jpg
+    - image/jpeg
+    - 25259
+    - 7
+  - - 10
+    - 2012-02-12 22:57:06.649449+0000
+    - 2012-02-12 22:57:06.649449+0000
+    - 
+    - id_8.jpg
+    - image/jpeg
+    - 26111
     - 8
-    - "567"
-    - 2a
+  - - 11
+    - 2012-02-12 22:57:25.724255+0000
+    - 2012-02-12 22:57:25.724255+0000
+    - 
+    - id_9.jpg
+    - image/jpeg
+    - 24125
+    - 9
+  - - 12
+    - 2012-02-12 22:57:46.495876+0000
+    - 2012-02-12 22:57:46.495876+0000
+    - 
+    - id_10.jpg
+    - image/jpeg
+    - 24433
+    - 10
+  - - 13
+    - 2012-02-12 22:58:31.400256+0000
+    - 2012-02-12 22:58:31.400256+0000
+    - 
+    - id_11.jpg
+    - image/jpeg
+    - 24105
+    - 11
+  - - 15
+    - 2012-02-12 22:59:27.457489+0000
+    - 2012-02-12 22:59:27.457489+0000
+    - 
+    - ip_13.jpg
+    - image/jpeg
+    - 16647
+    - 13
+  - - 16
+    - 2012-02-12 22:59:55.800095+0000
+    - 2012-02-12 22:59:55.800095+0000
+    - 
+    - ip_14.jpg
+    - image/jpeg
+    - 17750
+    - 14
+  - - 17
+    - 2012-02-12 23:02:11.745122+0000
+    - 2012-02-12 23:02:11.745122+0000
+    - 
+    - id_12.jpg
+    - image/jpeg
+    - 28643
+    - 12
+  - - 18
+    - 2012-02-13 14:25:44.460948+0000
+    - 2012-02-13 14:25:44.460948+0000
+    - 
+    - id_15.jpg
+    - image/jpeg
+    - 1515795
+    - 15
+  - - 19
+    - 2012-02-13 14:27:50.710563+0000
+    - 2012-03-26 20:52:20.144285+0000
+    - 
+    - id_16_b.jpg
+    - image/jpeg
+    - 59740
+    - 16
+  - - 20
+    - 2012-02-13 14:30:02.059108+0000
+    - 2012-02-13 14:30:02.059108+0000
+    - 
+    - id_17.jpg
+    - image/jpeg
+    - 250221
+    - 17
+  - - 21
+    - 2012-03-26 20:53:25.585795+0000
+    - 2012-03-26 20:53:25.585795+0000
+    - 
+    - id_17_b.jpg
+    - image/jpeg
+    - 37455
+    - 17
+
+--- 
+products: 
+  columns: 
+  - id
+  - created_at
+  - updated_at
+  - resource_id
+  - resource_type
+  records: 
+  - - 1
+    - 2012-01-22 19:41:35.743165+0000
+    - 2012-01-22 19:41:35.743165+0000
+    - 1
+    - Game
+  - - 3
+    - 2012-01-23 18:02:27.138804+0000
+    - 2012-01-23 18:02:27.138804+0000
+    - 1
+    - Book
+  - - 4
+    - 2012-02-12 19:08:02.304545+0000
+    - 2012-02-12 19:08:02.304545+0000
+    - 8
+    - Book
+  - - 5
+    - 2012-02-12 19:51:29.170288+0000
+    - 2012-02-12 19:51:29.170288+0000
+    - 9
+    - Book
+  - - 6
+    - 2012-02-12 20:16:45.365262+0000
+    - 2012-02-12 20:16:45.365262+0000
+    - 10
+    - Book
+  - - 7
+    - 2012-02-12 20:27:40.259866+0000
+    - 2012-02-12 20:27:40.259866+0000
+    - 11
+    - Book
+  - - 8
+    - 2012-02-12 20:46:19.650829+0000
+    - 2012-02-12 20:46:19.650829+0000
+    - 12
+    - Book
+  - - 9
+    - 2012-02-12 21:04:01.190376+0000
+    - 2012-02-12 21:04:01.190376+0000
+    - 13
+    - Book
+  - - 10
+    - 2012-02-12 21:27:59.246404+0000
+    - 2012-02-12 21:27:59.246404+0000
+    - 14
+    - Book
+  - - 11
+    - 2012-02-12 21:41:34.140198+0000
+    - 2012-02-12 21:41:34.140198+0000
+    - 15
+    - Book
+  - - 12
+    - 2012-02-12 21:50:34.122248+0000
+    - 2012-02-12 21:50:34.122248+0000
+    - 16
+    - Book
+  - - 13
+    - 2012-02-12 22:31:45.053757+0000
+    - 2012-02-12 22:31:45.053757+0000
+    - 17
+    - Book
+  - - 14
+    - 2012-02-12 22:38:55.477839+0000
+    - 2012-02-12 22:38:55.477839+0000
+    - 18
+    - Book
+  - - 15
+    - 2012-02-13 12:02:38.400920+0000
+    - 2012-02-13 12:02:38.400920+0000
+    - 2
+    - Game
+  - - 16
+    - 2012-02-13 12:21:27.005811+0000
+    - 2012-02-13 12:21:27.005811+0000
+    - 3
+    - Game
+  - - 17
+    - 2012-02-13 13:10:06.432984+0000
+    - 2012-02-13 13:10:06.432984+0000
+    - 4
+    - Game
+  - - 18
+    - 2013-01-21 21:08:35.533225
+    - 2013-01-21 21:08:35.533225
+    - 4
+    - Accessory
+
+--- 
+publisher_books: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Skorpion
+    - 2011-12-03 22:18:52.739471+0000
+    - 2011-12-03 22:18:52.739471+0000
+  - - 2
+    - Ossolineum
+    - 2012-01-22 19:29:38.492771+0000
+    - 2012-01-22 19:29:38.492771+0000
+  - - 3
+    - ARCHI-PLUS
+    - 2012-01-22 19:31:20.791599+0000
+    - 2012-01-22 19:31:20.791599+0000
+  - - 4
+    - PEKW "GAJA"
+    - 2012-01-22 19:33:23.459632+0000
+    - 2012-01-22 19:33:23.459632+0000
+  - - 5
+    - SUPERNOVA
+    - 2012-01-23 16:07:46.244971+0000
+    - 2012-01-23 16:07:46.244971+0000
+  - - 6
+    - Wolters Kluwer Polska
+    - 2012-01-23 16:08:50.849102+0000
+    - 2012-01-23 16:08:50.849102+0000
+  - - 7
+    - Poltext
+    - 2012-01-23 16:11:03.064114+0000
+    - 2012-01-23 16:11:03.064114+0000
+  - - 8
+    - MT Biznes
+    - 2012-01-23 16:11:37.134053+0000
+    - 2012-01-23 16:11:37.134053+0000
+  - - 9
+    - Wydawnictwo UMCS
+    - 2012-01-23 16:12:25.797162+0000
+    - 2012-01-23 16:12:25.797162+0000
+  - - 10
+    - Znak
+    - 2012-01-23 16:18:25.690533+0000
+    - 2012-01-23 16:18:25.690533+0000
+
+--- 
+publisher_games: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - IPN
+    - 2012-01-22 19:35:50.183136+0000
+    - 2012-01-22 19:35:50.183136+0000
+  - - 2
+    - Bard
+    - 2012-01-22 19:36:12.093326+0000
+    - 2012-01-22 19:36:12.093326+0000
+
+--- 
+subcategory_books: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  - category_book_id
+  records: 
+  - - 3
+    - "J\xC4\x99zyk angielski"
+    - 2011-12-03 22:17:41.533575+0000
+    - 2011-12-03 22:17:41.533575+0000
+    - 1
+  - - 4
+    - "J\xC4\x99zyk niemiecki"
+    - 2011-12-03 22:18:10.553334+0000
+    - 2011-12-03 22:18:10.553334+0000
+    - 1
+  - - 6
+    - Kuchnia
+    - 2011-12-18 14:38:18.703173+0000
+    - 2011-12-18 14:38:18.703173+0000
+    - 2
+  - - 7
+    - Zdrowie i uroda
+    - 2011-12-18 14:38:39.495412+0000
+    - 2011-12-18 14:38:39.495412+0000
+    - 2
+  - - 8
+    - Filologia obca
+    - 2011-12-18 14:39:07.794018+0000
+    - 2011-12-18 14:39:07.794018+0000
+    - 3
+  - - 9
+    - Filologia polska
+    - 2011-12-18 14:39:22.248681+0000
+    - 2011-12-18 14:39:22.248681+0000
+    - 3
+  - - 10
+    - Lektury
+    - 2012-01-22 18:15:28.809972+0000
+    - 2012-01-22 18:15:28.809972+0000
+    - 4
+  - - 11
+    - Historia literatury
+    - 2012-01-23 17:49:35.878782+0000
+    - 2012-01-23 17:49:35.878782+0000
+    - 11
+  - - 12
+    - Literaturoznawsto
+    - 2012-02-12 14:38:33.218645+0000
+    - 2012-02-12 22:23:22.720007+0000
+    - 11
+  - - 13
+    - Biblioteka Narodowa
+    - 2012-02-12 14:39:37.441147+0000
+    - 2012-02-12 14:39:37.441147+0000
+    - 11
+  - - 14
+    - Archeologia
+    - 2012-02-12 15:02:56.254933+0000
+    - 2012-02-12 15:02:56.254933+0000
+    - 5
+  - - 15
+    - Historia Polski
+    - 2012-02-12 21:56:41.376254+0000
+    - 2012-02-12 21:56:41.376254+0000
+    - 5
+  - - 16
+    - Biografie
+    - 2012-02-12 22:00:36.760702+0000
+    - 2012-02-12 22:00:36.760702+0000
+    - 5
+
+--- 
+subcategory_games: 
+  columns: 
+  - id
+  - name
+  - created_at
+  - updated_at
+  - category_game_id
+  records: 
+  - - 1
+    - Gry familijne
+    - 2012-01-22 19:08:08.307478+0000
+    - 2012-01-22 19:08:08.307478+0000
+    - 1
+  - - 2
+    - Gry strategiczne
+    - 2012-01-22 19:11:10.552218+0000
+    - 2012-01-22 19:11:10.552218+0000
+    - 1
+  - - 3
+    - Gry ekonomiczne
+    - 2012-01-22 19:13:29.881522+0000
+    - 2012-01-22 19:17:00.198982+0000
+    - 1

@@ -96,6 +96,7 @@
               = flash[:notice]
               = flash[:error]
               = flash[:alert]
+              Masz #{session[:count]} produktów w koszyku.
               =yield 
       #footer
         %div
