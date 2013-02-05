@@ -5,8 +5,12 @@ class OrderItem < ActiveRecord::Base
 
   attr_accessible :order_id, :product_id
 
-  validates_presence_of :product_id, :order_id, :name_of_product, :amount, :price_for_one
-  validates_numericality_of :product_id, :order_id
-  validates :price_for_one, :numericality => { :precision => 2 }
-  validates :amount, :numericality => { :greater_than => 0, :less_than => 999, :only_integer => true} 
+  def
+    product.resource.price * amount
+  end
+
+  validates_presence_of :product_id, :order_id, :amount#, :name_of_product,  :price_for_one
+#  validates_numericality_of :product_id, :order_id
+#  validates :price_for_one, :numericality => { :precision => 2 }
+#  validates :amount, :numericality => { :greater_than => 0, :less_than => 999, :only_integer => true} 
 end

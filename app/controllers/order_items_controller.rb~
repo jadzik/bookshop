@@ -8,10 +8,10 @@ class OrderItemsController < ApplicationController
   def create
     @order = current_order
     product = Product.find(params[:product_id])
-    @order_item = @order.product_items.build
+    @order_item = @order.add_product(product.id)
     @order_item.product = product
     if @order_item.save
-      redirect_to @order_item.order, notice: "Dodałeś produkt do koszyka" 
+      redirect_to @order_item.order, notice: "Dodałeś produkt do koszyka <br/>" 
     else
       render action: "new"
     end

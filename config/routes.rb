@@ -9,7 +9,7 @@ Bookshop::Application.routes.draw do
   resources :clients, :only => [:new, :create, :show, :edit]
   resources :addresses, :except => [:show]
   resources :payers
-  resources :orders, :except => [:destroy]
+  resources :orders
   resources :products do
     resources :order_items do
       resources :orders do

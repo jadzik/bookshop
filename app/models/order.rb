@@ -2,6 +2,19 @@
 class Order < ActiveRecord::Base
   has_many :order_items, dependent: :destroy
 
+  def add_product(product_id)
+    current_item = order_items.find_by_product_id(product_id)
+    if current_item
+      current_item.amount += 1 
+    else
+      current_item  = order_items.build(product_id: product_id)
+    end
+    current_item
+  end
+ 
+  def total_price
+    order_items.to_a.sum {|item| item.total_price }
+  end
 
 # validates_presence_of :status, :summary_price#, :client_id, :address_id, :payment_type, :delivery_type
 #  validates_numericality_of :client_id, :address_id

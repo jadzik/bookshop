@@ -8,7 +8,7 @@ class OrderItemsController < ApplicationController
   def create
     @order = current_order
     product = Product.find(params[:product_id])
-    @order_item = @order.order_items.build
+    @order_item = @order.add_product(product.id)
     @order_item.product = product
     if @order_item.save
       redirect_to @order_item.order, notice: "Dodałeś produkt do koszyka" 

@@ -1,3 +1,13 @@
+<br/>
 - @order.order_items.each do |item|
-  = item.product.resource.title
+  - unless item.product.resource.blank?
+    - if item.product.resource_type == "Book"
+      #{item.product.resource.title}      
+    - else
+      #{item.product.resource.name} 
+    #{number_to_currency(item.product.resource.price)} #{item.amount} szt. = #{number_to_currency(item.total_price)}
   <br/>
+<br/>
+Razem: #{number_to_currency(@order.total_price)}
+<br/>
+= button_to 'Opróżnij koszyk', @order, method: :delete, data: { confirm: 'Jesteś pewien?' } 

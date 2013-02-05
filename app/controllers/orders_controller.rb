@@ -3,8 +3,13 @@ class OrdersController < ApplicationController
 #  before_filter :my_orders, :only => [:show, :index, :edit]
 
   def show
-    @order = Order.find(params[:id])
-#    @client = @order.client_id
+    begin
+      @order = Order.find(params[:id])
+#      @client = @order.client_id
+    rescue ActiveRecord::RecordNotFound
+      logger.error "Wystąpił błąd koszyka #{params[:id]}"
+      redirect_to root_path, notice: 'Wystąpił błąd koszyka. Spróbuj jeszcze raz.'
+    end
   end
  
   def index
@@ -24,7 +29,6 @@ class OrdersController < ApplicationController
 #    @order = @client.orders.new(params[:order])
     if @order.save
       redirect_to @order, notice: "Dodałeś produkt do koszyka" 
-#      redirect_to orders_path(current_client)
     else
       render action: "new"
     end
@@ -41,6 +45,13 @@ class OrdersController < ApplicationController
     else
       render action: "edit"
     end
+  end
+
+  def destroy
+    @order = current_order
+    @order.destroy
+    session[:cart_id] = nil
+    redirect_to root_url, notice: 'Koszyk jest pusty'
   end
 
 
