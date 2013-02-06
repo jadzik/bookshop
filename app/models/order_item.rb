@@ -9,8 +9,8 @@ class OrderItem < ActiveRecord::Base
     product.resource.price * amount
   end
 
-  validates_presence_of :product_id, :order_id, :amount#, :name_of_product,  :price_for_one
-#  validates_numericality_of :product_id, :order_id
-#  validates :price_for_one, :numericality => { :precision => 2 }
-#  validates :amount, :numericality => { :greater_than => 0, :less_than => 999, :only_integer => true} 
+  validates_presence_of :product_id, :order_id, :amount,  :price_for_one#, :name_of_product
+  validates_numericality_of :product_id, :order_id
+  validates :price_for_one, :numericality => { :precision => 2 }
+  validates :amount, :numericality => { :greater_than => 0, :less_than => 999, :only_integer => true} 
 end
