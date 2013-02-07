@@ -2,14 +2,14 @@ Bookshop::Application.routes.draw do
 
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
-
-  resources :order_items
   
   devise_for :clients
   resources :clients, :only => [:new, :create, :show, :edit]
   resources :addresses, :except => [:show]
   resources :payers
   resources :orders
+  resources :order_items
+
   resources :products do
     resources :order_items do
       resources :orders do

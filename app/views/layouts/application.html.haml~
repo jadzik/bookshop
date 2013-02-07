@@ -12,7 +12,7 @@
     #page
       #header2
         %div
-          %a{:href => "index.html"}
+          %a{:href => root_path}
             = image_tag "logo-ania.png"
         %ul
           %li
@@ -31,6 +31,7 @@
         %ul
           %li
             %div
+              -#= render :partial => "shared/cart", :object => application.current_order
               - if client_signed_in? 
                 = render :partial => "shared/logged"
               - if !client_signed_in?
@@ -96,7 +97,6 @@
               = flash[:notice]
               = flash[:error]
               = flash[:alert]
-              Masz #{session[:count]} produktów w koszyku.
               =yield 
       #footer
         %div

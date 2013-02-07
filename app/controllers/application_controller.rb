@@ -1,7 +1,7 @@
 #encoding: utf-8
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
+  
   private
     def current_order
       Order.find(session[:order_id])
@@ -10,4 +10,6 @@ class ApplicationController < ActionController::Base
       session[:order_id] = order.id
       order
     end 
+  public
+     @cart = current_order
 end

@@ -1,4 +1,6 @@
 #encoding: utf-8
 class HomeController < ApplicationController
-
+  def index
+    @cart = current_order
+  end
 end
