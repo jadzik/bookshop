@@ -7,7 +7,6 @@ class ContactsController < ApplicationController
   end
  
   def create
-   @cart = current_order
     @contact = Contact.new(params[:contact])
     if @contact.save
       redirect_to('/contact_us', :notice => "Wiadomość została wysłana.")

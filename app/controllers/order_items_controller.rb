@@ -2,10 +2,15 @@
 class OrderItemsController < ApplicationController
   
   def new
+   @cart = current_order
+
     @order_item = OrderItem.new
   end
 
   def create
+
+   @cart = current_order
+
     @order = current_order
     product = Product.find(params[:product_id])
     @order_item = @order.add_product(product.id, product.resource.price, product.resource.name)

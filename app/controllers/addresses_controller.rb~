@@ -3,21 +3,15 @@ class AddressesController < ApplicationController
   before_filter :my_adresses, :only => [:show, :index, :edit, :destroy]
 
   def index
-   @cart = current_order
-
     @addresses = current_client.addresses if client_signed_in?
   end
 
   def new 
-   @cart = current_order
-
     @client = current_client
     @address = @client.addresses.new
   end
 
   def create
-   @cart = current_order
-
     @client = current_client
     @address = @client.addresses.new(params[:address])
     if @address.save
@@ -28,15 +22,11 @@ class AddressesController < ApplicationController
   end
 
   def edit
-   @cart = current_order
-
     @address = Address.find(params[:id])
     @client = current_client
   end
 
   def update
-   @cart = current_order
-
     @address = Address.find(params[:id])
     @client = current_client
     if @address.update_attributes(params[:address])
@@ -47,8 +37,6 @@ class AddressesController < ApplicationController
   end
 
   def destroy
-   @cart = current_order
-
     @address = Address.find(params[:id])
     @client = current_client
     @address.destroy
