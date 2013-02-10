@@ -16,4 +16,4 @@
     %br/
     cena: #{number_to_currency(book.price)} 
   .tekst
-    = button_to "Dodaj do koszyka", order_items_path(product_id: book.product.id, name: book.title)  
+    = button_to "Dodaj do koszyka", order_items_path(product_id: book.product.id)  

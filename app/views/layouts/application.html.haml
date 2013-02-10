@@ -31,7 +31,8 @@
         %ul
           %li
             %div
-              = render :partial => "shared/cart", :object => @cart
+              #cart
+                = render :partial => "orders/order", :object => @cart
               - if client_signed_in? 
                 = render :partial => "shared/logged"
               - if !client_signed_in?
