@@ -8,7 +8,7 @@
   %p.tekst
     cena: #{number_to_currency(@accessory.price)}
   .tekst
-    = button_to"Dodaj do koszyka", order_items_path( @accessory.product.id )  
+    = button_to"Dodaj do koszyka", order_items_path(product_id:  @accessory.product.id )  
   %p.tekst
     = @accessory.description.html_safe
 
