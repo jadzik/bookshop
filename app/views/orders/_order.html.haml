@@ -1,5 +1,5 @@
 <br/>
-- if order.order_items.blank?
+- if order.order_items.blank? || order.status != 'cart'
   Twój koszyk jest pusty.
 - else
   Twój koszyk: <br/>

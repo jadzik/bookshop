@@ -1,8 +1,11 @@
+Twoje zamówienie:
 <br/>
 - @order.order_items.each do |item|
   #{item.name_of_product} #{number_to_currency(item.price_for_one)} #{item.amount} szt. = #{number_to_currency(item.total_price)}
   <br/>
 <br/>
 Razem: #{number_to_currency(@order.total_price)}
+<br/>
+= link_to 'Złóż zamówienie', edit_order_path(@order)
 <br/>
 = button_to 'Opróżnij koszyk', @order, method: :delete, data: { confirm: 'Jesteś pewien?' } 

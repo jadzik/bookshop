@@ -1,15 +1,15 @@
 <br/>
-- if cart.order_items.blank?
+- if order.order_items.blank?
   Twój koszyk jest pusty.
 - else
   Twój koszyk: <br/>
-  - cart.order_items.each do |item|
+  - order.order_items.each do |item|
     #{item.name_of_product} #{item.amount} szt.-> #{number_to_currency(item.total_price)}
     <br/>
   <br/>
-  Razem: #{number_to_currency(cart.total_price)}
+  Razem: #{number_to_currency(order.total_price)}
   <br/>
-  = link_to 'Zobacz koszyk', order_path(cart)
+  = link_to 'Zobacz koszyk', order_path(order)
   <br/>
-  = button_to 'Opróżnij koszyk', cart, method: :delete, data: { confirm: 'Jesteś pewien?' } 
+  = button_to 'Opróżnij koszyk', order, method: :delete, data: { confirm: 'Jesteś pewien?' } 
 <br/>

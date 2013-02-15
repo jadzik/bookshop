@@ -1,6 +1,5 @@
-= render :partial => "errors"
 = form_for @address do |f|
-  .clearfixz
+  .clearfix
     = f.label :street, "ulica*"
     .input= f.text_field :street
   .clearfix

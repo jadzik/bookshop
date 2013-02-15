@@ -50,8 +50,9 @@ class OrdersController < ApplicationController
    @cart = current_order
 
     @order = Order.find(params[:id])
+    
     if @order.update_attributes(params[:order])
-      redirect_to @order, notice: 'Koszyk został zaktualizowany.' 
+      redirect_to root_url, notice: 'Zamówienie zostało złożone.' 
     else
       render action: "edit"
     end

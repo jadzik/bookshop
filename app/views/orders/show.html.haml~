@@ -1,14 +1,11 @@
+Twoje zamówienie:
 <br/>
 - @order.order_items.each do |item|
-  - unless item.product.resource.blank?
-    - if item.product.resource_type == "Book"
-      #{item.product.resource.title}      
-    - else
-      #{item.product.resource.name} 
-  {item.name_of_product}
-  #{number_to_currency(item.price_for_one)} #{item.amount} szt. = #{number_to_currency(item.total_price)}
+  #{item.name_of_product} #{number_to_currency(item.price_for_one)} #{item.amount} szt. = #{number_to_currency(item.total_price)}
   <br/>
 <br/>
 Razem: #{number_to_currency(@order.total_price)}
+<br/>
+= button_to 'Złóż zamówienie', @order, method: :edit
 <br/>
 = button_to 'Opróżnij koszyk', @order, method: :delete, data: { confirm: 'Jesteś pewien?' } 

@@ -3,6 +3,8 @@ class OrdersController < ApplicationController
 #  before_filter :my_orders, :only => [:show, :index, :edit]
 
   def show
+   @cart = current_order
+
     begin
       @order = Order.find(params[:id])
 #      @client = @order.client_id
@@ -13,11 +15,15 @@ class OrdersController < ApplicationController
   end
  
   def index
+   @cart = current_order
+
     @orders = Order.all
 #    @orders = current_client.orders if client_signed_in?
   end
 
   def new 
+   @cart = current_order
+
     @order = Order.new
 #    @client = current_client
 #    @order = @client.orders.new
@@ -35,11 +41,16 @@ class OrdersController < ApplicationController
   end
 
   def edit
+   @cart = current_order
+
     @order = Order.find(params[:id])
   end
 
   def update
+   @cart = current_order
+
     @order = Order.find(params[:id])
+    
     if @order.update_attributes(params[:order])
       redirect_to @order, notice: 'Koszyk został zaktualizowany.' 
     else
@@ -48,6 +59,8 @@ class OrdersController < ApplicationController
   end
 
   def destroy
+   @cart = current_order
+
     @order = current_order
     @order.destroy
     session[:cart_id] = nil

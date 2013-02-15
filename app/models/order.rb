@@ -16,11 +16,11 @@ class Order < ActiveRecord::Base
     order_items.to_a.sum {|item| item.total_price }
   end
 
-# validates_presence_of :status, :summary_price#, :client_id, :address_id, :payment_type, :delivery_type
+# validates_presence_of :status, :payment_type, :delivery_type#, :client_id, :address_id 
 #  validates_numericality_of :client_id, :address_id
 #  validates :payer_id, :numericality => true, :allow_blank => true
 #  validates :summary_price, :numericality => { :precision => 2 }
-#  validates_inclusion_of :status, :in => %w(cart )
+#  validates_inclusion_of :status, :in => %w(cart order )
 #  validates_inclusion_of :payment_type, :in => %w()
 #  validates_inclusion_of :delivery_type, :in => %w()
 end
