@@ -1,11 +1,14 @@
-Twoje zamówienie:
-<br/>
-- @order.order_items.each do |item|
-  #{item.name_of_product} #{number_to_currency(item.price_for_one)} #{item.amount} szt. = #{number_to_currency(item.total_price)}
+if @order.order_items.empty? || @order.status != 'cart'
+  Twój koszyk jest pusty.
+else
+  Twoje zamówienie:
   <br/>
-<br/>
-Razem: #{number_to_currency(@order.total_price)}
-<br/>
-= button_to 'Złóż zamówienie', @order, method: :edit
-<br/>
-= button_to 'Opróżnij koszyk', @order, method: :delete, data: { confirm: 'Jesteś pewien?' } 
+  - @order.order_items.each do |item|
+    #{item.name_of_product} #{number_to_currency(item.price_for_one)} #{item.amount} szt. = #{number_to_currency(item.total_price)}
+    <br/>
+  <br/>
+  Razem: #{number_to_currency(@order.total_price)}
+  <br/>
+  = link_to 'Złóż zamówienie', edit_order_path(@order)
+  <br/>
+  = button_to 'Opróżnij koszyk', @order, method: :delete, data: { confirm: 'Jesteś pewien?' } 

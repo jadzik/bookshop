@@ -1,21 +1,24 @@
-Twoje zamówienie:
-<br/>
-- @order.order_items.each do |item|
-  #{item.name_of_product} #{number_to_currency(item.price_for_one)} #{item.amount} szt. = #{number_to_currency(item.total_price)}
+if @order.order_items.empty? || @order.status != 'cart'
+  Twój koszyk jest pusty
+else
+  Twoje zamówienie:
   <br/>
-<br/>
-Razem: #{number_to_currency(@order.total_price)}
-<br/> 
-= form_for @order do |f|
-  .clearfix
-    = f.hidden_field :status, :value => 'order'
-  .clearfix
-    = f.label :delivery_type, "Sposób dostawy"
-    .input= f.select :delivery_type, ["odbiór osobisty", "kurier", "poczta polska"]
-  .clearfix
-    = f.label :payment_type, "Sposób płatności"
-    .input= f.select :payment_type, ["przelew", "przy odbiorze"]
-  .clearfix.actions
-    = f.submit "Złóż zamówienie", :class => "btn primary"
-<br/>
-= link_to 'Edytuj zawartość koszyka', order_path(@order)
+  - @order.order_items.each do |item|
+    #{item.name_of_product} #{number_to_currency(item.price_for_one)} #{item.amount} szt. = #{number_to_currency(item.total_price)}
+    <br/>
+  <br/>
+  Razem: #{number_to_currency(@order.total_price)}
+  <br/> 
+  = form_for @order do |f|
+    .clearfix
+      = f.hidden_field :status, :value => 'order'
+    .clearfix
+      = f.label :delivery_type, "Sposób dostawy"
+      .input= f.select :delivery_type, ["odbiór osobisty", "kurier", "poczta polska"]
+    .clearfix
+      = f.label :payment_type, "Sposób płatności"
+      .input= f.select :payment_type, ["przelew", "przy odbiorze"]
+    .clearfix.actions
+      = f.submit "Złóż zamówienie", :class => "btn primary"
+  <br/>
+  = link_to 'Edytuj zawartość koszyka', order_path(@order)

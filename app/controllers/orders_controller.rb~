@@ -8,6 +8,9 @@ class OrdersController < ApplicationController
     begin
       @order = Order.find(params[:id])
 #      @client = @order.client_id
+      if @order.order_items.empty? || @order.status != cart
+        redirect_to root_path, notice: 'Nie możesz obejrzeć zawartości koszyka - Twój koszyk jest pusty'
+      end
     rescue ActiveRecord::RecordNotFound
       logger.error "Wystąpił błąd koszyka #{params[:id]}"
       redirect_to root_path, notice: 'Wystąpił błąd koszyka. Spróbuj jeszcze raz.'
@@ -50,9 +53,10 @@ class OrdersController < ApplicationController
    @cart = current_order
 
     @order = Order.find(params[:id])
-    
-    if @order.update_attributes(params[:order])
-      redirect_to @order, notice: 'Koszyk został zaktualizowany.' 
+    if @order.order_items.empty?
+      redirect_to root_url, notice: 'Twój koszyk jest pusty'
+    elsif @order.update_attributes(params[:order])
+      redirect_to root_url, notice: 'Zamówienie zostało złożone.' 
     else
       render action: "edit"
     end
