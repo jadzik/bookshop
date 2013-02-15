@@ -3,6 +3,7 @@ class Product < ActiveRecord::Base
   belongs_to :resource, :polymorphic => true
   has_many :pictures
   has_many :order_items
+  has_many :orders, through: :order_items
 
   before_destroy :ensure_not_referenced_by_any_order_item
 
