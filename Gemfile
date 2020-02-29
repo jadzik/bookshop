@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 gem 'rails', '3.1.1'
-gem 'rake', '~> 0.9.2'
+gem 'rake', '~> 12.3.3'
 gem 'sqlite3'
 gem 'haml'
 gem 'devise', "~>2.0.0"
